@@ -1,3 +1,3 @@
 # green-reference
 
-Reference implementation of green-lib component.
+Reference implementation of green-lib MDX component library.
