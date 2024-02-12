@@ -1,0 +1,118 @@
+---
+topic:
+  image: topicImage
+  heading: Card example topic
+  abstract: This is an example of a topic abstract text.
+  action:
+    heading: Show featured reference
+    url: /reference/featured
+---
+export { PageLayout as default } from '../../layouts/page-layout'
+import { TwoColumnLayout } from '../../components/layout/two-column-layout/two-column-layout'
+import { ThreeColumnLayout } from '../../components/layout/three-column-layout/three-column-layout'
+import { FourColumnLayout } from '../../components/layout/four-column-layout/four-column-layout'
+import { Topic } from '../../components/topic/topic/topic'
+import { TopicList } from '../../components/topic/topic-list/topic-list'
+import { topicData } from '../../data/topics'
+import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
+
+<Topic
+  variant="headline"
+  topic={{...topicData.card, action: undefined}}
+/>
+
+<br />
+
+# Single topic
+
+<Topic
+  images={{ topicImage }}
+  imageSizes={props.imageSizes}
+  topic={frontmatter.topic}
+  variant="card"
+/>
+
+---
+
+# Two columns
+
+<TwoColumnLayout>
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="card"
+  />
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="card"
+  />
+</TwoColumnLayout>
+
+---
+
+# Three columns
+
+<ThreeColumnLayout>
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="card"
+  />
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="card"
+  />
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="card"
+  />
+</ThreeColumnLayout>
+
+---
+
+# Four columns
+
+<FourColumnLayout>
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="card"
+  />
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="card"
+  />
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="card"
+  />
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="card"
+  />
+</FourColumnLayout>
+
+---
+
+# Other references
+
+<TopicList 
+  variant="three-column"
+  topicVariant="card"
+  topics={Object.values(topicData)}
+/>

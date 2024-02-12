@@ -1,0 +1,24 @@
+---
+navigation:
+  heading: Reference
+  order: 20
+topic:
+  heading: Reference
+  icon: book-open
+  abstract: A reference implementation of the Modelberry UI Library.
+---
+export { PageLayout as default } from '../layouts/page-layout'
+import { Topic } from '../components/topic/topic/topic'
+import { TopicList } from '../components/topic/topic-list/topic-list'
+import { topicData } from '../data/topics'
+
+<Topic
+  variant="headline"
+  topic={frontmatter.topic}
+/>
+
+<TopicList 
+  variant="three-column"
+  topicVariant="card"
+  topics={Object.values(topicData)}
+/>

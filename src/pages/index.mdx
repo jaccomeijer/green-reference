@@ -1,0 +1,24 @@
+---
+navigation:
+  heading: Home
+  order: 10  
+topic:
+  heading: Modelberry UI Library
+  abstract: A reference implementation of the Modelberry UI Library.
+  image: topicImage
+  action:
+    heading: Reference
+    url: /reference
+---
+export { PageLayout as default } from '../layouts/page-layout'
+import { Topic } from '../components/topic/topic/topic'
+import topicImage from '../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
+
+<div class="container-full">
+  <Topic
+    variant="hero"
+    topic={frontmatter.topic}
+    images={{topicImage}}
+    imageSizes={props.imageSizes}
+  />
+</div>

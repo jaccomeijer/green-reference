@@ -1,0 +1,48 @@
+---
+topic:
+  image: topicImage
+  heading: Headline example topic
+  abstract: This is an example of a topic abstract text.
+  action:
+    heading: Show hero reference
+    url: /reference/hero
+---
+export { PageLayout as default } from '../../layouts/page-layout'
+import { Topic } from '../../components/topic/topic/topic'
+import { TopicList } from '../../components/topic/topic-list/topic-list'
+import { topicData } from '../../data/topics'
+import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
+
+<Topic
+  variant="headline"
+  topic={{...topicData.headline, action: undefined}}
+/>
+
+<div class="container-full">
+  <Topic
+    images={{ topicImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="headline"
+  />
+</div>
+
+---
+
+<Topic
+  images={{ topicImage }}
+  imageSizes={props.imageSizes}
+  topic={frontmatter.topic}
+  variant="headline"
+  style="--image-order: 2"
+/>
+
+---
+
+# Other references
+
+<TopicList 
+  variant="three-column"
+  topicVariant="card"
+  topics={Object.values(topicData)}
+/>
