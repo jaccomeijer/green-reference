@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Reference implementation of green-lib MDX component library",
   "scripts": {
-    "components": "npm run clean && node build-scripts/build.js components",
-    "components-serve": "npm run clean && node build-scripts/build.js components-serve",
-    "pages": "npm run clean && node build-scripts/build.js pages",
-    "pages-serve": "npm run clean && node build-scripts/build.js pages-serve",
     "clean": "rm -rf dist"
   },
   "keywords": [
@@ -34,10 +30,10 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@jaccomeijer/green-build": "1.0.7",
     "eslint": "8.56.0",
     "eslint-config-eslint": "9.0.0",
-    "eslint-plugin-react": "7.33.2",
-    "feather-icons": "4.29.1"
+    "eslint-plugin-react": "7.33.2"
   },
   "files": [
     "dist"

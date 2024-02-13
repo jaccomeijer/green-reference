@@ -1,8 +1,8 @@
-import { Head } from './head.jsx'
-import { HeaderNavigation } from '../components/navigation/header-navigation/header-navigation.jsx'
-import { FooterNavigation } from '../components/navigation/footer-navigation/footer-navigation.jsx'
-import { LegalNavigation } from '../components/navigation/legal-navigation/legal-navigation.jsx'
-import { getMenuItems } from '../../build-scripts/get-menu-items.js'
+import { Head } from '../../../green-lib/src/layouts/head.jsx'
+import { HeaderNavigation } from '../../../green-lib/src/components/navigation/header-navigation/header-navigation.jsx'
+import { FooterNavigation } from '../../../green-lib/src/components/navigation/footer-navigation/footer-navigation.jsx'
+import { LegalNavigation } from '../../../green-lib/src/components/navigation/legal-navigation/legal-navigation.jsx'
+import { getMenuItems } from '../../../green-lib/src/layouts/get-menu-items.js'
 import { actionMenu } from "../data/action-menu.js"
 import { socialMenu } from "../data/social-menu.js"
 
