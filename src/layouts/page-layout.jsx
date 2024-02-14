@@ -1,10 +1,12 @@
-import { Head } from '../../../green-lib/src/layouts/head.jsx'
-import { HeaderNavigation } from '../../../green-lib/src/components/navigation/header-navigation/header-navigation.jsx'
-import { FooterNavigation } from '../../../green-lib/src/components/navigation/footer-navigation/footer-navigation.jsx'
-import { LegalNavigation } from '../../../green-lib/src/components/navigation/legal-navigation/legal-navigation.jsx'
-import { getMenuItems } from '../../../green-lib/src/layouts/get-menu-items.js'
+import { Head } from '@jaccomeijer/green-lib'
+import { HeaderNavigation } from '@jaccomeijer/green-lib'
+import { FooterNavigation } from '@jaccomeijer/green-lib'
+import { LegalNavigation } from '@jaccomeijer/green-lib'
+import { getMenuItems } from '@jaccomeijer/green-lib'
+
 import { actionMenu } from "../data/action-menu.js"
 import { socialMenu } from "../data/social-menu.js"
+import favicon from '../assets/favicon/favicon.ico'
 
 export const PageLayout = props => {
   const mainMenu = getMenuItems({
@@ -16,6 +18,7 @@ export const PageLayout = props => {
       <Head
         metadata={props.metadata}
         page={props.page}
+        favicon={favicon}
       />
       <body>
         <div class="border-bottom">

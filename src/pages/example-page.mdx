@@ -7,15 +7,15 @@ topic:
   icon: globe
   abstract: Text is free style. Have it your own, including headings, images and all that.
 imageTopic:
-  heading: Example page
+  heading: Demo topic for example page
   icon: globe
-  abstract: Text is free style. Have it your own, including headings, images and all that.
+  abstract: This topic has an image, a two line heading and a longer abstract, all for demo purposes.
   image: demoImage
 
 ---
 export { PageLayout as default } from '../layouts/page-layout'
-import { Topic } from '../components/topic/topic/topic'
-import { TopicList } from '../components/topic/topic-list/topic-list'
+import { Topic, TopicList } from '@jaccomeijer/green-lib'
+
 import { topicData } from '../data/topics'
 import demoImage from '../assets/images/simon-lee-zft-W1kVEhg-unsplash.jpg'
 
@@ -78,6 +78,16 @@ bibendum. Quisque maximus orci eget justo venenatis posuere.
 
 Sed velit sapien, sagittis quis ligula eu, molestie ornare eros. Etiam lobortis
 sagittis orci volutpat maximus.
+
+<div class="container-full margin-top-6 margin-bottom-6">
+  <Topic
+    images={{ demoImage }}
+    imageSizes={props.imageSizes}
+    topic={frontmatter.imageTopic}
+    variant="headline"
+    style="--container-width: 700px"
+  />
+</div>
 
 Phasellus commodo magna id mauris aliquet, vel fermentum massa malesuada.
 Maecenas placerat velit non iaculis commodo. Nam ac auctor ante, sed tincidunt
