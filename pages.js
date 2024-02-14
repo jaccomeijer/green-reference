@@ -10,9 +10,9 @@ const config = {
     l: 1000,
   },
   metadata,
-  outdir: 'dist',
+  outdir: 'docs',
   removeBundle: true,
-  serve: true,
+  serve: false,
   stripFromOutputPath: 'src/pages',
 }
 
