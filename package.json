@@ -32,7 +32,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@jaccomeijer/green-build": "1.1.0",
+    "@jaccomeijer/green-build": "1.1.1",
     "@jaccomeijer/green-lib": "1.1.0",
     "eslint": "8.56.0",
     "eslint-config-eslint": "9.0.0",
