@@ -480,8 +480,7 @@ pre code.hljs {
   padding: 1rem;
 }
 sup {
-  font-size: 75%;
-  line-height: 0;
+  margin-top: -1rem;
 }
 
 /* node_modules/@jaccomeijer/green-lib/src/package/css/highlight/github.css */

@@ -298,7 +298,7 @@ var three_column_layout_ce_default = "./three-column-layout.ce-7Y7CIUIF.css";
 var three_column_layout_ce_default2 = "./three-column-layout.ce-CWH3UATK.js";
 
 // node_modules/@jaccomeijer/green-lib/src/package/css/global.bundle.css
-var global_bundle_default = "./global.bundle-WZ4HONYP.css";
+var global_bundle_default = "./global.bundle-YT3MDYPT.css";
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.jsx
 var ThreeColumnLayout = (props) => /* @__PURE__ */ u2("three-column-layout", { delay: props.delay, children: [
@@ -410,7 +410,7 @@ var Picture = (props) => {
 };
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/feather-icon/feather-icon.ce.css
-var feather_icon_ce_default = "./feather-icon.ce-Q3KOUQ4J.css";
+var feather_icon_ce_default = "./feather-icon.ce-RCCVXCND.css";
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/feather-icon/feather-icon.ce.js
 var feather_icon_ce_default2 = "./feather-icon.ce-KQAR6BV2.js";
@@ -465,19 +465,20 @@ var getAction = ({ type, globals: globals2, url }) => {
 var IconLink = (props) => /* @__PURE__ */ u2(
   "a",
   {
-    variant: props.variant,
     class: props.class,
-    href: getAction({ type: "href", globals: props.globals, url: props.url }),
+    href: getAction({ type: "href", globals: props.globals, url: props.action.url }),
+    id: props.id,
+    variant: props.variant,
     children: [
-      props.icon && /* @__PURE__ */ u2(
+      props.action.icon && /* @__PURE__ */ u2(
         FeatherIcon,
         {
           globals: props.globals,
-          icon: props.icon,
+          icon: props.action.icon,
           variant: props.variant
         }
       ),
-      props.children
+      props.children || props.action.heading
     ]
   }
 );
@@ -489,17 +490,17 @@ var IconButton = (props) => /* @__PURE__ */ u2(
     variant: props.variant,
     class: props.class,
     type: "button",
-    onclick: getAction({ type: "onclick", globals: props.globals, url: props.url }),
+    onclick: getAction({ type: "onclick", globals: props.globals, url: props.action.url }),
     children: [
-      props.icon && /* @__PURE__ */ u2(
+      props.action.icon && /* @__PURE__ */ u2(
         FeatherIcon,
         {
           globals: props.globals,
-          icon: props.icon,
+          icon: props.action.icon,
           variant: props.variant
         }
       ),
-      props.children
+      props.children || props.action.heading
     ]
   }
 );
@@ -507,7 +508,14 @@ var IconButton = (props) => /* @__PURE__ */ u2(
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/button-segment/button-segment.jsx
 var ButtonSegment = (props) => {
   const menu = props.menu || [];
-  return /* @__PURE__ */ u2("div", { class: "button-segment", children: menu.map((item) => /* @__PURE__ */ u2(IconButton, { globals: props.globals, variant: "s", icon: item.icon, url: item.url, children: item.heading })) });
+  return /* @__PURE__ */ u2("div", { class: "button-segment", children: menu.map((item) => /* @__PURE__ */ u2(
+    IconButton,
+    {
+      globals: props.globals,
+      variant: "s",
+      action: item
+    }
+  )) });
 };
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/navigation.ce.css
@@ -522,12 +530,10 @@ var Segment = (props) => {
   return /* @__PURE__ */ u2("ul", { class: "navigation-segment", children: menu.map((item) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
     IconLink,
     {
+      action: item,
       class: props.pageUrl === item.url && "active",
       globals: props.globals,
-      icon: item.icon,
-      variant: "s",
-      url: item.url,
-      children: item.heading
+      variant: "s"
     }
   ) })) });
 };
@@ -544,9 +550,6 @@ var FooterNavigation = (props) => /* @__PURE__ */ u2("footer-navigation", { chil
   ] }),
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${footer_navigation_ce_default}` })
 ] });
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/header-navigation/branding.jsx
-var Branding = (props) => /* @__PURE__ */ u2("a", { id: "branding", variant: "s", children: props.globals.metadata.branding });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/header-navigation/modal-menu.jsx
 var ModalMenu = (props) => /* @__PURE__ */ u2("div", { id: "modal-menu", children: [
@@ -567,7 +570,15 @@ var HeaderNavigation = (props) => {
   return /* @__PURE__ */ u2("header-navigation", { children: [
     /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
       /* @__PURE__ */ u2("div", { id: "header-navigation", children: [
-        /* @__PURE__ */ u2(Branding, { globals: props.globals }),
+        /* @__PURE__ */ u2(
+          IconLink,
+          {
+            action: props.globals.metadata.branding,
+            globals: props.globals,
+            id: "branding",
+            variant: "s"
+          }
+        ),
         /* @__PURE__ */ u2("nav", { children: [
           /* @__PURE__ */ u2(Segment, { globals: props.globals, menu: props.mainMenu, pageUrl: props.pageUrl }),
           /* @__PURE__ */ u2(Segment, { globals: props.globals, menu: props.socialMenu }),
@@ -600,18 +611,11 @@ var legal_navigation_ce_default = "./legal-navigation.ce-QO4J546K.js";
 var LegalNavigation = (props) => /* @__PURE__ */ u2("legal-navigation", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2("nav", { id: "legal-navigation", children: [
-      /* @__PURE__ */ u2("p", { variant: "xs", children: props.globals.metadata.copyright }),
-      /* @__PURE__ */ u2(
-        "a",
-        {
-          variant: "xs",
-          href: getAction({ type: "href", globals: props.globals, url: props.globals.metadata.url }),
-          children: [
-            props.globals.metadata.vendor,
-            /* @__PURE__ */ u2("sup", { children: props.globals.metadata.version })
-          ]
-        }
-      )
+      /* @__PURE__ */ u2("p", { variant: "xs", children: props.globals.metadata.branding.copyright }),
+      /* @__PURE__ */ u2(IconLink, { variant: "xs", globals: props.globals, action: props.globals.metadata.vendor, children: [
+        props.globals.metadata.vendor.heading,
+        /* @__PURE__ */ u2("sup", { children: props.globals.metadata.vendor.version })
+      ] })
     ] }),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${navigation_ce_default}` })
@@ -649,7 +653,15 @@ var TopicCore = (props) => {
       }
     ),
     /* @__PURE__ */ u2("div", { id: "topic-content", children: [
-      props.topic.icon && /* @__PURE__ */ u2(FeatherIcon, { globals: props.globals, icon: props.topic.icon, variant: iconVariant, strokeWidth: iconStrokeWidth }),
+      props.topic.icon && /* @__PURE__ */ u2(
+        FeatherIcon,
+        {
+          globals: props.globals,
+          icon: props.topic.icon,
+          variant: iconVariant,
+          strokeWidth: iconStrokeWidth
+        }
+      ),
       props.topic.labels && /* @__PURE__ */ u2("div", { id: "topic-labels", children: /* @__PURE__ */ u2("p", { variant: labelVariant, children: props.topic.labels?.map((label) => /* @__PURE__ */ u2(g, { children: [
         /* @__PURE__ */ u2("span", { children: label }),
         " "
@@ -658,8 +670,16 @@ var TopicCore = (props) => {
       props.topic.heading && headingElement === "h2" && /* @__PURE__ */ u2("h2", { id: "topic-heading", variant: headingVariant, children: props.topic.heading }),
       props.topic.heading && headingElement === "h3" && /* @__PURE__ */ u2("h3", { id: "topic-heading", variant: headingVariant, children: props.topic.heading }),
       props.topic.abstract && /* @__PURE__ */ u2("p", { id: "topic-abstract", variant: abstractVariant, children: props.topic.abstract }),
-      props.topic.action && actionElement === "button" && /* @__PURE__ */ u2(IconButton, { variant: actionVariant, globals: props.globals, icon: props.topic.action.icon, url: props.topic.action.url, children: props.topic.action.heading }),
-      props.topic.action && actionElement === "link" && /* @__PURE__ */ u2(IconLink, { globals: props.globals, variant: actionVariant, icon: props.topic.action.icon, url: props.topic.action.url, children: props.topic.action.heading })
+      props.topic.action && actionElement === "button" && /* @__PURE__ */ u2(
+        IconButton,
+        {
+          variant: actionVariant,
+          globals: props.globals,
+          action: props.topic.action,
+          url: props.topic.action.url
+        }
+      ),
+      props.topic.action && actionElement === "link" && /* @__PURE__ */ u2(IconLink, { globals: props.globals, variant: actionVariant, action: props.topic.action })
     ] })
   ] });
 };
@@ -993,12 +1013,12 @@ var Head = (props) => {
     /* @__PURE__ */ u2("meta", { charset: "utf-8" }),
     /* @__PURE__ */ u2("meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }),
     /* @__PURE__ */ u2("title", { children: [
-      props.globals.metadata.title,
+      props.globals.metadata.branding.heading,
       " - ",
       frontmatter2.title || frontmatter2.navigation?.heading
     ] }),
-    /* @__PURE__ */ u2("meta", { name: "description", content: frontmatter2.description || props.globals.metadata.description }),
-    /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.generator }),
+    /* @__PURE__ */ u2("meta", { name: "description", content: frontmatter2.description || props.globals.metadata.branding.description }),
+    /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.content.generator }),
     /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
     props.enableReload && /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
@@ -1109,27 +1129,33 @@ var config = {
   ...process.env.MODE === "serve" ? serveConfig : {}
 };
 
+// src/data/metadata.js
+var metadata = {
+  branding: {
+    copyright: "Copyright \xA9 2024 Jacco Meijer",
+    description: "A reference implementation of the Green UI Library.",
+    heading: "Green Reference",
+    icon: "sun",
+    url: "/"
+  },
+  vendor: {
+    heading: "Made with Green UI Library",
+    icon: "globe",
+    url: "https://github.com/jaccomeijer/green-lib",
+    version: "4.0.0"
+  },
+  content: {
+    generator: "esbuild",
+    language: "en"
+  }
+};
+
 // src/data/globals.js
 var globals = {
   assetUrl: config.assetUrl,
   baseUrl: config.baseUrl,
   imageSizes: config.imageSizes,
-  metadata: {
-    author: {
-      name: "Jacco Meijer",
-      email: "jacco@jaccomeijer.nl",
-      url: "https://jaccomeijer.nl"
-    },
-    branding: "Green Reference",
-    copyright: "Copyright 2024 \xA9 Jacco Meijer",
-    description: "A reference implementation of the Green UI Library.",
-    generator: "esbuild",
-    language: "en",
-    title: "Green UI Library",
-    url: "https://github.com/jaccomeijer/green-lib",
-    vendor: "Made with Green UI Library",
-    version: "4.0.0"
-  }
+  metadata
 };
 
 // src/data/action-menu.js
@@ -1280,15 +1306,15 @@ var topicData = {
 // src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
 var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
 
-// src/pages/reference/block.mdx
+// src/pages/reference/hero.mdx
 var frontmatter = {
   "topic": {
     "image": "topicImage",
-    "heading": "Block example topic",
+    "heading": "Hero example topic",
     "abstract": "This is an example of a topic abstract text.",
     "action": {
-      "heading": "Show card reference",
-      "url": "/reference/card"
+      "heading": "Show profile reference",
+      "url": "/reference/profile"
     }
   }
 };
@@ -1302,104 +1328,34 @@ function _createMdxContent(props) {
     children: [u2(Topic, {
       globals,
       topic: {
-        ...topicData.block,
+        ...topicData.hero,
         action: void 0
       },
       variant: "headline"
-    }), "\n", u2("br", {}), "\n", u2(_components.h1, {
-      children: "Single topic"
-    }), "\n", u2(Topic, {
+    }), "\n", u2("div", {
+      class: "container-full",
+      children: u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "hero"
+      })
+    }), "\n", u2(_components.hr, {}), "\n", u2(Topic, {
       globals,
       images: {
         topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
       },
       topic: frontmatter.topic,
-      variant: "block"
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Two columns"
-    }), "\n", u2(TwoColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Three columns"
-    }), "\n", u2(ThreeColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Four columns"
-    }), "\n", u2(FourColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      })]
+      variant: "hero"
     }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
       children: "Other references"
     }), "\n", u2(TopicList, {
       globals,
-      variant: "three-column",
+      topics: Object.values(topicData),
       topicVariant: "card",
-      topics: Object.values(topicData)
+      variant: "three-column"
     })]
   });
 }
