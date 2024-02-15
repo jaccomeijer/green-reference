@@ -511,7 +511,7 @@ var ButtonSegment = (props) => {
 };
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/navigation.ce.css
-var navigation_ce_default = "./navigation.ce-L6FYW374.css";
+var navigation_ce_default = "./navigation.ce-JSKIPCMY.css";
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/footer-navigation/footer-navigation.ce.js
 var footer_navigation_ce_default = "./footer-navigation.ce-IGZTHGPJ.js";
@@ -593,26 +593,30 @@ var HeaderNavigation = (props) => {
   ] });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/legal-navigation/legal-navigation.ce.css
-var legal_navigation_ce_default = "./legal-navigation.ce-3NZUBXCP.css";
-
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/legal-navigation/legal-navigation.ce.js
-var legal_navigation_ce_default2 = "./legal-navigation.ce-QO4J546K.js";
+var legal_navigation_ce_default = "./legal-navigation.ce-QO4J546K.js";
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/legal-navigation/legal-navigation.jsx
 var LegalNavigation = (props) => /* @__PURE__ */ u2("legal-navigation", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2("nav", { id: "legal-navigation", children: [
       /* @__PURE__ */ u2("p", { variant: "xs", children: props.globals.metadata.copyright }),
-      /* @__PURE__ */ u2("a", { variant: "xs", children: [
-        props.globals.metadata.vendor,
-        /* @__PURE__ */ u2("sup", { children: props.globals.metadata.version })
-      ] })
+      /* @__PURE__ */ u2(
+        "a",
+        {
+          variant: "xs",
+          href: getAction({ type: "href", globals: props.globals, url: props.globals.metadata.url }),
+          children: [
+            props.globals.metadata.vendor,
+            /* @__PURE__ */ u2("sup", { children: props.globals.metadata.version })
+          ]
+        }
+      )
     ] }),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${legal_navigation_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${navigation_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${legal_navigation_ce_default2}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${legal_navigation_ce_default}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/hero-topic/hero-topic.ce.css
@@ -1276,15 +1280,15 @@ var topicData = {
 // src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
 var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
 
-// src/pages/reference/card.mdx
+// src/pages/reference/featured.mdx
 var frontmatter = {
   "topic": {
     "image": "topicImage",
-    "heading": "Card example topic",
+    "heading": "Featured example topic",
     "abstract": "This is an example of a topic abstract text.",
     "action": {
-      "heading": "Show featured reference",
-      "url": "/reference/featured"
+      "heading": "Show headline reference",
+      "url": "/reference/headline"
     }
   }
 };
@@ -1298,22 +1302,18 @@ function _createMdxContent(props) {
     children: [u2(Topic, {
       globals,
       topic: {
-        ...topicData.card,
+        ...topicData.featured,
         action: void 0
       },
       variant: "headline"
-    }), "\n", u2("br", {}), "\n", u2(_components.h1, {
-      children: "Single topic"
-    }), "\n", u2(Topic, {
+    }), "\n", u2(_components.hr, {}), "\n", u2(Topic, {
       globals,
       images: {
         topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
       },
       topic: frontmatter.topic,
-      variant: "card"
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Two columns"
-    }), "\n", u2(TwoColumnLayout, {
+      variant: "featured"
+    }), "\n", u2(_components.hr, {}), "\n", u2(OneColumnLayout, {
       globals,
       children: [u2(Topic, {
         globals,
@@ -1321,73 +1321,15 @@ function _createMdxContent(props) {
           topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
         },
         topic: frontmatter.topic,
-        variant: "card"
+        variant: "featured"
       }), u2(Topic, {
         globals,
         images: {
           topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
         },
         topic: frontmatter.topic,
-        variant: "card"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Three columns"
-    }), "\n", u2(ThreeColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Four columns"
-    }), "\n", u2(FourColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
+        variant: "featured",
+        style: "--image-order: 2"
       })]
     }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
       children: "Other references"
