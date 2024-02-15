@@ -788,7 +788,7 @@ var QuoteTopic = (props) => /* @__PURE__ */ u2("quote-topic", { children: [
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/headline-topic/headline-topic.ce.css
-var headline_topic_ce_default = "./headline-topic.ce-KSJWU3Q2.css";
+var headline_topic_ce_default = "./headline-topic.ce-YF4C4LO3.css";
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/headline-topic/headline-topic.ce.js
 var headline_topic_ce_default2 = "./headline-topic.ce-JTTKBUTY.js";
@@ -1120,14 +1120,14 @@ var globals = {
       email: "jacco@jaccomeijer.nl",
       url: "https://jaccomeijer.nl"
     },
-    branding: "Modelberry UI Library",
-    copyright: "Copyright 2024 \xA9 Modelberry UI Library",
-    description: "A reference implementation of the Modelberry UI Library.",
+    branding: "Green Reference",
+    copyright: "Copyright 2024 \xA9 Jacco Meijer",
+    description: "A reference implementation of the Green UI Library.",
     generator: "esbuild",
     language: "en",
-    title: "Modelberry UI Library",
-    url: "https://blue.modelberry.com",
-    vendor: "Made with Modelberry",
+    title: "Green UI Library",
+    url: "https://github.com/jaccomeijer/green-lib",
+    vendor: "Made with Green UI Library",
     version: "4.0.0"
   }
 };
@@ -1139,9 +1139,9 @@ var actionMenu = [
     url: "/reference"
   },
   {
-    heading: "modelberry.com",
+    heading: "jaccomeijer.nl",
     icon: "external-link",
-    url: "https://www.modelberry.com"
+    url: "https://www.jaccomeijer.nl"
   }
 ];
 
@@ -1149,7 +1149,7 @@ var actionMenu = [
 var socialMenu = [
   {
     icon: "github",
-    url: "https://github.com/modelberry"
+    url: "https://github.com/jaccomeijer/green-reference"
   }
 ];
 
@@ -1277,129 +1277,176 @@ var topicData = {
   }
 };
 
-// src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
-var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
+// src/assets/images/simon-lee-zft-W1kVEhg-unsplash.jpg
+var simon_lee_zft_W1kVEhg_unsplash_default = "./simon-lee-zft-W1kVEhg-unsplash-4L7LGD7K.jpg";
 
-// src/pages/reference/block.mdx
+// src/pages/example-page.mdx
 var frontmatter = {
+  "navigation": {
+    "heading": "Example page",
+    "order": 30
+  },
   "topic": {
-    "image": "topicImage",
-    "heading": "Block example topic",
-    "abstract": "This is an example of a topic abstract text.",
-    "action": {
-      "heading": "Show card reference",
-      "url": "/reference/card"
-    }
+    "heading": "Example page",
+    "icon": "globe",
+    "abstract": "Text is free style. Have it your own, including headings, images and all that."
+  },
+  "imageTopic": {
+    "heading": "Demo topic for example page",
+    "icon": "globe",
+    "abstract": "This topic has an image, a two line heading and a longer abstract, all for demo purposes.",
+    "image": "demoImage"
   }
 };
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
+    code: "code",
+    em: "em",
     h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    h5: "h5",
+    h6: "h6",
     hr: "hr",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
     ...props.components
   };
   return u2(g, {
     children: [u2(Topic, {
       globals,
-      topic: {
-        ...topicData.block,
-        action: void 0
-      },
-      variant: "headline"
-    }), "\n", u2("br", {}), "\n", u2(_components.h1, {
-      children: "Single topic"
-    }), "\n", u2(Topic, {
-      globals,
-      images: {
-        topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-      },
       topic: frontmatter.topic,
-      variant: "block"
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Two columns"
-    }), "\n", u2(TwoColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
+      variant: "headline"
+    }), "\n", u2(_components.hr, {}), "\n", u2("div", {
+      class: "container",
+      style: "--container-width: 700px",
+      children: [u2(_components.h1, {
+        children: "Heading 1"
+      }), u2(_components.ul, {
+        children: ["\n", u2(_components.li, {
+          children: "Cras felis magna, imperdiet eu turpis ut, dignissim lorum ipsum venenatis\njusto."
+        }), "\n", u2(_components.li, {
+          children: "Nullam cursus fermentum risus nec semper."
+        }), "\n", u2(_components.li, {
+          children: "Fusce ornare ipsum et facilisis consequat."
+        }), "\n"]
+      }), u2(_components.ol, {
+        children: ["\n", u2(_components.li, {
+          children: "Donec tincidunt ut arcu ac sagittis."
+        }), "\n", u2(_components.li, {
+          children: "Nulla condimentum consectetur tristique."
+        }), "\n", u2(_components.li, {
+          children: "Integer eu consectetur libero, et ullamcorper felis."
+        }), "\n"]
+      }), u2(_components.p, {
+        children: ["Integer ", u2(_components.strong, {
+          children: "tempus"
+        }), " turpis vel ornare pulvinar. Nulla ", u2(_components.em, {
+          children: "facilisis"
+        }), " leo lectus, nec\neuismod magna vulputate et. Duis vel velit quam. Cras interdum aliquet\nefficitur. Integer accumsan ", u2(_components.em, {
+          children: u2(_components.strong, {
+            children: "maximus"
+          })
+        }), " purus, at dignissim augue dapibus in."]
+      }), u2(_components.p, {
+        children: u2(_components.code, {
+          children: "Nulla et libero arcu. In convallis sed leo eget dictum."
+        })
+      }), u2(_components.p, {
+        children: "Integer vitae elit sapien. Ut congue arcu mauris, non dictum ipsum viverra eget.\nDuis et ultricies lorem."
+      }), u2(_components.h2, {
+        children: "Heading 2"
+      }), u2(_components.p, {
+        children: "Sed ac augue at nisi fringilla iaculis vitae ac metus. In in iaculis nunc."
+      }), u2(_components.pre, {
+        children: u2(_components.code, {
+          className: "hljs language-text",
+          children: "Aliquam eu ultrices nisi.\n"
+        })
+      }), u2(_components.p, {
+        children: "Maecenas consectetur justo non nibh efficitur pellentesque. Donec scelerisque\nnisi ac tortor porta mollis. Proin lacinia volutpat odio, eu interdum eros\nullamcorper sed."
+      }), u2(_components.hr, {}), u2(_components.p, {
+        children: "Etiam eget risus ac lorem dignissim vestibulum nec quis felis. Nullam\nscelerisque, sem sit amet tempus interdum, libero mi vehicula sem, ac volutpat\nurna nibh ut orci. Donec metus ex, luctus quis egestas at, placerat sed tortor."
+      }), u2(_components.h3, {
+        children: "Heading 3"
+      }), u2(_components.p, {
+        children: "Integer vitae elit sapien. Ut congue arcu mauris, non dictum ipsum viverra eget.\nDuis et ultricies lorem. Nulla at varius arcu. Integer tristique mattis ante eu\nbibendum. Quisque maximus orci eget justo venenatis posuere."
+      }), u2(_components.ul, {
+        children: ["\n", u2(_components.li, {
+          children: ["This is a link to an ", u2("a", {
+            href: `${globals.baseUrl}${globals.assetUrl}${simon_lee_zft_W1kVEhg_unsplash_default}`,
+            children: "image"
+          })]
+        }), "\n", u2(_components.li, {
+          children: ["This ia a link to ", u2(_components.a, {
+            href: "https://www.jaccomeijer.nl",
+            children: "jaccomeijer.nl"
+          })]
+        }), "\n"]
+      }), u2(_components.p, {
+        children: "Sed velit sapien, sagittis quis ligula eu, molestie ornare eros. Etiam lobortis\nsagittis orci volutpat maximus."
+      }), u2("div", {
+        class: "container-full margin-top-6 margin-bottom-6",
+        children: u2(Topic, {
+          globals,
+          images: {
+            demoImage: simon_lee_zft_W1kVEhg_unsplash_default
+          },
+          style: "--container-width: 700px",
+          topic: frontmatter.imageTopic,
+          variant: "headline"
+        })
+      }), u2(_components.p, {
+        children: "Phasellus commodo magna id mauris aliquet, vel fermentum massa malesuada.\nMaecenas placerat velit non iaculis commodo. Nam ac auctor ante, sed tincidunt\nlibero. Curabitur venenatis mi ac urna pellentesque, ut ornare ipsum malesuada."
+      }), u2(_components.h4, {
+        children: "Heading 4"
+      }), u2(_components.p, {
+        children: "Fusce tincidunt a nunc et fringilla. Nulla in nunc eget sapien finibus venenatis\nut non orci. Suspendisse nec orci est. Duis id turpis quis mauris venenatis\ncondimentum."
+      }), u2("img", {
+        src: `${globals.baseUrl}${globals.assetUrl}/${simon_lee_zft_W1kVEhg_unsplash_default}`,
+        alt: "Demo image",
+        class: "md-image"
+      }), u2(_components.p, {
+        children: "Maecenas nisl nulla, laoreet sed lectus id, commodo euismod lorem. Praesent\ntempus pulvinar sapien maximus placerat. Praesent ligula orci, egestas a mattis\nac, ullamcorper tempor eros. Sed a pharetra leo. Etiam dapibus sem at neque\nfaucibus, at porta mauris accumsan. Nullam tellus nunc, elementum in nibh sit\namet, ultricies bibendum magna. Suspendisse potenti."
+      }), u2(_components.h5, {
+        children: "Heading 5"
+      }), u2(_components.p, {
+        children: "Nulla facilisi. In porta auctor lorem blandit convallis. Phasellus quis sapien\nelit. Nullam mollis, nisi ac blandit consequat, sapien ligula suscipit libero,\net vulputate velit sapien ut elit. Vivamus dolor risus, tempus sit amet erat id,\nsagittis pellentesque odio."
       }), u2(Topic, {
         globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
         topic: frontmatter.topic,
-        variant: "block"
+        variant: "headline"
+      }), u2(_components.p, {
+        children: "Fusce id quam nulla. Mauris ac eros et erat dapibus gravida a ac justo. Integer\nsit amet elit dui. Fusce porta volutpat porttitor."
+      }), u2(_components.h6, {
+        children: "Heading 6"
+      }), u2(_components.p, {
+        children: "Cras felis magna, imperdiet eu turpis ut, dignissim venenatis justo. Nullam\ncursus fermentum risus nec semper. Fusce ornare ipsum et facilisis consequat."
+      }), u2("div", {
+        class: "container-full margin-top-6 margin-bottom-6",
+        children: u2(Topic, {
+          globals,
+          images: {
+            demoImage: simon_lee_zft_W1kVEhg_unsplash_default
+          },
+          style: "--container-width: 700px",
+          topic: frontmatter.imageTopic,
+          variant: "hero"
+        })
+      }), u2(_components.p, {
+        children: "Donec tincidunt ut arcu ac sagittis. Nulla condimentum consectetur tristique.\nInteger eu consectetur libero, et ullamcorper felis. Integer tempus turpis vel\nornare pulvinar."
       })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Three columns"
-    }), "\n", u2(ThreeColumnLayout, {
+    }), "\n", u2(_components.hr, {}), "\n", u2(TopicList, {
       globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Four columns"
-    }), "\n", u2(FourColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "block"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Other references"
-    }), "\n", u2(TopicList, {
-      globals,
-      variant: "three-column",
+      topics: Object.values(topicData),
       topicVariant: "card",
-      topics: Object.values(topicData)
+      variant: "three-column"
     })]
   });
 }
