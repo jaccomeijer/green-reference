@@ -449,7 +449,7 @@ var IconLink = (props) => /* @__PURE__ */ u2(
   {
     variant: props.variant,
     class: props.class,
-    href: props.globals.baseUrl + (props.url || "#"),
+    href: props.globals.baseUrl + props.url,
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -471,7 +471,7 @@ var IconButton = (props) => /* @__PURE__ */ u2(
     variant: props.variant,
     class: props.class,
     type: "button",
-    onclick: `location.href='${props.globals.baseUrl}${props.url || "#"}';`,
+    onclick: `location.href='${props.globals.baseUrl}${props.url}';`,
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -616,7 +616,7 @@ var TopicCore = (props) => {
   const iconStrokeWidth = props.iconStrokeWidth || 2;
   const iconVariant = props.iconVariant || "s";
   const labelVariant = props.labelVariant || "s";
-  return /* @__PURE__ */ u2("div", { id: "topic-container", onClick: props.onClick, style: props.style, children: [
+  return /* @__PURE__ */ u2("div", { id: "topic-container", onclick: props.onclick, style: props.style, children: [
     props.topic.image && /* @__PURE__ */ u2(
       Picture,
       {
@@ -694,7 +694,7 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
         labelVariant: "l",
         style: props.style,
         topic: props.topic,
-        onClick: `location.href='${props.topic.action?.url || "#"}';`
+        onclick: `location.href='${props.globals.baseUrl}${props.topic.action.url}';`
       }
     ),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
@@ -1257,15 +1257,15 @@ var topicData = {
 // src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
 var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
 
-// src/pages/reference/card.mdx
+// src/pages/reference/showcase.mdx
 var frontmatter = {
   "topic": {
     "image": "topicImage",
-    "heading": "Card example topic",
+    "heading": "Showcase example topic",
     "abstract": "This is an example of a topic abstract text.",
     "action": {
-      "heading": "Show featured reference",
-      "url": "/reference/featured"
+      "heading": "Show block reference",
+      "url": "/reference/block"
     }
   }
 };
@@ -1279,22 +1279,18 @@ function _createMdxContent(props) {
     children: [u2(Topic, {
       globals,
       topic: {
-        ...topicData.card,
+        ...topicData.showcase,
         action: void 0
       },
       variant: "headline"
-    }), "\n", u2("br", {}), "\n", u2(_components.h1, {
-      children: "Single topic"
-    }), "\n", u2(Topic, {
+    }), "\n", u2(_components.hr, {}), "\n", u2(Topic, {
       globals,
       images: {
         topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
       },
       topic: frontmatter.topic,
-      variant: "card"
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Two columns"
-    }), "\n", u2(TwoColumnLayout, {
+      variant: "showcase"
+    }), "\n", u2(_components.hr, {}), "\n", u2(TwoColumnLayout, {
       globals,
       children: [u2(Topic, {
         globals,
@@ -1302,73 +1298,14 @@ function _createMdxContent(props) {
           topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
         },
         topic: frontmatter.topic,
-        variant: "card"
+        variant: "showcase"
       }), u2(Topic, {
         globals,
         images: {
           topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
         },
         topic: frontmatter.topic,
-        variant: "card"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Three columns"
-    }), "\n", u2(ThreeColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Four columns"
-    }), "\n", u2(FourColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
+        variant: "showcase"
       })]
     }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
       children: "Other references"

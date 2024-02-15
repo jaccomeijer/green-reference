@@ -449,7 +449,7 @@ var IconLink = (props) => /* @__PURE__ */ u2(
   {
     variant: props.variant,
     class: props.class,
-    href: props.globals.baseUrl + (props.url || "#"),
+    href: props.globals.baseUrl + props.url,
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -471,7 +471,7 @@ var IconButton = (props) => /* @__PURE__ */ u2(
     variant: props.variant,
     class: props.class,
     type: "button",
-    onclick: `location.href='${props.globals.baseUrl}${props.url || "#"}';`,
+    onclick: `location.href='${props.globals.baseUrl}${props.url}';`,
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -616,7 +616,7 @@ var TopicCore = (props) => {
   const iconStrokeWidth = props.iconStrokeWidth || 2;
   const iconVariant = props.iconVariant || "s";
   const labelVariant = props.labelVariant || "s";
-  return /* @__PURE__ */ u2("div", { id: "topic-container", onClick: props.onClick, style: props.style, children: [
+  return /* @__PURE__ */ u2("div", { id: "topic-container", onclick: props.onclick, style: props.style, children: [
     props.topic.image && /* @__PURE__ */ u2(
       Picture,
       {
@@ -694,7 +694,7 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
         labelVariant: "l",
         style: props.style,
         topic: props.topic,
-        onClick: `location.href='${props.topic.action?.url || "#"}';`
+        onclick: `location.href='${props.globals.baseUrl}${props.topic.action.url}';`
       }
     ),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
@@ -1257,15 +1257,15 @@ var topicData = {
 // src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
 var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
 
-// src/pages/reference/featured.mdx
+// src/pages/reference/headline.mdx
 var frontmatter = {
   "topic": {
     "image": "topicImage",
-    "heading": "Featured example topic",
+    "heading": "Headline example topic",
     "abstract": "This is an example of a topic abstract text.",
     "action": {
-      "heading": "Show headline reference",
-      "url": "/reference/headline"
+      "heading": "Show hero reference",
+      "url": "/reference/hero"
     }
   }
 };
@@ -1279,35 +1279,28 @@ function _createMdxContent(props) {
     children: [u2(Topic, {
       globals,
       topic: {
-        ...topicData.featured,
+        ...topicData.headline,
         action: void 0
       },
       variant: "headline"
+    }), "\n", u2("div", {
+      class: "container-full",
+      children: u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "headline"
+      })
     }), "\n", u2(_components.hr, {}), "\n", u2(Topic, {
       globals,
       images: {
         topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
       },
+      style: "--image-order: 2",
       topic: frontmatter.topic,
-      variant: "featured"
-    }), "\n", u2(_components.hr, {}), "\n", u2(OneColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "featured"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "featured",
-        style: "--image-order: 2"
-      })]
+      variant: "headline"
     }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
       children: "Other references"
     }), "\n", u2(TopicList, {
