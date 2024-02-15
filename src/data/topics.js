@@ -47,7 +47,7 @@ export const topicData = {
   profile: {
     heading: 'Profile',
     icon: 'book-open',
-    abstract: 'Profile shows a profile image and tells about a person.file',
+    abstract: 'Profile shows a profile image and tells about a person.',
     action: {
       heading: 'Show profile examples',
       url: '/reference/profile',
