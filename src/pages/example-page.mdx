@@ -15,13 +15,14 @@ imageTopic:
 ---
 export { PageLayout as default } from '../layouts/page-layout'
 import { Topic, TopicList } from '@jaccomeijer/green-lib'
-
+import { globals } from '../data/globals.js'
 import { topicData } from '../data/topics'
 import demoImage from '../assets/images/simon-lee-zft-W1kVEhg-unsplash.jpg'
 
 <Topic
-  variant="headline"
+  globals={globals}
   topic={frontmatter.topic}
+  variant="headline"
 />
 
 ---
@@ -81,11 +82,11 @@ sagittis orci volutpat maximus.
 
 <div class="container-full margin-top-6 margin-bottom-6">
   <Topic
+    globals={globals}
     images={{ demoImage }}
-    imageSizes={props.imageSizes}
+    style="--container-width: 700px"
     topic={frontmatter.imageTopic}
     variant="headline"
-    style="--container-width: 700px"
   />
 </div>
 
@@ -99,7 +100,7 @@ Fusce tincidunt a nunc et fringilla. Nulla in nunc eget sapien finibus venenatis
 ut non orci. Suspendisse nec orci est. Duis id turpis quis mauris venenatis
 condimentum.
 
-<img src={`/green-reference/assets/${demoImage}`} alt="Demo image" class="md-image" />
+<img src={`${globals.assetUrlPrefix}/${demoImage}`} alt="Demo image" class="md-image" />
 
 Maecenas nisl nulla, laoreet sed lectus id, commodo euismod lorem. Praesent
 tempus pulvinar sapien maximus placerat. Praesent ligula orci, egestas a mattis
@@ -115,8 +116,9 @@ et vulputate velit sapien ut elit. Vivamus dolor risus, tempus sit amet erat id,
 sagittis pellentesque odio.
 
 <Topic
-  variant="headline"
+  globals={globals}
   topic={frontmatter.topic}
+  variant="headline"
 />
 
 Fusce id quam nulla. Mauris ac eros et erat dapibus gravida a ac justo. Integer
@@ -129,11 +131,11 @@ cursus fermentum risus nec semper. Fusce ornare ipsum et facilisis consequat.
 
 <div class="container-full margin-top-6 margin-bottom-6">
   <Topic
+    globals={globals}
     images={{ demoImage }}
-    imageSizes={props.imageSizes}
+    style="--container-width: 700px"
     topic={frontmatter.imageTopic}
     variant="hero"
-    style="--container-width: 700px"
   />
 </div>
 
@@ -146,7 +148,8 @@ ornare pulvinar.
 ---
 
 <TopicList 
-  variant="three-column"
-  topicVariant="card"
+  globals={globals}
   topics={Object.values(topicData)}
+  topicVariant="card"
+  variant="three-column"
 />

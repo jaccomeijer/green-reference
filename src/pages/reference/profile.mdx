@@ -9,89 +9,90 @@ topic:
 ---
 export { PageLayout as default } from '../../layouts/page-layout'
 import { TwoColumnLayout, ThreeColumnLayout, FourColumnLayout, Topic, TopicList } from '@jaccomeijer/green-lib'
-
+import { globals } from '../../data/globals.js'
 import { topicData } from '../../data/topics'
 import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
 
 <Topic
-  variant="headline"
+  globals={globals}
   topic={{...topicData.profile, action: undefined}}
+  variant="headline"
 />
 
 ---
 
 <Topic
+  globals={globals}
   images={{ topicImage }}
-  imageSizes={props.imageSizes}
   topic={frontmatter.topic}
   variant="profile"
 />
 
 ---
 
-<TwoColumnLayout>
+<TwoColumnLayout globals={globals}>
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="profile"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="profile"
   />
 </TwoColumnLayout>
 
 ---
 
-<ThreeColumnLayout>
+<ThreeColumnLayout globals={globals}>
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="profile"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="profile"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="profile"
   />
 </ThreeColumnLayout>
 
 ---
 
-<FourColumnLayout>
+<FourColumnLayout globals={globals}>
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="profile"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="profile"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="profile"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="profile"
   />
 </FourColumnLayout>
@@ -101,6 +102,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 # Other references
 
 <TopicList 
+  globals={globals}
   variant="three-column"
   topicVariant="card"
   topics={Object.values(topicData)}

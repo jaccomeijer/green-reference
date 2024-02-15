@@ -9,16 +9,18 @@ topic:
 ---
 export { PageLayout as default } from '../layouts/page-layout'
 import { Topic, TopicList } from '@jaccomeijer/green-lib'
-
+import { globals } from '../data/globals.js'
 import { topicData } from '../data/topics'
 
 <Topic
-  variant="headline"
+  globals={globals}
   topic={frontmatter.topic}
+  variant="headline"
 />
 
 <TopicList 
-  variant="three-column"
-  topicVariant="card"
+  globals={globals}
   topics={Object.values(topicData)}
+  topicVariant="card"
+  variant="three-column"
 />

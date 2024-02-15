@@ -1,18 +1,13 @@
-import { metadata } from './src/data/metadata.js'
+import { globals } from './src/data/globals.js'
 import { build } from '@jaccomeijer/green-build'
 
 const config = {
-  assetUrlPrefix: '/green-reference/assets',
+  assetUrlPrefix: globals.assetUrlPrefix,
   entryPointsGlob: 'src/pages/**/*.{mdx}',
-  imageSizes: {
-    s: 300,
-    m: 700,
-    l: 1000,
-  },
+  imageSizes: globals.imageSizes,
   initialProps: {},
-  metadata,
-  outdir: 'docs',
-  removeBundle: true,
+  outdir: 'dist',
+  removeBundle: false,
   serve: false,
   stripFromOutputPath: 'src/pages',
 }

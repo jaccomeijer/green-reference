@@ -9,19 +9,20 @@ topic:
 ---
 export { PageLayout as default } from '../../layouts/page-layout'
 import { Topic, TopicList } from '@jaccomeijer/green-lib'
-
+import { globals } from '../../data/globals.js'
 import { topicData } from '../../data/topics'
 import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
 
 <Topic
-  variant="headline"
+  globals={globals}
   topic={{...topicData.hero, action: undefined}}
+  variant="headline"
 />
 
 <div class="container-full">
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
     topic={frontmatter.topic}
     variant="hero"
   />
@@ -30,8 +31,8 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ---
 
 <Topic
+  globals={globals}
   images={{ topicImage }}
-  imageSizes={props.imageSizes}
   topic={frontmatter.topic}
   variant="hero"
 />
@@ -41,7 +42,8 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 # Other references
 
 <TopicList 
-  variant="three-column"
-  topicVariant="card"
+  globals={globals}
   topics={Object.values(topicData)}
+  topicVariant="card"
+  variant="three-column"
 />

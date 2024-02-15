@@ -13,12 +13,13 @@ topic:
 export { PageLayout as default } from '../layouts/page-layout'
 import { Topic } from '@jaccomeijer/green-lib'
 import topicImage from '../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
+import { globals } from '../data/globals.js'
 
 <div class="container-full">
   <Topic
-    variant="hero"
-    topic={frontmatter.topic}
+    globals={globals}
     images={{topicImage}}
-    imageSizes={props.imageSizes}
+    topic={frontmatter.topic}
+    variant="hero"
   />
 </div>

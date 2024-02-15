@@ -9,13 +9,14 @@ topic:
 ---
 export { PageLayout as default } from '../../layouts/page-layout'
 import { TwoColumnLayout, ThreeColumnLayout, FourColumnLayout, Topic, TopicList } from '@jaccomeijer/green-lib'
-
+import { globals } from '../../data/globals.js'
 import { topicData } from '../../data/topics'
 import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
 
 <Topic
-  variant="headline"
+  globals={globals}
   topic={{...topicData.card, action: undefined}}
+  variant="headline"
 />
 
 <br />
@@ -23,8 +24,8 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 # Single topic
 
 <Topic
+  globals={globals}
   images={{ topicImage }}
-  imageSizes={props.imageSizes}
   topic={frontmatter.topic}
   variant="card"
 />
@@ -33,17 +34,17 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 
 # Two columns
 
-<TwoColumnLayout>
+<TwoColumnLayout globals={globals}>
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="card"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="card"
   />
 </TwoColumnLayout>
@@ -52,23 +53,23 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 
 # Three columns
 
-<ThreeColumnLayout>
+<ThreeColumnLayout globals={globals}>
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="card"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="card"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="card"
   />
 </ThreeColumnLayout>
@@ -77,29 +78,29 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 
 # Four columns
 
-<FourColumnLayout>
+<FourColumnLayout globals={globals}>
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="card"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="card"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="card"
   />
   <Topic
+    globals={globals}
     images={{ topicImage }}
-    imageSizes={props.imageSizes}
-    topic={frontmatter.topic}
+      topic={frontmatter.topic}
     variant="card"
   />
 </FourColumnLayout>
@@ -109,7 +110,8 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 # Other references
 
 <TopicList 
-  variant="three-column"
-  topicVariant="card"
+  globals={globals}
   topics={Object.values(topicData)}
+  topicVariant="card"
+  variant="three-column"
 />
