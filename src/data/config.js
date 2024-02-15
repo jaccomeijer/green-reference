@@ -1,11 +1,13 @@
 const buildConfig = {
-  assetUrlPrefix: '/green-reference/assets',
+  assetUrl: '/assets/',
+  baseUrl: '/green-reference',
   outdir: 'docs',
   serve: false,
 }
 
 const serveConfig = {
-  assetUrlPrefix: '/assets',
+  assetUrl: '/assets/',
+  baseUrl: '',
   outdir: 'dist',
   serve: true,
 }
