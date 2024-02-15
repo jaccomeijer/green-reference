@@ -291,91 +291,8 @@ function u2(e2, t2, n2, o2, i3, u3) {
   return l.vnode && l.vnode(l2), l2;
 }
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.ce.css
-var three_column_layout_ce_default = "./three-column-layout.ce-7Y7CIUIF.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.ce.js
-var three_column_layout_ce_default2 = "./three-column-layout.ce-CWH3UATK.js";
-
 // node_modules/@jaccomeijer/green-lib/src/package/css/global.bundle.css
 var global_bundle_default = "./global.bundle-WZ4HONYP.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.jsx
-var ThreeColumnLayout = (props) => /* @__PURE__ */ u2("three-column-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${three_column_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${three_column_layout_ce_default2}` })
-] });
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/one-column-layout/one-column-layout.ce.css
-var one_column_layout_ce_default = "./one-column-layout.ce-ZZ2JSS3S.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/one-column-layout/one-column-layout.ce.js
-var one_column_layout_ce_default2 = "./one-column-layout.ce-MKEXO5T3.js";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/one-column-layout/one-column-layout.jsx
-var OneColumnLayout = (props) => /* @__PURE__ */ u2("one-column-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${one_column_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${one_column_layout_ce_default2}` })
-] });
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/four-column-layout/four-column-layout.ce.css
-var four_column_layout_ce_default = "./four-column-layout.ce-3KEALEM2.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/four-column-layout/four-column-layout.ce.js
-var four_column_layout_ce_default2 = "./four-column-layout.ce-SMTOQCMM.js";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/four-column-layout/four-column-layout.jsx
-var FourColumnLayout = (props) => /* @__PURE__ */ u2("four-column-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${four_column_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${four_column_layout_ce_default2}` })
-] });
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/carousel-layout/carousel-layout.ce.css
-var carousel_layout_ce_default = "./carousel-layout.ce-2QGUDORO.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/carousel-layout/carousel-layout.ce.js
-var carousel_layout_ce_default2 = "./carousel-layout.ce-3NJIJ6TV.js";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/carousel-layout/carousel-layout.jsx
-var CarouselLayout = (props) => /* @__PURE__ */ u2("carousel-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: [
-      /* @__PURE__ */ u2("div", { id: "slider", children: props.children }),
-      /* @__PURE__ */ u2("div", { id: "dots" })
-    ] }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${carousel_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${carousel_layout_ce_default2}` })
-] });
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/two-column-layout/two-column-layout.ce.css
-var two_column_layout_ce_default = "./two-column-layout.ce-H4VZ7UUQ.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/two-column-layout/two-column-layout.ce.js
-var two_column_layout_ce_default2 = "./two-column-layout.ce-KEIBXCKN.js";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/two-column-layout/two-column-layout.jsx
-var TwoColumnLayout = (props) => /* @__PURE__ */ u2("two-column-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${two_column_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${two_column_layout_ce_default2}` })
-] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/picture/picture.jsx
 var numberSort = (a2, b2) => {
@@ -434,26 +351,57 @@ var FeatherIcon = (props) => {
           "stroke-width": strokeWidth,
           "stroke-linecap": "round",
           "stroke-linejoin": "round",
-          children: /* @__PURE__ */ u2("use", { href: `${props.globals.assetUrlPrefix}/${feather_sprite_default}#${props.icon}` })
+          children: /* @__PURE__ */ u2("use", { href: `${props.globals.baseUrl}${props.globals.assetUrl}${feather_sprite_default}#${props.icon}` })
         }
       ),
-      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${feather_icon_ce_default}` })
+      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${feather_icon_ce_default}` })
     ] }),
-    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${feather_icon_ce_default2}` })
+    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${feather_icon_ce_default2}` })
   ] });
 };
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-link/icon-link.jsx
-var IconLink = (props) => /* @__PURE__ */ u2("a", { variant: props.variant, class: props.class, href: props.url || "#", children: [
-  props.icon && /* @__PURE__ */ u2(FeatherIcon, { globals: props.globals, icon: props.icon, variant: props.variant }),
-  props.children
-] });
+var IconLink = (props) => /* @__PURE__ */ u2(
+  "a",
+  {
+    variant: props.variant,
+    class: props.class,
+    href: props.globals.baseUrl + (props.url || "#"),
+    children: [
+      props.icon && /* @__PURE__ */ u2(
+        FeatherIcon,
+        {
+          globals: props.globals,
+          icon: props.icon,
+          variant: props.variant
+        }
+      ),
+      props.children
+    ]
+  }
+);
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-button/icon-button.jsx
-var IconButton = (props) => /* @__PURE__ */ u2("button", { variant: props.variant, class: props.class, type: "button", onclick: `location.href='${props.url || "#"}';`, children: [
-  props.icon && /* @__PURE__ */ u2(FeatherIcon, { globals: props.globals, icon: props.icon, variant: props.variant }),
-  props.children
-] });
+var IconButton = (props) => /* @__PURE__ */ u2(
+  "button",
+  {
+    variant: props.variant,
+    class: props.class,
+    type: "button",
+    onclick: `location.href='${props.globals.baseUrl}${props.url || "#"}';`,
+    children: [
+      props.icon && /* @__PURE__ */ u2(
+        FeatherIcon,
+        {
+          globals: props.globals,
+          icon: props.icon,
+          variant: props.variant
+        }
+      ),
+      props.children
+    ]
+  }
+);
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/button-segment/button-segment.jsx
 var ButtonSegment = (props) => {
@@ -490,10 +438,10 @@ var FooterNavigation = (props) => /* @__PURE__ */ u2("footer-navigation", { chil
       /* @__PURE__ */ u2(Segment, { globals: props.globals, menu: props.mainMenu, pageUrl: props.pageUrl }),
       /* @__PURE__ */ u2(Segment, { globals: props.globals, menu: props.socialMenu })
     ] }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${navigation_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${navigation_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${footer_navigation_ce_default}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${footer_navigation_ce_default}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/header-navigation/branding.jsx
@@ -537,10 +485,10 @@ var HeaderNavigation = (props) => {
           )
         ] })
       ] }),
-      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${navigation_ce_default}` })
+      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${navigation_ce_default}` })
     ] }),
-    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${header_navigation_ce_default}` })
+    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${header_navigation_ce_default}` })
   ] });
 };
 
@@ -560,10 +508,10 @@ var LegalNavigation = (props) => /* @__PURE__ */ u2("legal-navigation", { childr
         /* @__PURE__ */ u2("sup", { children: props.globals.metadata.version })
       ] })
     ] }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${legal_navigation_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${legal_navigation_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${legal_navigation_ce_default2}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${legal_navigation_ce_default2}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/hero-topic/hero-topic.ce.css
@@ -591,7 +539,7 @@ var TopicCore = (props) => {
       {
         globals: props.globals,
         id: "topic-picture",
-        src: `${props.globals.assetUrlPrefix}/${props.images[props.topic.image]}`,
+        src: `${props.globals.baseUrl}${props.globals.assetUrl}${props.images[props.topic.image]}`,
         sizes: props.imageSizes
       }
     ),
@@ -633,10 +581,10 @@ var HeroTopic = (props) => {
           topic: props.topic
         }
       ),
-      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${hero_topic_ce_default}` })
+      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+      /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${hero_topic_ce_default}` })
     ] }),
-    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${hero_topic_ce_default2}` })
+    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${hero_topic_ce_default2}` })
   ] });
 };
 
@@ -666,10 +614,10 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
         onClick: `location.href='${props.topic.action?.url || "#"}';`
       }
     ),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${card_topic_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${card_topic_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${card_topic_ce_default2}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${card_topic_ce_default2}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/profile-topic/profile-topic.ce.css
@@ -697,10 +645,10 @@ var ProfileTopic = (props) => /* @__PURE__ */ u2("profile-topic", { children: [
         topic: props.topic
       }
     ),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${profile_topic_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${profile_topic_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${profile_topic_ce_default2}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${profile_topic_ce_default2}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/quote-topic/quote-topic.ce.css
@@ -728,10 +676,10 @@ var QuoteTopic = (props) => /* @__PURE__ */ u2("quote-topic", { children: [
         topic: props.topic
       }
     ),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${quote_topic_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${quote_topic_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${quote_topic_ce_default2}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${quote_topic_ce_default2}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/headline-topic/headline-topic.ce.css
@@ -759,10 +707,10 @@ var HeadlineTopic = (props) => /* @__PURE__ */ u2("headline-topic", { children: 
         topic: props.topic
       }
     ),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${headline_topic_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${headline_topic_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${headline_topic_ce_default2}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${headline_topic_ce_default2}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/block-topic/block-topic.ce.css
@@ -790,10 +738,10 @@ var BlockTopic = (props) => /* @__PURE__ */ u2("block-topic", { children: [
         topic: props.topic
       }
     ),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${block_topic_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${block_topic_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${block_topic_ce_default2}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${block_topic_ce_default2}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/featured-topic/featured-topic.ce.css
@@ -821,10 +769,10 @@ var FeaturedTopic = (props) => /* @__PURE__ */ u2("featured-topic", { children: 
         topic: props.topic
       }
     ),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${featured_topic_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${featured_topic_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${featured_topic_ce_default2}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${featured_topic_ce_default2}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/showcase-topic/showcase-topic.ce.css
@@ -853,10 +801,10 @@ var ShowcaseTopic = (props) => /* @__PURE__ */ u2("showcase-topic", { children: 
         actionElement: "link"
       }
     ),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${showcase_topic_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${showcase_topic_ce_default}` })
   ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${showcase_topic_ce_default2}` })
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${showcase_topic_ce_default2}` })
 ] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/topic/topic/topic.jsx
@@ -894,42 +842,6 @@ var Topic = (props) => {
   return /* @__PURE__ */ u2(TopicElement, { ...props });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/topic-list/topic-list.jsx
-var TopicList = (props) => {
-  const topicVariant = props.topicVariant || "block";
-  let ListElement;
-  switch (props.variant) {
-    case "one-column":
-      ListElement = OneColumnLayout;
-      break;
-    case "two-column":
-      ListElement = TwoColumnLayout;
-      break;
-    case "three-column":
-      ListElement = ThreeColumnLayout;
-      break;
-    case "four-column":
-      ListElement = FourColumnLayout;
-      break;
-    case "carousel":
-      ListElement = CarouselLayout;
-      break;
-    default:
-      ListElement = TwoColumnLayout;
-      break;
-  }
-  const topicElements = props.topics.map((topicElement) => /* @__PURE__ */ u2(
-    Topic,
-    {
-      variant: topicVariant,
-      topic: topicElement,
-      images: props.images,
-      globals: props.globals
-    }
-  ));
-  return /* @__PURE__ */ u2(ListElement, { ...props, children: topicElements });
-};
-
 // node_modules/@jaccomeijer/green-lib/src/package/layouts/esbuild-reload.ce.js
 var esbuild_reload_ce_default = "./esbuild-reload.ce-ZYHERQPM.js";
 
@@ -946,9 +858,9 @@ var Head = (props) => {
     ] }),
     /* @__PURE__ */ u2("meta", { name: "description", content: frontmatter2.description || props.globals.metadata.description }),
     /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.generator }),
-    /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.assetUrlPrefix}/${props.favicon}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.assetUrlPrefix}/${global_bundle_default}` }),
-    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.assetUrlPrefix}/${esbuild_reload_ce_default}` })
+    /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
   ] });
 };
 
@@ -1029,14 +941,38 @@ var getMenuItems = ({ pages }) => {
   return nestedMenuItems;
 };
 
-// src/data/globals.js
-var globals = {
-  assetUrlPrefix: "/green-reference/assets",
+// src/data/config.js
+var buildConfig = {
+  assetUrl: "/assets/",
+  baseUrl: "/green-reference",
+  outdir: "docs",
+  serve: false
+};
+var serveConfig = {
+  assetUrl: "/assets/",
+  baseUrl: "",
+  outdir: "dist",
+  serve: true
+};
+var config = {
+  entryPointsGlob: "src/pages/**/*.{mdx}",
   imageSizes: {
     s: 300,
     m: 700,
     l: 1e3
   },
+  initialProps: {},
+  removeBundle: false,
+  stripFromOutputPath: "src/pages",
+  ...process.env.MODE === "build" ? buildConfig : {},
+  ...process.env.MODE === "serve" ? serveConfig : {}
+};
+
+// src/data/globals.js
+var globals = {
+  assetUrl: config.assetUrl,
+  baseUrl: config.baseUrl,
+  imageSizes: config.imageSizes,
   metadata: {
     author: {
       name: "Jacco Meijer",
@@ -1123,206 +1059,36 @@ var PageLayout = (props) => {
   ] });
 };
 
-// src/data/topics.js
-var topicData = {
-  block: {
-    heading: "Block",
-    icon: "book-open",
-    abstract: "Blocks give overview to a set of topics. Stacked neatly next to each other they provide a clean display.",
-    action: {
-      heading: "Show block examples",
-      url: "/reference/block"
-    }
-  },
-  card: {
-    heading: "Card",
-    icon: "book-open",
-    abstract: "Cards are on the table. Like cards are supposed to.",
-    action: {
-      heading: "Show card examples",
-      url: "/reference/card"
-    }
-  },
-  featured: {
-    heading: "Featured",
-    icon: "book-open",
-    abstract: "Featured puts it on display. In a spacious room.",
-    action: {
-      heading: "Show featured examples",
-      url: "/reference/featured"
-    }
-  },
-  headline: {
-    heading: "Headline",
-    icon: "book-open",
-    abstract: "Headlines are ideal page openers. Half way on a page they are useful for starting a new section.",
-    action: {
-      heading: "Show headline examples",
-      url: "/reference/headline"
-    }
-  },
-  hero: {
-    heading: "Hero",
-    icon: "book-open",
-    abstract: "Hero puts the message on top of the image.",
-    action: {
-      heading: "Show hero examples",
-      url: "/reference/hero"
-    }
-  },
-  profile: {
-    heading: "Profile",
-    icon: "book-open",
-    abstract: "Profile shows a profile image and tells about a person.file",
-    action: {
-      heading: "Show profile examples",
-      url: "/reference/profile"
-    }
-  },
-  quote: {
-    heading: "Quote",
-    icon: "book-open",
-    abstract: "Quote. No need to explain that.",
-    action: {
-      heading: "Show quote examples",
-      url: "/reference/quote"
-    }
-  },
-  showcase: {
-    heading: "Showcase",
-    icon: "book-open",
-    abstract: "Showcase sets your topics on display in a modest way. Stacked on top of each other, it's a clear line-up.",
-    action: {
-      heading: "Show showcase examples",
-      url: "/reference/showcase"
-    }
-  }
-};
-
 // src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
 var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
 
-// src/pages/reference/card.mdx
+// src/pages/index.mdx
 var frontmatter = {
+  "navigation": {
+    "heading": "Home",
+    "order": 10
+  },
   "topic": {
+    "heading": "Modelberry UI Library",
+    "abstract": "A reference implementation of the Modelberry UI Library.",
     "image": "topicImage",
-    "heading": "Card example topic",
-    "abstract": "This is an example of a topic abstract text.",
     "action": {
-      "heading": "Show featured reference",
-      "url": "/reference/featured"
+      "heading": "Reference",
+      "url": "/reference"
     }
   }
 };
 function _createMdxContent(props) {
-  const _components = {
-    h1: "h1",
-    hr: "hr",
-    ...props.components
-  };
-  return u2(g, {
-    children: [u2(Topic, {
-      globals,
-      topic: {
-        ...topicData.card,
-        action: void 0
-      },
-      variant: "headline"
-    }), "\n", u2("br", {}), "\n", u2(_components.h1, {
-      children: "Single topic"
-    }), "\n", u2(Topic, {
+  return u2("div", {
+    class: "container-full",
+    children: u2(Topic, {
       globals,
       images: {
         topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
       },
       topic: frontmatter.topic,
-      variant: "card"
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Two columns"
-    }), "\n", u2(TwoColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Three columns"
-    }), "\n", u2(ThreeColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Four columns"
-    }), "\n", u2(FourColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "card"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Other references"
-    }), "\n", u2(TopicList, {
-      globals,
-      topics: Object.values(topicData),
-      topicVariant: "card",
-      variant: "three-column"
-    })]
+      variant: "hero"
+    })
   });
 }
 function MDXContent(props = {}) {
