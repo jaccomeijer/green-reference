@@ -1,5 +1,16 @@
-export const config = {
+const buildConfig = {
   assetUrlPrefix: '/green-reference/assets',
+  outdir: 'docs',
+  serve: false,
+}
+
+const serveConfig = {
+  assetUrlPrefix: '/assets',
+  outdir: 'dist',
+  serve: true,
+}
+
+export const config = {
   entryPointsGlob: 'src/pages/**/*.{mdx}',
   imageSizes: {
     s: 300,
@@ -7,8 +18,8 @@ export const config = {
     l: 1000,
   },
   initialProps: {},
-  outdir: 'docs',
   removeBundle: false,
-  serve: false,
   stripFromOutputPath: 'src/pages',
+  ...(process.env.MODE === 'build' ? buildConfig : {}),
+  ...(process.env.MODE === 'serve' ? serveConfig : {}),
 }

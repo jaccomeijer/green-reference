@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Reference implementation of green-lib MDX component library",
   "scripts": {
-    "clean": "rm -rf docs",
-    "build": "npm run clean && node pages.js",
-    "serve": "npm run clean && node pages.js serve"
+    "clean-dist": "rm -rf dist",
+    "clean-docs": "rm -rf docs",
+    "build": "npm run clean-docs && MODE=build node pages.js",
+    "serve": "npm run clean-dist && MODE=serve node pages.js"
   },
   "keywords": [
     "esbuild",
