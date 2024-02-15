@@ -6,7 +6,7 @@ const config = {
   entryPointsGlob: 'src/pages/**/*.{mdx}',
   imageSizes: globals.imageSizes,
   initialProps: {},
-  outdir: 'dist',
+  outdir: 'docs',
   removeBundle: false,
   serve: false,
   stripFromOutputPath: 'src/pages',
