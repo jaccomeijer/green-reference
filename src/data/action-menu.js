@@ -4,8 +4,8 @@ export const actionMenu = [
     url: '/reference',
   },
   {
-    heading: 'modelberry.com',
+    heading: 'jaccomeijer.nl',
     icon: 'external-link',
-    url: 'https://www.modelberry.com',
+    url: 'https://www.jaccomeijer.nl',
   },
 ]
