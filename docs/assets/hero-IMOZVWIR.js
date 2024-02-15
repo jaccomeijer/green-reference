@@ -979,7 +979,7 @@ var Head = (props) => {
     /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.generator }),
     /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
+    props.enableReload && /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
   ] });
 };
 
@@ -1143,6 +1143,7 @@ var PageLayout = (props) => {
     /* @__PURE__ */ u2(
       Head,
       {
+        enableReload: process.env.MODE === "serve",
         favicon: favicon_default,
         globals,
         page: props.page

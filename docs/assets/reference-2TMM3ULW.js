@@ -979,7 +979,7 @@ var Head = (props) => {
     /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.generator }),
     /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
+    props.enableReload && /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
   ] });
 };
 
@@ -1143,6 +1143,7 @@ var PageLayout = (props) => {
     /* @__PURE__ */ u2(
       Head,
       {
+        enableReload: process.env.MODE === "serve",
         favicon: favicon_default,
         globals,
         page: props.page
@@ -1254,55 +1255,24 @@ var topicData = {
   }
 };
 
-// src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
-var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
-
-// src/pages/reference/headline.mdx
+// src/pages/reference.mdx
 var frontmatter = {
+  "navigation": {
+    "heading": "Reference",
+    "order": 20
+  },
   "topic": {
-    "image": "topicImage",
-    "heading": "Headline example topic",
-    "abstract": "This is an example of a topic abstract text.",
-    "action": {
-      "heading": "Show hero reference",
-      "url": "/reference/hero"
-    }
+    "heading": "Reference",
+    "icon": "book-open",
+    "abstract": "A reference implementation of the Modelberry UI Library."
   }
 };
 function _createMdxContent(props) {
-  const _components = {
-    h1: "h1",
-    hr: "hr",
-    ...props.components
-  };
   return u2(g, {
     children: [u2(Topic, {
       globals,
-      topic: {
-        ...topicData.headline,
-        action: void 0
-      },
-      variant: "headline"
-    }), "\n", u2("div", {
-      class: "container-full",
-      children: u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "headline"
-      })
-    }), "\n", u2(_components.hr, {}), "\n", u2(Topic, {
-      globals,
-      images: {
-        topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-      },
-      style: "--image-order: 2",
       topic: frontmatter.topic,
       variant: "headline"
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Other references"
     }), "\n", u2(TopicList, {
       globals,
       topics: Object.values(topicData),
