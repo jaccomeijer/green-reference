@@ -443,13 +443,31 @@ var FeatherIcon = (props) => {
   ] });
 };
 
+// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-action.js
+var parseUrl = ({ globals: globals2, url }) => {
+  if (url && url.startsWith("http")) {
+    return url;
+  }
+  return globals2.baseUrl + (url || "#");
+};
+var getAction = ({ type, globals: globals2, url }) => {
+  switch (type) {
+    case "onclick":
+      return `location.href='${parseUrl({ globals: globals2, url })}';`;
+    case "href":
+      return parseUrl({ globals: globals2, url });
+    default:
+      return "#unknown-type";
+  }
+};
+
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-link/icon-link.jsx
 var IconLink = (props) => /* @__PURE__ */ u2(
   "a",
   {
     variant: props.variant,
     class: props.class,
-    href: props.globals.baseUrl + props.url,
+    href: getAction({ type: "href", globals: props.globals, url: props.url }),
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -471,7 +489,7 @@ var IconButton = (props) => /* @__PURE__ */ u2(
     variant: props.variant,
     class: props.class,
     type: "button",
-    onclick: `location.href='${props.globals.baseUrl}${props.url}';`,
+    onclick: getAction({ type: "onclick", globals: props.globals, url: props.url }),
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -694,7 +712,7 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
         labelVariant: "l",
         style: props.style,
         topic: props.topic,
-        onclick: `location.href='${props.globals.baseUrl}${props.topic.action.url}';`
+        onclick: getAction({ type: "onclick", globals: props.globals, url: props.topic.action.url })
       }
     ),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),

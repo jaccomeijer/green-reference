@@ -443,13 +443,31 @@ var FeatherIcon = (props) => {
   ] });
 };
 
+// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-action.js
+var parseUrl = ({ globals: globals2, url }) => {
+  if (url && url.startsWith("http")) {
+    return url;
+  }
+  return globals2.baseUrl + (url || "#");
+};
+var getAction = ({ type, globals: globals2, url }) => {
+  switch (type) {
+    case "onclick":
+      return `location.href='${parseUrl({ globals: globals2, url })}';`;
+    case "href":
+      return parseUrl({ globals: globals2, url });
+    default:
+      return "#unknown-type";
+  }
+};
+
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-link/icon-link.jsx
 var IconLink = (props) => /* @__PURE__ */ u2(
   "a",
   {
     variant: props.variant,
     class: props.class,
-    href: props.globals.baseUrl + props.url,
+    href: getAction({ type: "href", globals: props.globals, url: props.url }),
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -471,7 +489,7 @@ var IconButton = (props) => /* @__PURE__ */ u2(
     variant: props.variant,
     class: props.class,
     type: "button",
-    onclick: `location.href='${props.globals.baseUrl}${props.url}';`,
+    onclick: getAction({ type: "onclick", globals: props.globals, url: props.url }),
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -694,7 +712,7 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
         labelVariant: "l",
         style: props.style,
         topic: props.topic,
-        onclick: `location.href='${props.globals.baseUrl}${props.topic.action.url}';`
+        onclick: getAction({ type: "onclick", globals: props.globals, url: props.topic.action.url })
       }
     ),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
@@ -1258,15 +1276,15 @@ var topicData = {
 // src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
 var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
 
-// src/pages/reference/profile.mdx
+// src/pages/reference/hero.mdx
 var frontmatter = {
   "topic": {
     "image": "topicImage",
-    "heading": "Profile example topic",
+    "heading": "Hero example topic",
     "abstract": "This is an example of a topic abstract text.",
     "action": {
-      "heading": "Show quote reference",
-      "url": "/reference/quote"
+      "heading": "Show profile reference",
+      "url": "/reference/profile"
     }
   }
 };
@@ -1280,96 +1298,34 @@ function _createMdxContent(props) {
     children: [u2(Topic, {
       globals,
       topic: {
-        ...topicData.profile,
+        ...topicData.hero,
         action: void 0
       },
       variant: "headline"
+    }), "\n", u2("div", {
+      class: "container-full",
+      children: u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "hero"
+      })
     }), "\n", u2(_components.hr, {}), "\n", u2(Topic, {
       globals,
       images: {
         topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
       },
       topic: frontmatter.topic,
-      variant: "profile"
-    }), "\n", u2(_components.hr, {}), "\n", u2(TwoColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "profile"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "profile"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(ThreeColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "profile"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "profile"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "profile"
-      })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(FourColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "profile"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "profile"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "profile"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "profile"
-      })]
+      variant: "hero"
     }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
       children: "Other references"
     }), "\n", u2(TopicList, {
       globals,
-      variant: "three-column",
+      topics: Object.values(topicData),
       topicVariant: "card",
-      topics: Object.values(topicData)
+      variant: "three-column"
     })]
   });
 }

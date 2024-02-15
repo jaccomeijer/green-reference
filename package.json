@@ -34,7 +34,7 @@
   "license": "MIT",
   "devDependencies": {
     "@jaccomeijer/green-build": "1.1.1",
-    "@jaccomeijer/green-lib": "1.2.4",
+    "@jaccomeijer/green-lib": "1.2.5",
     "eslint": "8.56.0",
     "eslint-config-eslint": "9.0.0",
     "eslint-plugin-react": "7.33.2"

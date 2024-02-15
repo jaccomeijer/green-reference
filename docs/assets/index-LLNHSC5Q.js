@@ -291,91 +291,8 @@ function u2(e2, t2, n2, o2, i3, u3) {
   return l.vnode && l.vnode(l2), l2;
 }
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.ce.css
-var three_column_layout_ce_default = "./three-column-layout.ce-7Y7CIUIF.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.ce.js
-var three_column_layout_ce_default2 = "./three-column-layout.ce-CWH3UATK.js";
-
 // node_modules/@jaccomeijer/green-lib/src/package/css/global.bundle.css
 var global_bundle_default = "./global.bundle-WZ4HONYP.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.jsx
-var ThreeColumnLayout = (props) => /* @__PURE__ */ u2("three-column-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${three_column_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${three_column_layout_ce_default2}` })
-] });
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/one-column-layout/one-column-layout.ce.css
-var one_column_layout_ce_default = "./one-column-layout.ce-ZZ2JSS3S.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/one-column-layout/one-column-layout.ce.js
-var one_column_layout_ce_default2 = "./one-column-layout.ce-MKEXO5T3.js";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/one-column-layout/one-column-layout.jsx
-var OneColumnLayout = (props) => /* @__PURE__ */ u2("one-column-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${one_column_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${one_column_layout_ce_default2}` })
-] });
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/four-column-layout/four-column-layout.ce.css
-var four_column_layout_ce_default = "./four-column-layout.ce-3KEALEM2.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/four-column-layout/four-column-layout.ce.js
-var four_column_layout_ce_default2 = "./four-column-layout.ce-SMTOQCMM.js";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/four-column-layout/four-column-layout.jsx
-var FourColumnLayout = (props) => /* @__PURE__ */ u2("four-column-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${four_column_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${four_column_layout_ce_default2}` })
-] });
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/carousel-layout/carousel-layout.ce.css
-var carousel_layout_ce_default = "./carousel-layout.ce-2QGUDORO.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/carousel-layout/carousel-layout.ce.js
-var carousel_layout_ce_default2 = "./carousel-layout.ce-3NJIJ6TV.js";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/carousel-layout/carousel-layout.jsx
-var CarouselLayout = (props) => /* @__PURE__ */ u2("carousel-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: [
-      /* @__PURE__ */ u2("div", { id: "slider", children: props.children }),
-      /* @__PURE__ */ u2("div", { id: "dots" })
-    ] }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${carousel_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${carousel_layout_ce_default2}` })
-] });
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/two-column-layout/two-column-layout.ce.css
-var two_column_layout_ce_default = "./two-column-layout.ce-H4VZ7UUQ.css";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/two-column-layout/two-column-layout.ce.js
-var two_column_layout_ce_default2 = "./two-column-layout.ce-KEIBXCKN.js";
-
-// node_modules/@jaccomeijer/green-lib/src/package/components/layout/two-column-layout/two-column-layout.jsx
-var TwoColumnLayout = (props) => /* @__PURE__ */ u2("two-column-layout", { delay: props.delay, children: [
-  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
-    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${two_column_layout_ce_default}` })
-  ] }),
-  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${two_column_layout_ce_default2}` })
-] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/picture/picture.jsx
 var numberSort = (a2, b2) => {
@@ -443,13 +360,31 @@ var FeatherIcon = (props) => {
   ] });
 };
 
+// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-action.js
+var parseUrl = ({ globals: globals2, url }) => {
+  if (url && url.startsWith("http")) {
+    return url;
+  }
+  return globals2.baseUrl + (url || "#");
+};
+var getAction = ({ type, globals: globals2, url }) => {
+  switch (type) {
+    case "onclick":
+      return `location.href='${parseUrl({ globals: globals2, url })}';`;
+    case "href":
+      return parseUrl({ globals: globals2, url });
+    default:
+      return "#unknown-type";
+  }
+};
+
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-link/icon-link.jsx
 var IconLink = (props) => /* @__PURE__ */ u2(
   "a",
   {
     variant: props.variant,
     class: props.class,
-    href: props.globals.baseUrl + props.url,
+    href: getAction({ type: "href", globals: props.globals, url: props.url }),
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -471,7 +406,7 @@ var IconButton = (props) => /* @__PURE__ */ u2(
     variant: props.variant,
     class: props.class,
     type: "button",
-    onclick: `location.href='${props.globals.baseUrl}${props.url}';`,
+    onclick: getAction({ type: "onclick", globals: props.globals, url: props.url }),
     children: [
       props.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -694,7 +629,7 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
         labelVariant: "l",
         style: props.style,
         topic: props.topic,
-        onclick: `location.href='${props.globals.baseUrl}${props.topic.action.url}';`
+        onclick: getAction({ type: "onclick", globals: props.globals, url: props.topic.action.url })
       }
     ),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
@@ -925,42 +860,6 @@ var Topic = (props) => {
   return /* @__PURE__ */ u2(TopicElement, { ...props });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/topic-list/topic-list.jsx
-var TopicList = (props) => {
-  const topicVariant = props.topicVariant || "block";
-  let ListElement;
-  switch (props.variant) {
-    case "one-column":
-      ListElement = OneColumnLayout;
-      break;
-    case "two-column":
-      ListElement = TwoColumnLayout;
-      break;
-    case "three-column":
-      ListElement = ThreeColumnLayout;
-      break;
-    case "four-column":
-      ListElement = FourColumnLayout;
-      break;
-    case "carousel":
-      ListElement = CarouselLayout;
-      break;
-    default:
-      ListElement = TwoColumnLayout;
-      break;
-  }
-  const topicElements = props.topics.map((topicElement) => /* @__PURE__ */ u2(
-    Topic,
-    {
-      variant: topicVariant,
-      topic: topicElement,
-      images: props.images,
-      globals: props.globals
-    }
-  ));
-  return /* @__PURE__ */ u2(ListElement, { ...props, children: topicElements });
-};
-
 // node_modules/@jaccomeijer/green-lib/src/package/layouts/esbuild-reload.ce.js
 var esbuild_reload_ce_default = "./esbuild-reload.ce-ZYHERQPM.js";
 
@@ -1179,136 +1078,36 @@ var PageLayout = (props) => {
   ] });
 };
 
-// src/data/topics.js
-var topicData = {
-  block: {
-    heading: "Block",
-    icon: "book-open",
-    abstract: "Blocks give overview to a set of topics. Stacked neatly next to each other they provide a clean display.",
-    action: {
-      heading: "Show block examples",
-      url: "/reference/block"
-    }
-  },
-  card: {
-    heading: "Card",
-    icon: "book-open",
-    abstract: "Cards are on the table. Like cards are supposed to.",
-    action: {
-      heading: "Show card examples",
-      url: "/reference/card"
-    }
-  },
-  featured: {
-    heading: "Featured",
-    icon: "book-open",
-    abstract: "Featured puts it on display. In a spacious room.",
-    action: {
-      heading: "Show featured examples",
-      url: "/reference/featured"
-    }
-  },
-  headline: {
-    heading: "Headline",
-    icon: "book-open",
-    abstract: "Headlines are ideal page openers. Half way on a page they are useful for starting a new section.",
-    action: {
-      heading: "Show headline examples",
-      url: "/reference/headline"
-    }
-  },
-  hero: {
-    heading: "Hero",
-    icon: "book-open",
-    abstract: "Hero puts the message on top of the image.",
-    action: {
-      heading: "Show hero examples",
-      url: "/reference/hero"
-    }
-  },
-  profile: {
-    heading: "Profile",
-    icon: "book-open",
-    abstract: "Profile shows a profile image and tells about a person.file",
-    action: {
-      heading: "Show profile examples",
-      url: "/reference/profile"
-    }
-  },
-  quote: {
-    heading: "Quote",
-    icon: "book-open",
-    abstract: "Quote. No need to explain that.",
-    action: {
-      heading: "Show quote examples",
-      url: "/reference/quote"
-    }
-  },
-  showcase: {
-    heading: "Showcase",
-    icon: "book-open",
-    abstract: "Showcase sets your topics on display in a modest way. Stacked on top of each other, it's a clear line-up.",
-    action: {
-      heading: "Show showcase examples",
-      url: "/reference/showcase"
-    }
-  }
-};
-
 // src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
 var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
 
-// src/pages/reference/hero.mdx
+// src/pages/index.mdx
 var frontmatter = {
+  "navigation": {
+    "heading": "Home",
+    "order": 10
+  },
   "topic": {
+    "heading": "Modelberry UI Library",
+    "abstract": "A reference implementation of the Modelberry UI Library.",
     "image": "topicImage",
-    "heading": "Hero example topic",
-    "abstract": "This is an example of a topic abstract text.",
     "action": {
-      "heading": "Show profile reference",
-      "url": "/reference/profile"
+      "heading": "Reference",
+      "url": "/reference"
     }
   }
 };
 function _createMdxContent(props) {
-  const _components = {
-    h1: "h1",
-    hr: "hr",
-    ...props.components
-  };
-  return u2(g, {
-    children: [u2(Topic, {
-      globals,
-      topic: {
-        ...topicData.hero,
-        action: void 0
-      },
-      variant: "headline"
-    }), "\n", u2("div", {
-      class: "container-full",
-      children: u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "hero"
-      })
-    }), "\n", u2(_components.hr, {}), "\n", u2(Topic, {
+  return u2("div", {
+    class: "container-full",
+    children: u2(Topic, {
       globals,
       images: {
         topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
       },
       topic: frontmatter.topic,
       variant: "hero"
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Other references"
-    }), "\n", u2(TopicList, {
-      globals,
-      topics: Object.values(topicData),
-      topicVariant: "card",
-      variant: "three-column"
-    })]
+    })
   });
 }
 function MDXContent(props = {}) {
