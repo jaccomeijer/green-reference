@@ -2,14 +2,14 @@ import { Head } from '@jaccomeijer/green-lib'
 import { HeaderNavigation } from '@jaccomeijer/green-lib'
 import { FooterNavigation } from '@jaccomeijer/green-lib'
 import { LegalNavigation } from '@jaccomeijer/green-lib'
-import { getMenuItems } from '@jaccomeijer/green-lib'
+import { getMenuActions } from '@jaccomeijer/green-lib'
 import { globals } from '../data/globals.js'
 import { actionMenu } from "../data/action-menu.js"
 import { socialMenu } from "../data/social-menu.js"
 import favicon from '../assets/favicon/favicon.ico'
 
 export const PageLayout = props => {
-  const mainMenu = getMenuItems({
+  const mainMenu = getMenuActions({
     pages: props.pages,
   })
 
