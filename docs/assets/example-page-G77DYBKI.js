@@ -298,7 +298,7 @@ var three_column_layout_ce_default = "./three-column-layout.ce-7Y7CIUIF.css";
 var three_column_layout_ce_default2 = "./three-column-layout.ce-CWH3UATK.js";
 
 // node_modules/@jaccomeijer/green-lib/src/package/css/global.bundle.css
-var global_bundle_default = "./global.bundle-YT3MDYPT.css";
+var global_bundle_default = "./global.bundle-NLPX7W4L.css";
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.jsx
 var ThreeColumnLayout = (props) => /* @__PURE__ */ u2("three-column-layout", { delay: props.delay, children: [
@@ -390,7 +390,7 @@ var Picture = (props) => {
     width: props.globals.imageSizes[name]
   })).sort(numberSort);
   const lowestWidth = sizesArray.pop();
-  return /* @__PURE__ */ u2("picture", { id: props.id, children: [
+  return /* @__PURE__ */ u2("picture", { id: props.id, class: props.class, children: [
     sizesArray.map((size) => /* @__PURE__ */ u2(
       "source",
       {
@@ -403,7 +403,7 @@ var Picture = (props) => {
       "img",
       {
         src: `${imageBasePath}-${lowestWidth.name}.webp`,
-        alt: props.alt || "Image"
+        alt: props.alt || "Image without description"
       }
     )
   ] });
@@ -444,29 +444,22 @@ var FeatherIcon = (props) => {
 };
 
 // node_modules/@jaccomeijer/green-lib/src/package/layouts/get-action.js
-var parseUrl = ({ globals: globals2, url }) => {
-  if (url && url.startsWith("http")) {
-    return url;
+var parseUrl = ({ globals: globals2, action }) => {
+  if (action?.url && action.url.startsWith("http")) {
+    return action.url;
   }
-  return globals2.baseUrl + (url || "#");
+  return globals2.baseUrl + (action?.url || "#");
 };
-var getAction = ({ type, globals: globals2, url }) => {
-  switch (type) {
-    case "onclick":
-      return `location.href='${parseUrl({ globals: globals2, url })}';`;
-    case "href":
-      return parseUrl({ globals: globals2, url });
-    default:
-      return "#unknown-type";
-  }
-};
+var getOnClickAction = ({ globals: globals2, action }) => `location.href='${parseUrl({ globals: globals2, action })}';`;
+var getHrefAction = ({ globals: globals2, action }) => parseUrl({ globals: globals2, action });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-link/icon-link.jsx
 var IconLink = (props) => /* @__PURE__ */ u2(
   "a",
   {
+    "aria-label": props.action.icon,
     class: props.class,
-    href: getAction({ type: "href", globals: props.globals, url: props.action.url }),
+    href: getHrefAction({ globals: props.globals, action: props.action }),
     id: props.id,
     variant: props.variant,
     children: [
@@ -487,10 +480,11 @@ var IconLink = (props) => /* @__PURE__ */ u2(
 var IconButton = (props) => /* @__PURE__ */ u2(
   "button",
   {
+    "aria-label": props.action.icon,
     variant: props.variant,
     class: props.class,
     type: "button",
-    onclick: getAction({ type: "onclick", globals: props.globals, url: props.action.url }),
+    onclick: getOnClickAction({ globals: props.globals, action: props.action }),
     children: [
       props.action.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -508,12 +502,12 @@ var IconButton = (props) => /* @__PURE__ */ u2(
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/button-segment/button-segment.jsx
 var ButtonSegment = (props) => {
   const menu = props.menu || [];
-  return /* @__PURE__ */ u2("div", { class: "button-segment", children: menu.map((item) => /* @__PURE__ */ u2(
+  return /* @__PURE__ */ u2("div", { class: "button-segment", children: menu.map((action) => /* @__PURE__ */ u2(
     IconButton,
     {
+      action,
       globals: props.globals,
-      variant: "s",
-      action: item
+      variant: "s"
     }
   )) });
 };
@@ -527,11 +521,11 @@ var footer_navigation_ce_default = "./footer-navigation.ce-IGZTHGPJ.js";
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/segment/segment.jsx
 var Segment = (props) => {
   const menu = props.menu || [];
-  return /* @__PURE__ */ u2("ul", { class: "navigation-segment", children: menu.map((item) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
+  return /* @__PURE__ */ u2("ul", { class: "navigation-segment", children: menu.map((action) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
     IconLink,
     {
-      action: item,
-      class: props.pageUrl === item.url && "active",
+      action,
+      class: props.pageUrl === action.url && "active",
       globals: props.globals,
       variant: "s"
     }
@@ -646,10 +640,10 @@ var TopicCore = (props) => {
     props.topic.image && /* @__PURE__ */ u2(
       Picture,
       {
+        alt: props.topic.imageDescription,
         globals: props.globals,
         id: "topic-picture",
-        src: `${props.globals.baseUrl}${props.globals.assetUrl}${props.images[props.topic.image]}`,
-        sizes: props.imageSizes
+        src: `${props.globals.baseUrl}${props.globals.assetUrl}${props.images[props.topic.image]}`
       }
     ),
     /* @__PURE__ */ u2("div", { id: "topic-content", children: [
@@ -658,8 +652,8 @@ var TopicCore = (props) => {
         {
           globals: props.globals,
           icon: props.topic.icon,
-          variant: iconVariant,
-          strokeWidth: iconStrokeWidth
+          strokeWidth: iconStrokeWidth,
+          variant: iconVariant
         }
       ),
       props.topic.labels && /* @__PURE__ */ u2("div", { id: "topic-labels", children: /* @__PURE__ */ u2("p", { variant: labelVariant, children: props.topic.labels?.map((label) => /* @__PURE__ */ u2(g, { children: [
@@ -673,13 +667,19 @@ var TopicCore = (props) => {
       props.topic.action && actionElement === "button" && /* @__PURE__ */ u2(
         IconButton,
         {
-          variant: actionVariant,
-          globals: props.globals,
           action: props.topic.action,
-          url: props.topic.action.url
+          globals: props.globals,
+          variant: actionVariant
         }
       ),
-      props.topic.action && actionElement === "link" && /* @__PURE__ */ u2(IconLink, { globals: props.globals, variant: actionVariant, action: props.topic.action })
+      props.topic.action && actionElement === "link" && /* @__PURE__ */ u2(
+        IconLink,
+        {
+          action: props.topic.action,
+          globals: props.globals,
+          variant: actionVariant
+        }
+      )
     ] })
   ] });
 };
@@ -736,7 +736,7 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
         labelVariant: "l",
         style: props.style,
         topic: props.topic,
-        onclick: getAction({ type: "onclick", globals: props.globals, url: props.topic.action.url })
+        onclick: getOnClickAction({ globals: props.globals, action: props.topic.action })
       }
     ),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
@@ -1006,27 +1006,8 @@ var TopicList = (props) => {
 // node_modules/@jaccomeijer/green-lib/src/package/layouts/esbuild-reload.ce.js
 var esbuild_reload_ce_default = "./esbuild-reload.ce-ZYHERQPM.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/head.jsx
-var Head = (props) => {
-  const frontmatter2 = props.page.frontmatter;
-  return /* @__PURE__ */ u2("head", { children: [
-    /* @__PURE__ */ u2("meta", { charset: "utf-8" }),
-    /* @__PURE__ */ u2("meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }),
-    /* @__PURE__ */ u2("title", { children: [
-      props.globals.metadata.branding.heading,
-      " - ",
-      frontmatter2.title || frontmatter2.navigation?.heading
-    ] }),
-    /* @__PURE__ */ u2("meta", { name: "description", content: frontmatter2.description || props.globals.metadata.branding.description }),
-    /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.content.generator }),
-    /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    props.enableReload && /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
-  ] });
-};
-
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-menu-items.js
-var getMenuItems = ({ pages }) => {
+// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-menu-actions.js
+var getMenuActions = ({ pages }) => {
   const menuItems = pages.filter((page) => page.frontmatter.navigation?.heading).map((page) => {
     const frontmatter2 = page.frontmatter;
     const navigation = frontmatter2.navigation;
@@ -1100,6 +1081,25 @@ var getMenuItems = ({ pages }) => {
     item.children.sort(numberSort2);
   });
   return nestedMenuItems;
+};
+
+// node_modules/@jaccomeijer/green-lib/src/package/layouts/head.jsx
+var Head = (props) => {
+  const frontmatter2 = props.page.frontmatter;
+  return /* @__PURE__ */ u2("head", { children: [
+    /* @__PURE__ */ u2("meta", { charset: "utf-8" }),
+    /* @__PURE__ */ u2("meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }),
+    /* @__PURE__ */ u2("title", { children: [
+      props.globals.metadata.branding.heading,
+      " - ",
+      frontmatter2.title || frontmatter2.navigation?.heading
+    ] }),
+    /* @__PURE__ */ u2("meta", { name: "description", content: frontmatter2.description || props.globals.metadata.branding.description }),
+    /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.content.generator }),
+    /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    props.enableReload && /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
+  ] });
 };
 
 // src/data/config.js
@@ -1184,10 +1184,10 @@ var favicon_default = "./favicon-WMNGZEA5.ico";
 
 // src/layouts/page-layout.jsx
 var PageLayout = (props) => {
-  const mainMenu = getMenuItems({
+  const mainMenu = getMenuActions({
     pages: props.pages
   });
-  return /* @__PURE__ */ u2("html", { lang: globals.metadata.language, children: [
+  return /* @__PURE__ */ u2("html", { lang: globals.metadata.content.language, children: [
     /* @__PURE__ */ u2(
       Head,
       {
@@ -1277,7 +1277,7 @@ var topicData = {
   profile: {
     heading: "Profile",
     icon: "book-open",
-    abstract: "Profile shows a profile image and tells about a person.file",
+    abstract: "Profile shows a profile image and tells about a person.",
     action: {
       heading: "Show profile examples",
       url: "/reference/profile"
@@ -1303,66 +1303,179 @@ var topicData = {
   }
 };
 
-// src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
-var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
+// src/assets/images/simon-lee-zft-W1kVEhg-unsplash.jpg
+var simon_lee_zft_W1kVEhg_unsplash_default = "./simon-lee-zft-W1kVEhg-unsplash-4L7LGD7K.jpg";
 
-// src/pages/reference/showcase.mdx
+// src/pages/example-page.mdx
 var frontmatter = {
+  "navigation": {
+    "heading": "Example page",
+    "order": 30
+  },
   "topic": {
-    "image": "topicImage",
-    "heading": "Showcase example topic",
-    "abstract": "This is an example of a topic abstract text.",
-    "action": {
-      "heading": "Show block reference",
-      "url": "/reference/block"
-    }
+    "heading": "Example page",
+    "icon": "globe",
+    "abstract": "Text is free style. Have it your own, including headings, images and all that."
+  },
+  "imageTopic": {
+    "heading": "Demo topic for example page",
+    "icon": "globe",
+    "abstract": "This topic has an image, a two line heading and a longer abstract, all for demo purposes.",
+    "image": "demoImage"
   }
 };
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
+    code: "code",
+    em: "em",
     h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    h5: "h5",
+    h6: "h6",
     hr: "hr",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
     ...props.components
   };
   return u2(g, {
     children: [u2(Topic, {
       globals,
-      topic: {
-        ...topicData.showcase,
-        action: void 0
-      },
-      variant: "headline"
-    }), "\n", u2(_components.hr, {}), "\n", u2(Topic, {
-      globals,
-      images: {
-        topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-      },
       topic: frontmatter.topic,
-      variant: "showcase"
-    }), "\n", u2(_components.hr, {}), "\n", u2(TwoColumnLayout, {
-      globals,
-      children: [u2(Topic, {
+      variant: "headline"
+    }), "\n", u2(_components.hr, {}), "\n", u2("div", {
+      class: "container",
+      style: "--container-width: 700px",
+      children: [u2(_components.h1, {
+        children: "Heading 1"
+      }), u2(_components.ul, {
+        children: ["\n", u2(_components.li, {
+          children: "Cras felis magna, imperdiet eu turpis ut, dignissim lorum ipsum venenatis\njusto."
+        }), "\n", u2(_components.li, {
+          children: "Nullam cursus fermentum risus nec semper."
+        }), "\n", u2(_components.li, {
+          children: "Fusce ornare ipsum et facilisis consequat."
+        }), "\n"]
+      }), u2(_components.ol, {
+        children: ["\n", u2(_components.li, {
+          children: "Donec tincidunt ut arcu ac sagittis."
+        }), "\n", u2(_components.li, {
+          children: "Nulla condimentum consectetur tristique."
+        }), "\n", u2(_components.li, {
+          children: "Integer eu consectetur libero, et ullamcorper felis."
+        }), "\n"]
+      }), u2(_components.p, {
+        children: ["Integer ", u2(_components.strong, {
+          children: "tempus"
+        }), " turpis vel ornare pulvinar. Nulla ", u2(_components.em, {
+          children: "facilisis"
+        }), " leo lectus, nec\neuismod magna vulputate et. Duis vel velit quam. Cras interdum aliquet\nefficitur. Integer accumsan ", u2(_components.em, {
+          children: u2(_components.strong, {
+            children: "maximus"
+          })
+        }), " purus, at dignissim augue dapibus in."]
+      }), u2(_components.p, {
+        children: u2(_components.code, {
+          children: "Nulla et libero arcu. In convallis sed leo eget dictum."
+        })
+      }), u2(_components.p, {
+        children: "Integer vitae elit sapien. Ut congue arcu mauris, non dictum ipsum viverra eget.\nDuis et ultricies lorem."
+      }), u2(_components.h2, {
+        children: "Heading 2"
+      }), u2(_components.p, {
+        children: "Sed ac augue at nisi fringilla iaculis vitae ac metus. In in iaculis nunc."
+      }), u2(_components.pre, {
+        children: u2(_components.code, {
+          className: "hljs language-text",
+          children: "Aliquam eu ultrices nisi.\n"
+        })
+      }), u2(_components.p, {
+        children: "Maecenas consectetur justo non nibh efficitur pellentesque. Donec scelerisque\nnisi ac tortor porta mollis. Proin lacinia volutpat odio, eu interdum eros\nullamcorper sed."
+      }), u2(_components.hr, {}), u2(_components.p, {
+        children: "Etiam eget risus ac lorem dignissim vestibulum nec quis felis. Nullam\nscelerisque, sem sit amet tempus interdum, libero mi vehicula sem, ac volutpat\nurna nibh ut orci. Donec metus ex, luctus quis egestas at, placerat sed tortor."
+      }), u2(_components.h3, {
+        children: "Heading 3"
+      }), u2(_components.p, {
+        children: "Integer vitae elit sapien. Ut congue arcu mauris, non dictum ipsum viverra eget.\nDuis et ultricies lorem. Nulla at varius arcu. Integer tristique mattis ante eu\nbibendum. Quisque maximus orci eget justo venenatis posuere."
+      }), u2(_components.ul, {
+        children: ["\n", u2(_components.li, {
+          children: ["This is a link to an ", u2("a", {
+            href: `${globals.baseUrl}${globals.assetUrl}${simon_lee_zft_W1kVEhg_unsplash_default}`,
+            children: "image"
+          })]
+        }), "\n", u2(_components.li, {
+          children: ["This ia a link to ", u2(_components.a, {
+            href: "https://www.jaccomeijer.nl",
+            children: "jaccomeijer.nl"
+          })]
+        }), "\n"]
+      }), u2(_components.p, {
+        children: "Sed velit sapien, sagittis quis ligula eu, molestie ornare eros. Etiam lobortis\nsagittis orci volutpat maximus."
+      }), u2("div", {
+        class: "container-full margin-top-6 margin-bottom-6",
+        children: u2(Topic, {
+          globals,
+          images: {
+            demoImage: simon_lee_zft_W1kVEhg_unsplash_default
+          },
+          style: "--container-width: 700px",
+          topic: frontmatter.imageTopic,
+          variant: "headline"
+        })
+      }), u2(_components.p, {
+        children: "Phasellus commodo magna id mauris aliquet, vel fermentum massa malesuada.\nMaecenas placerat velit non iaculis commodo. Nam ac auctor ante, sed tincidunt\nlibero. Curabitur venenatis mi ac urna pellentesque, ut ornare ipsum malesuada."
+      }), u2(_components.h4, {
+        children: "Heading 4"
+      }), u2(_components.p, {
+        children: "Fusce tincidunt a nunc et fringilla. Nulla in nunc eget sapien finibus venenatis\nut non orci. Suspendisse nec orci est. Duis id turpis quis mauris venenatis\ncondimentum."
+      }), u2(Picture, {
+        class: "md-picture",
         globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "showcase"
+        id: "topic-picture",
+        src: `${globals.baseUrl}${globals.assetUrl}/${simon_lee_zft_W1kVEhg_unsplash_default}`
+      }), u2(_components.p, {
+        children: "Maecenas nisl nulla, laoreet sed lectus id, commodo euismod lorem. Praesent\ntempus pulvinar sapien maximus placerat. Praesent ligula orci, egestas a mattis\nac, ullamcorper tempor eros. Sed a pharetra leo. Etiam dapibus sem at neque\nfaucibus, at porta mauris accumsan. Nullam tellus nunc, elementum in nibh sit\namet, ultricies bibendum magna. Suspendisse potenti."
+      }), u2(_components.h5, {
+        children: "Heading 5"
+      }), u2(_components.p, {
+        children: "Nulla facilisi. In porta auctor lorem blandit convallis. Phasellus quis sapien\nelit. Nullam mollis, nisi ac blandit consequat, sapien ligula suscipit libero,\net vulputate velit sapien ut elit. Vivamus dolor risus, tempus sit amet erat id,\nsagittis pellentesque odio."
       }), u2(Topic, {
         globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
         topic: frontmatter.topic,
-        variant: "showcase"
+        variant: "headline"
+      }), u2(_components.p, {
+        children: "Fusce id quam nulla. Mauris ac eros et erat dapibus gravida a ac justo. Integer\nsit amet elit dui. Fusce porta volutpat porttitor."
+      }), u2(_components.h6, {
+        children: "Heading 6"
+      }), u2(_components.p, {
+        children: "Cras felis magna, imperdiet eu turpis ut, dignissim venenatis justo. Nullam\ncursus fermentum risus nec semper. Fusce ornare ipsum et facilisis consequat."
+      }), u2("div", {
+        class: "container-full margin-top-6 margin-bottom-6",
+        children: u2(Topic, {
+          globals,
+          images: {
+            demoImage: simon_lee_zft_W1kVEhg_unsplash_default
+          },
+          style: "--container-width: 700px",
+          topic: frontmatter.imageTopic,
+          variant: "hero"
+        })
+      }), u2(_components.p, {
+        children: "Donec tincidunt ut arcu ac sagittis. Nulla condimentum consectetur tristique.\nInteger eu consectetur libero, et ullamcorper felis. Integer tempus turpis vel\nornare pulvinar."
       })]
-    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
-      children: "Other references"
-    }), "\n", u2(TopicList, {
-      globals,
-      topics: Object.values(topicData),
-      topicVariant: "card",
-      variant: "three-column"
+    }), "\n", u2(_components.hr, {}), "\n", u2("nav", {
+      children: u2(TopicList, {
+        globals,
+        topics: Object.values(topicData),
+        topicVariant: "card",
+        variant: "three-column"
+      })
     })]
   });
 }

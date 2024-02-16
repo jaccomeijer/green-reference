@@ -291,8 +291,91 @@ function u2(e2, t2, n2, o2, i3, u3) {
   return l.vnode && l.vnode(l2), l2;
 }
 
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.ce.css
+var three_column_layout_ce_default = "./three-column-layout.ce-7Y7CIUIF.css";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.ce.js
+var three_column_layout_ce_default2 = "./three-column-layout.ce-CWH3UATK.js";
+
 // node_modules/@jaccomeijer/green-lib/src/package/css/global.bundle.css
-var global_bundle_default = "./global.bundle-YT3MDYPT.css";
+var global_bundle_default = "./global.bundle-NLPX7W4L.css";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.jsx
+var ThreeColumnLayout = (props) => /* @__PURE__ */ u2("three-column-layout", { delay: props.delay, children: [
+  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
+    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${three_column_layout_ce_default}` })
+  ] }),
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${three_column_layout_ce_default2}` })
+] });
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/one-column-layout/one-column-layout.ce.css
+var one_column_layout_ce_default = "./one-column-layout.ce-ZZ2JSS3S.css";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/one-column-layout/one-column-layout.ce.js
+var one_column_layout_ce_default2 = "./one-column-layout.ce-MKEXO5T3.js";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/one-column-layout/one-column-layout.jsx
+var OneColumnLayout = (props) => /* @__PURE__ */ u2("one-column-layout", { delay: props.delay, children: [
+  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
+    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${one_column_layout_ce_default}` })
+  ] }),
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${one_column_layout_ce_default2}` })
+] });
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/four-column-layout/four-column-layout.ce.css
+var four_column_layout_ce_default = "./four-column-layout.ce-3KEALEM2.css";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/four-column-layout/four-column-layout.ce.js
+var four_column_layout_ce_default2 = "./four-column-layout.ce-SMTOQCMM.js";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/four-column-layout/four-column-layout.jsx
+var FourColumnLayout = (props) => /* @__PURE__ */ u2("four-column-layout", { delay: props.delay, children: [
+  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
+    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${four_column_layout_ce_default}` })
+  ] }),
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${four_column_layout_ce_default2}` })
+] });
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/carousel-layout/carousel-layout.ce.css
+var carousel_layout_ce_default = "./carousel-layout.ce-2QGUDORO.css";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/carousel-layout/carousel-layout.ce.js
+var carousel_layout_ce_default2 = "./carousel-layout.ce-3NJIJ6TV.js";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/carousel-layout/carousel-layout.jsx
+var CarouselLayout = (props) => /* @__PURE__ */ u2("carousel-layout", { delay: props.delay, children: [
+  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
+    /* @__PURE__ */ u2("div", { id: "root-container", children: [
+      /* @__PURE__ */ u2("div", { id: "slider", children: props.children }),
+      /* @__PURE__ */ u2("div", { id: "dots" })
+    ] }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${carousel_layout_ce_default}` })
+  ] }),
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${carousel_layout_ce_default2}` })
+] });
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/two-column-layout/two-column-layout.ce.css
+var two_column_layout_ce_default = "./two-column-layout.ce-H4VZ7UUQ.css";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/two-column-layout/two-column-layout.ce.js
+var two_column_layout_ce_default2 = "./two-column-layout.ce-KEIBXCKN.js";
+
+// node_modules/@jaccomeijer/green-lib/src/package/components/layout/two-column-layout/two-column-layout.jsx
+var TwoColumnLayout = (props) => /* @__PURE__ */ u2("two-column-layout", { delay: props.delay, children: [
+  /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
+    /* @__PURE__ */ u2("div", { id: "root-container", children: props.children }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${two_column_layout_ce_default}` })
+  ] }),
+  /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${two_column_layout_ce_default2}` })
+] });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/picture/picture.jsx
 var numberSort = (a2, b2) => {
@@ -307,7 +390,7 @@ var Picture = (props) => {
     width: props.globals.imageSizes[name]
   })).sort(numberSort);
   const lowestWidth = sizesArray.pop();
-  return /* @__PURE__ */ u2("picture", { id: props.id, children: [
+  return /* @__PURE__ */ u2("picture", { id: props.id, class: props.class, children: [
     sizesArray.map((size) => /* @__PURE__ */ u2(
       "source",
       {
@@ -320,7 +403,7 @@ var Picture = (props) => {
       "img",
       {
         src: `${imageBasePath}-${lowestWidth.name}.webp`,
-        alt: props.alt || "Image"
+        alt: props.alt || "Image without description"
       }
     )
   ] });
@@ -361,29 +444,22 @@ var FeatherIcon = (props) => {
 };
 
 // node_modules/@jaccomeijer/green-lib/src/package/layouts/get-action.js
-var parseUrl = ({ globals: globals2, url }) => {
-  if (url && url.startsWith("http")) {
-    return url;
+var parseUrl = ({ globals: globals2, action }) => {
+  if (action?.url && action.url.startsWith("http")) {
+    return action.url;
   }
-  return globals2.baseUrl + (url || "#");
+  return globals2.baseUrl + (action?.url || "#");
 };
-var getAction = ({ type, globals: globals2, url }) => {
-  switch (type) {
-    case "onclick":
-      return `location.href='${parseUrl({ globals: globals2, url })}';`;
-    case "href":
-      return parseUrl({ globals: globals2, url });
-    default:
-      return "#unknown-type";
-  }
-};
+var getOnClickAction = ({ globals: globals2, action }) => `location.href='${parseUrl({ globals: globals2, action })}';`;
+var getHrefAction = ({ globals: globals2, action }) => parseUrl({ globals: globals2, action });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-link/icon-link.jsx
 var IconLink = (props) => /* @__PURE__ */ u2(
   "a",
   {
+    "aria-label": props.action.icon,
     class: props.class,
-    href: getAction({ type: "href", globals: props.globals, url: props.action.url }),
+    href: getHrefAction({ globals: props.globals, action: props.action }),
     id: props.id,
     variant: props.variant,
     children: [
@@ -404,10 +480,11 @@ var IconLink = (props) => /* @__PURE__ */ u2(
 var IconButton = (props) => /* @__PURE__ */ u2(
   "button",
   {
+    "aria-label": props.action.icon,
     variant: props.variant,
     class: props.class,
     type: "button",
-    onclick: getAction({ type: "onclick", globals: props.globals, url: props.action.url }),
+    onclick: getOnClickAction({ globals: props.globals, action: props.action }),
     children: [
       props.action.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -425,12 +502,12 @@ var IconButton = (props) => /* @__PURE__ */ u2(
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/button-segment/button-segment.jsx
 var ButtonSegment = (props) => {
   const menu = props.menu || [];
-  return /* @__PURE__ */ u2("div", { class: "button-segment", children: menu.map((item) => /* @__PURE__ */ u2(
+  return /* @__PURE__ */ u2("div", { class: "button-segment", children: menu.map((action) => /* @__PURE__ */ u2(
     IconButton,
     {
+      action,
       globals: props.globals,
-      variant: "s",
-      action: item
+      variant: "s"
     }
   )) });
 };
@@ -444,11 +521,11 @@ var footer_navigation_ce_default = "./footer-navigation.ce-IGZTHGPJ.js";
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/segment/segment.jsx
 var Segment = (props) => {
   const menu = props.menu || [];
-  return /* @__PURE__ */ u2("ul", { class: "navigation-segment", children: menu.map((item) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
+  return /* @__PURE__ */ u2("ul", { class: "navigation-segment", children: menu.map((action) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
     IconLink,
     {
-      action: item,
-      class: props.pageUrl === item.url && "active",
+      action,
+      class: props.pageUrl === action.url && "active",
       globals: props.globals,
       variant: "s"
     }
@@ -563,10 +640,10 @@ var TopicCore = (props) => {
     props.topic.image && /* @__PURE__ */ u2(
       Picture,
       {
+        alt: props.topic.imageDescription,
         globals: props.globals,
         id: "topic-picture",
-        src: `${props.globals.baseUrl}${props.globals.assetUrl}${props.images[props.topic.image]}`,
-        sizes: props.imageSizes
+        src: `${props.globals.baseUrl}${props.globals.assetUrl}${props.images[props.topic.image]}`
       }
     ),
     /* @__PURE__ */ u2("div", { id: "topic-content", children: [
@@ -575,8 +652,8 @@ var TopicCore = (props) => {
         {
           globals: props.globals,
           icon: props.topic.icon,
-          variant: iconVariant,
-          strokeWidth: iconStrokeWidth
+          strokeWidth: iconStrokeWidth,
+          variant: iconVariant
         }
       ),
       props.topic.labels && /* @__PURE__ */ u2("div", { id: "topic-labels", children: /* @__PURE__ */ u2("p", { variant: labelVariant, children: props.topic.labels?.map((label) => /* @__PURE__ */ u2(g, { children: [
@@ -590,13 +667,19 @@ var TopicCore = (props) => {
       props.topic.action && actionElement === "button" && /* @__PURE__ */ u2(
         IconButton,
         {
-          variant: actionVariant,
-          globals: props.globals,
           action: props.topic.action,
-          url: props.topic.action.url
+          globals: props.globals,
+          variant: actionVariant
         }
       ),
-      props.topic.action && actionElement === "link" && /* @__PURE__ */ u2(IconLink, { globals: props.globals, variant: actionVariant, action: props.topic.action })
+      props.topic.action && actionElement === "link" && /* @__PURE__ */ u2(
+        IconLink,
+        {
+          action: props.topic.action,
+          globals: props.globals,
+          variant: actionVariant
+        }
+      )
     ] })
   ] });
 };
@@ -653,7 +736,7 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
         labelVariant: "l",
         style: props.style,
         topic: props.topic,
-        onclick: getAction({ type: "onclick", globals: props.globals, url: props.topic.action.url })
+        onclick: getOnClickAction({ globals: props.globals, action: props.topic.action })
       }
     ),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
@@ -884,30 +967,47 @@ var Topic = (props) => {
   return /* @__PURE__ */ u2(TopicElement, { ...props });
 };
 
+// node_modules/@jaccomeijer/green-lib/src/package/components/topic/topic-list/topic-list.jsx
+var TopicList = (props) => {
+  const topicVariant = props.topicVariant || "block";
+  let ListElement;
+  switch (props.variant) {
+    case "one-column":
+      ListElement = OneColumnLayout;
+      break;
+    case "two-column":
+      ListElement = TwoColumnLayout;
+      break;
+    case "three-column":
+      ListElement = ThreeColumnLayout;
+      break;
+    case "four-column":
+      ListElement = FourColumnLayout;
+      break;
+    case "carousel":
+      ListElement = CarouselLayout;
+      break;
+    default:
+      ListElement = TwoColumnLayout;
+      break;
+  }
+  const topicElements = props.topics.map((topicElement) => /* @__PURE__ */ u2(
+    Topic,
+    {
+      variant: topicVariant,
+      topic: topicElement,
+      images: props.images,
+      globals: props.globals
+    }
+  ));
+  return /* @__PURE__ */ u2(ListElement, { ...props, children: topicElements });
+};
+
 // node_modules/@jaccomeijer/green-lib/src/package/layouts/esbuild-reload.ce.js
 var esbuild_reload_ce_default = "./esbuild-reload.ce-ZYHERQPM.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/head.jsx
-var Head = (props) => {
-  const frontmatter2 = props.page.frontmatter;
-  return /* @__PURE__ */ u2("head", { children: [
-    /* @__PURE__ */ u2("meta", { charset: "utf-8" }),
-    /* @__PURE__ */ u2("meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }),
-    /* @__PURE__ */ u2("title", { children: [
-      props.globals.metadata.branding.heading,
-      " - ",
-      frontmatter2.title || frontmatter2.navigation?.heading
-    ] }),
-    /* @__PURE__ */ u2("meta", { name: "description", content: frontmatter2.description || props.globals.metadata.branding.description }),
-    /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.content.generator }),
-    /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    props.enableReload && /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
-  ] });
-};
-
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-menu-items.js
-var getMenuItems = ({ pages }) => {
+// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-menu-actions.js
+var getMenuActions = ({ pages }) => {
   const menuItems = pages.filter((page) => page.frontmatter.navigation?.heading).map((page) => {
     const frontmatter2 = page.frontmatter;
     const navigation = frontmatter2.navigation;
@@ -981,6 +1081,25 @@ var getMenuItems = ({ pages }) => {
     item.children.sort(numberSort2);
   });
   return nestedMenuItems;
+};
+
+// node_modules/@jaccomeijer/green-lib/src/package/layouts/head.jsx
+var Head = (props) => {
+  const frontmatter2 = props.page.frontmatter;
+  return /* @__PURE__ */ u2("head", { children: [
+    /* @__PURE__ */ u2("meta", { charset: "utf-8" }),
+    /* @__PURE__ */ u2("meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }),
+    /* @__PURE__ */ u2("title", { children: [
+      props.globals.metadata.branding.heading,
+      " - ",
+      frontmatter2.title || frontmatter2.navigation?.heading
+    ] }),
+    /* @__PURE__ */ u2("meta", { name: "description", content: frontmatter2.description || props.globals.metadata.branding.description }),
+    /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.content.generator }),
+    /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    props.enableReload && /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
+  ] });
 };
 
 // src/data/config.js
@@ -1065,10 +1184,10 @@ var favicon_default = "./favicon-WMNGZEA5.ico";
 
 // src/layouts/page-layout.jsx
 var PageLayout = (props) => {
-  const mainMenu = getMenuItems({
+  const mainMenu = getMenuActions({
     pages: props.pages
   });
-  return /* @__PURE__ */ u2("html", { lang: globals.metadata.language, children: [
+  return /* @__PURE__ */ u2("html", { lang: globals.metadata.content.language, children: [
     /* @__PURE__ */ u2(
       Head,
       {
@@ -1108,36 +1227,206 @@ var PageLayout = (props) => {
   ] });
 };
 
+// src/data/topics.js
+var topicData = {
+  block: {
+    heading: "Block",
+    icon: "book-open",
+    abstract: "Blocks give overview to a set of topics. Stacked neatly next to each other they provide a clean display.",
+    action: {
+      heading: "Show block examples",
+      url: "/reference/block"
+    }
+  },
+  card: {
+    heading: "Card",
+    icon: "book-open",
+    abstract: "Cards are on the table. Like cards are supposed to.",
+    action: {
+      heading: "Show card examples",
+      url: "/reference/card"
+    }
+  },
+  featured: {
+    heading: "Featured",
+    icon: "book-open",
+    abstract: "Featured puts it on display. In a spacious room.",
+    action: {
+      heading: "Show featured examples",
+      url: "/reference/featured"
+    }
+  },
+  headline: {
+    heading: "Headline",
+    icon: "book-open",
+    abstract: "Headlines are ideal page openers. Half way on a page they are useful for starting a new section.",
+    action: {
+      heading: "Show headline examples",
+      url: "/reference/headline"
+    }
+  },
+  hero: {
+    heading: "Hero",
+    icon: "book-open",
+    abstract: "Hero puts the message on top of the image.",
+    action: {
+      heading: "Show hero examples",
+      url: "/reference/hero"
+    }
+  },
+  profile: {
+    heading: "Profile",
+    icon: "book-open",
+    abstract: "Profile shows a profile image and tells about a person.",
+    action: {
+      heading: "Show profile examples",
+      url: "/reference/profile"
+    }
+  },
+  quote: {
+    heading: "Quote",
+    icon: "book-open",
+    abstract: "Quote. No need to explain that.",
+    action: {
+      heading: "Show quote examples",
+      url: "/reference/quote"
+    }
+  },
+  showcase: {
+    heading: "Showcase",
+    icon: "book-open",
+    abstract: "Showcase sets your topics on display in a modest way. Stacked on top of each other, it's a clear line-up.",
+    action: {
+      heading: "Show showcase examples",
+      url: "/reference/showcase"
+    }
+  }
+};
+
 // src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
 var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
 
-// src/pages/index.mdx
+// src/pages/reference/card.mdx
 var frontmatter = {
-  "navigation": {
-    "heading": "Home",
-    "order": 10
-  },
   "topic": {
-    "heading": "Green Reference",
-    "abstract": "A reference implementation of the Green UI Library.",
     "image": "topicImage",
+    "heading": "Card example topic",
+    "abstract": "This is an example of a topic abstract text.",
     "action": {
-      "heading": "Reference",
-      "url": "/reference"
+      "heading": "Show featured reference",
+      "url": "/reference/featured"
     }
   }
 };
 function _createMdxContent(props) {
-  return u2("div", {
-    class: "container-full",
-    children: u2(Topic, {
+  const _components = {
+    h1: "h1",
+    hr: "hr",
+    ...props.components
+  };
+  return u2(g, {
+    children: [u2(Topic, {
+      globals,
+      topic: {
+        ...topicData.card,
+        action: void 0
+      },
+      variant: "headline"
+    }), "\n", u2("br", {}), "\n", u2(_components.h1, {
+      children: "Single topic"
+    }), "\n", u2(Topic, {
       globals,
       images: {
         topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
       },
       topic: frontmatter.topic,
-      variant: "hero"
-    })
+      variant: "card"
+    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
+      children: "Two columns"
+    }), "\n", u2(TwoColumnLayout, {
+      globals,
+      children: [u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "card"
+      }), u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "card"
+      })]
+    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
+      children: "Three columns"
+    }), "\n", u2(ThreeColumnLayout, {
+      globals,
+      children: [u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "card"
+      }), u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "card"
+      }), u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "card"
+      })]
+    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
+      children: "Four columns"
+    }), "\n", u2(FourColumnLayout, {
+      globals,
+      children: [u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "card"
+      }), u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "card"
+      }), u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "card"
+      }), u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "card"
+      })]
+    }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
+      children: "Other references"
+    }), "\n", u2(TopicList, {
+      globals,
+      topics: Object.values(topicData),
+      topicVariant: "card",
+      variant: "three-column"
+    })]
   });
 }
 function MDXContent(props = {}) {

@@ -298,7 +298,7 @@ var three_column_layout_ce_default = "./three-column-layout.ce-7Y7CIUIF.css";
 var three_column_layout_ce_default2 = "./three-column-layout.ce-CWH3UATK.js";
 
 // node_modules/@jaccomeijer/green-lib/src/package/css/global.bundle.css
-var global_bundle_default = "./global.bundle-YT3MDYPT.css";
+var global_bundle_default = "./global.bundle-NLPX7W4L.css";
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/layout/three-column-layout/three-column-layout.jsx
 var ThreeColumnLayout = (props) => /* @__PURE__ */ u2("three-column-layout", { delay: props.delay, children: [
@@ -390,7 +390,7 @@ var Picture = (props) => {
     width: props.globals.imageSizes[name]
   })).sort(numberSort);
   const lowestWidth = sizesArray.pop();
-  return /* @__PURE__ */ u2("picture", { id: props.id, children: [
+  return /* @__PURE__ */ u2("picture", { id: props.id, class: props.class, children: [
     sizesArray.map((size) => /* @__PURE__ */ u2(
       "source",
       {
@@ -403,7 +403,7 @@ var Picture = (props) => {
       "img",
       {
         src: `${imageBasePath}-${lowestWidth.name}.webp`,
-        alt: props.alt || "Image"
+        alt: props.alt || "Image without description"
       }
     )
   ] });
@@ -444,29 +444,22 @@ var FeatherIcon = (props) => {
 };
 
 // node_modules/@jaccomeijer/green-lib/src/package/layouts/get-action.js
-var parseUrl = ({ globals: globals2, url }) => {
-  if (url && url.startsWith("http")) {
-    return url;
+var parseUrl = ({ globals: globals2, action }) => {
+  if (action?.url && action.url.startsWith("http")) {
+    return action.url;
   }
-  return globals2.baseUrl + (url || "#");
+  return globals2.baseUrl + (action?.url || "#");
 };
-var getAction = ({ type, globals: globals2, url }) => {
-  switch (type) {
-    case "onclick":
-      return `location.href='${parseUrl({ globals: globals2, url })}';`;
-    case "href":
-      return parseUrl({ globals: globals2, url });
-    default:
-      return "#unknown-type";
-  }
-};
+var getOnClickAction = ({ globals: globals2, action }) => `location.href='${parseUrl({ globals: globals2, action })}';`;
+var getHrefAction = ({ globals: globals2, action }) => parseUrl({ globals: globals2, action });
 
 // node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-link/icon-link.jsx
 var IconLink = (props) => /* @__PURE__ */ u2(
   "a",
   {
+    "aria-label": props.action.icon,
     class: props.class,
-    href: getAction({ type: "href", globals: props.globals, url: props.action.url }),
+    href: getHrefAction({ globals: props.globals, action: props.action }),
     id: props.id,
     variant: props.variant,
     children: [
@@ -487,10 +480,11 @@ var IconLink = (props) => /* @__PURE__ */ u2(
 var IconButton = (props) => /* @__PURE__ */ u2(
   "button",
   {
+    "aria-label": props.action.icon,
     variant: props.variant,
     class: props.class,
     type: "button",
-    onclick: getAction({ type: "onclick", globals: props.globals, url: props.action.url }),
+    onclick: getOnClickAction({ globals: props.globals, action: props.action }),
     children: [
       props.action.icon && /* @__PURE__ */ u2(
         FeatherIcon,
@@ -508,12 +502,12 @@ var IconButton = (props) => /* @__PURE__ */ u2(
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/button-segment/button-segment.jsx
 var ButtonSegment = (props) => {
   const menu = props.menu || [];
-  return /* @__PURE__ */ u2("div", { class: "button-segment", children: menu.map((item) => /* @__PURE__ */ u2(
+  return /* @__PURE__ */ u2("div", { class: "button-segment", children: menu.map((action) => /* @__PURE__ */ u2(
     IconButton,
     {
+      action,
       globals: props.globals,
-      variant: "s",
-      action: item
+      variant: "s"
     }
   )) });
 };
@@ -527,11 +521,11 @@ var footer_navigation_ce_default = "./footer-navigation.ce-IGZTHGPJ.js";
 // node_modules/@jaccomeijer/green-lib/src/package/components/navigation/segment/segment.jsx
 var Segment = (props) => {
   const menu = props.menu || [];
-  return /* @__PURE__ */ u2("ul", { class: "navigation-segment", children: menu.map((item) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
+  return /* @__PURE__ */ u2("ul", { class: "navigation-segment", children: menu.map((action) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
     IconLink,
     {
-      action: item,
-      class: props.pageUrl === item.url && "active",
+      action,
+      class: props.pageUrl === action.url && "active",
       globals: props.globals,
       variant: "s"
     }
@@ -646,10 +640,10 @@ var TopicCore = (props) => {
     props.topic.image && /* @__PURE__ */ u2(
       Picture,
       {
+        alt: props.topic.imageDescription,
         globals: props.globals,
         id: "topic-picture",
-        src: `${props.globals.baseUrl}${props.globals.assetUrl}${props.images[props.topic.image]}`,
-        sizes: props.imageSizes
+        src: `${props.globals.baseUrl}${props.globals.assetUrl}${props.images[props.topic.image]}`
       }
     ),
     /* @__PURE__ */ u2("div", { id: "topic-content", children: [
@@ -658,8 +652,8 @@ var TopicCore = (props) => {
         {
           globals: props.globals,
           icon: props.topic.icon,
-          variant: iconVariant,
-          strokeWidth: iconStrokeWidth
+          strokeWidth: iconStrokeWidth,
+          variant: iconVariant
         }
       ),
       props.topic.labels && /* @__PURE__ */ u2("div", { id: "topic-labels", children: /* @__PURE__ */ u2("p", { variant: labelVariant, children: props.topic.labels?.map((label) => /* @__PURE__ */ u2(g, { children: [
@@ -673,13 +667,19 @@ var TopicCore = (props) => {
       props.topic.action && actionElement === "button" && /* @__PURE__ */ u2(
         IconButton,
         {
-          variant: actionVariant,
-          globals: props.globals,
           action: props.topic.action,
-          url: props.topic.action.url
+          globals: props.globals,
+          variant: actionVariant
         }
       ),
-      props.topic.action && actionElement === "link" && /* @__PURE__ */ u2(IconLink, { globals: props.globals, variant: actionVariant, action: props.topic.action })
+      props.topic.action && actionElement === "link" && /* @__PURE__ */ u2(
+        IconLink,
+        {
+          action: props.topic.action,
+          globals: props.globals,
+          variant: actionVariant
+        }
+      )
     ] })
   ] });
 };
@@ -736,7 +736,7 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
         labelVariant: "l",
         style: props.style,
         topic: props.topic,
-        onclick: getAction({ type: "onclick", globals: props.globals, url: props.topic.action.url })
+        onclick: getOnClickAction({ globals: props.globals, action: props.topic.action })
       }
     ),
     /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
@@ -1006,27 +1006,8 @@ var TopicList = (props) => {
 // node_modules/@jaccomeijer/green-lib/src/package/layouts/esbuild-reload.ce.js
 var esbuild_reload_ce_default = "./esbuild-reload.ce-ZYHERQPM.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/head.jsx
-var Head = (props) => {
-  const frontmatter2 = props.page.frontmatter;
-  return /* @__PURE__ */ u2("head", { children: [
-    /* @__PURE__ */ u2("meta", { charset: "utf-8" }),
-    /* @__PURE__ */ u2("meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }),
-    /* @__PURE__ */ u2("title", { children: [
-      props.globals.metadata.branding.heading,
-      " - ",
-      frontmatter2.title || frontmatter2.navigation?.heading
-    ] }),
-    /* @__PURE__ */ u2("meta", { name: "description", content: frontmatter2.description || props.globals.metadata.branding.description }),
-    /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.content.generator }),
-    /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
-    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
-    props.enableReload && /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
-  ] });
-};
-
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-menu-items.js
-var getMenuItems = ({ pages }) => {
+// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-menu-actions.js
+var getMenuActions = ({ pages }) => {
   const menuItems = pages.filter((page) => page.frontmatter.navigation?.heading).map((page) => {
     const frontmatter2 = page.frontmatter;
     const navigation = frontmatter2.navigation;
@@ -1100,6 +1081,25 @@ var getMenuItems = ({ pages }) => {
     item.children.sort(numberSort2);
   });
   return nestedMenuItems;
+};
+
+// node_modules/@jaccomeijer/green-lib/src/package/layouts/head.jsx
+var Head = (props) => {
+  const frontmatter2 = props.page.frontmatter;
+  return /* @__PURE__ */ u2("head", { children: [
+    /* @__PURE__ */ u2("meta", { charset: "utf-8" }),
+    /* @__PURE__ */ u2("meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }),
+    /* @__PURE__ */ u2("title", { children: [
+      props.globals.metadata.branding.heading,
+      " - ",
+      frontmatter2.title || frontmatter2.navigation?.heading
+    ] }),
+    /* @__PURE__ */ u2("meta", { name: "description", content: frontmatter2.description || props.globals.metadata.branding.description }),
+    /* @__PURE__ */ u2("meta", { name: "generator", content: props.globals.metadata.content.generator }),
+    /* @__PURE__ */ u2("link", { rel: "icon", type: "image/x-icon", href: `${props.globals.baseUrl}${props.globals.assetUrl}${props.favicon}` }),
+    /* @__PURE__ */ u2("link", { rel: "stylesheet", type: "text/css", href: `${props.globals.baseUrl}${props.globals.assetUrl}${global_bundle_default}` }),
+    props.enableReload && /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${esbuild_reload_ce_default}` })
+  ] });
 };
 
 // src/data/config.js
@@ -1184,10 +1184,10 @@ var favicon_default = "./favicon-WMNGZEA5.ico";
 
 // src/layouts/page-layout.jsx
 var PageLayout = (props) => {
-  const mainMenu = getMenuItems({
+  const mainMenu = getMenuActions({
     pages: props.pages
   });
-  return /* @__PURE__ */ u2("html", { lang: globals.metadata.language, children: [
+  return /* @__PURE__ */ u2("html", { lang: globals.metadata.content.language, children: [
     /* @__PURE__ */ u2(
       Head,
       {
@@ -1277,7 +1277,7 @@ var topicData = {
   profile: {
     heading: "Profile",
     icon: "book-open",
-    abstract: "Profile shows a profile image and tells about a person.file",
+    abstract: "Profile shows a profile image and tells about a person.",
     action: {
       heading: "Show profile examples",
       url: "/reference/profile"
@@ -1306,15 +1306,15 @@ var topicData = {
 // src/assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg
 var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-A-unsplash-NIUIYIXY.jpg";
 
-// src/pages/reference/quote.mdx
+// src/pages/reference/headline.mdx
 var frontmatter = {
   "topic": {
     "image": "topicImage",
-    "heading": "Quote example topic",
-    "abstract": '"This is an example of a topic abstract text."',
+    "heading": "Headline example topic",
+    "abstract": "This is an example of a topic abstract text.",
     "action": {
-      "heading": "Show showcase reference",
-      "url": "/reference/showcase"
+      "heading": "Show hero reference",
+      "url": "/reference/hero"
     }
   }
 };
@@ -1328,34 +1328,28 @@ function _createMdxContent(props) {
     children: [u2(Topic, {
       globals,
       topic: {
-        ...topicData.quote,
+        ...topicData.headline,
         action: void 0
       },
       variant: "headline"
+    }), "\n", u2("div", {
+      class: "container-full",
+      children: u2(Topic, {
+        globals,
+        images: {
+          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
+        },
+        topic: frontmatter.topic,
+        variant: "headline"
+      })
     }), "\n", u2(_components.hr, {}), "\n", u2(Topic, {
       globals,
       images: {
         topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
       },
+      style: "--image-order: 2",
       topic: frontmatter.topic,
-      variant: "quote"
-    }), "\n", u2(_components.hr, {}), "\n", u2(TwoColumnLayout, {
-      globals,
-      children: [u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "quote"
-      }), u2(Topic, {
-        globals,
-        images: {
-          topicImage: richard_horvath_cPccYbPrF_A_unsplash_default
-        },
-        topic: frontmatter.topic,
-        variant: "quote"
-      })]
+      variant: "headline"
     }), "\n", u2(_components.hr, {}), "\n", u2(_components.h1, {
       children: "Other references"
     }), "\n", u2(TopicList, {
