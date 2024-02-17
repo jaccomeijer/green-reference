@@ -1,11 +1,11 @@
-import { Head } from '@jaccomeijer/green-lib'
+import { Head } from './head.jsx'
 import { HeaderNavigation } from '@jaccomeijer/green-lib'
 import { FooterNavigation } from '@jaccomeijer/green-lib'
 import { LegalNavigation } from '@jaccomeijer/green-lib'
 import { getMenuActions } from '@jaccomeijer/green-lib'
 import { globals } from '../config/globals.js'
 import favicon from '../assets/favicon/favicon.ico'
-import globalCss from '@jaccomeijer/green-lib/css/global.bundle.css'
+import globalCss from '@jaccomeijer/green-lib/global.bundle.css'
 import settingsCss from '../assets/css/settings.bundle.css'
 
 export const PageLayout = props => {

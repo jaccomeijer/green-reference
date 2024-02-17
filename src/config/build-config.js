@@ -16,7 +16,7 @@ export const buildConfig = {
     l: 1000,
   },
   initialProps: {},
-  removeBundle: false,
+  removeBundle: true,
   stripFromOutputPath: 'src/pages',
   ...(process.env.MODE === 'build' ? buildEnv : {}),
   ...(process.env.MODE === 'serve' ? serveEnv : {}),
