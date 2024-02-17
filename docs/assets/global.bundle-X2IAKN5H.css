@@ -1,4 +1,4 @@
-/* node_modules/@jaccomeijer/green-lib/src/package/css/button.css */
+/* node_modules/@jaccomeijer/green-lib/css/button.css */
 button {
   background-color: var(--color-primary-400);
   border: 1px solid var(--color-primary-400);
@@ -57,7 +57,7 @@ button.stretch {
   width: 100%;
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/colors.css */
+/* node_modules/@jaccomeijer/green-lib/css/colors.css */
 :root {
   --color-primary-100: #dae7f9;
   --color-primary-200: #90b6ee;
@@ -81,7 +81,7 @@ button.stretch {
   --color-monochrome-000: #ffffff;
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/input.css */
+/* node_modules/@jaccomeijer/green-lib/css/input.css */
 input {
   border: 1px solid transparent;
   border-color: var(--color-monochrome-300);
@@ -155,7 +155,7 @@ input[type=checkbox].switch:checked {
   background-position: right center;
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/layout.css */
+/* node_modules/@jaccomeijer/green-lib/css/layout.css */
 :root {
   --container-width: 1280px;
 }
@@ -186,7 +186,7 @@ body {
   width: 100vw;
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/link.css */
+/* node_modules/@jaccomeijer/green-lib/css/link.css */
 a {
   font-size: inherit;
   line-height: inherit;
@@ -198,6 +198,7 @@ a {
   text-decoration: none;
 }
 a feather-icon {
+  color: var(--color-primary-400);
   margin-right: 0.25rem;
 }
 a[variant=xl] {
@@ -223,14 +224,11 @@ a[variant=xs] {
 a:hover {
   text-decoration: underline;
 }
-a feather-icon {
-  color: var(--color-primary-400);
-}
 a.active {
   text-decoration: underline;
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/markdown.css */
+/* node_modules/@jaccomeijer/green-lib/css/markdown.css */
 hr {
   color: var(--color-monochrome-100);
   margin: 5rem 0;
@@ -261,7 +259,7 @@ hr {
   border-top: 1px solid var(--color-monochrome-100);
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/stories.css */
+/* node_modules/@jaccomeijer/green-lib/css/stories.css */
 .yellow-brick {
   background: yellow;
   padding: 3rem 0;
@@ -271,7 +269,7 @@ hr {
   padding: 3rem 0;
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/textarea.css */
+/* node_modules/@jaccomeijer/green-lib/css/textarea.css */
 textarea {
   border: 1px solid transparent;
   border-color: var(--color-monochrome-200);
@@ -312,7 +310,7 @@ textarea:disabled {
   cursor: not-allowed;
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/typography.css */
+/* node_modules/@jaccomeijer/green-lib/css/typography.css */
 :root {
   --body-font-family:
     Montserrat,
@@ -485,7 +483,7 @@ sup {
   margin-top: -1rem;
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/highlight/github.css */
+/* node_modules/@jaccomeijer/green-lib/css/highlight/github.css */
 .hljs {
   color: #24292e;
   background: #ffffff;
@@ -571,10 +569,10 @@ sup {
 .hljs-tag {
 }
 
-/* node_modules/@jaccomeijer/green-lib/src/package/css/global.bundle.css */
+/* node_modules/@jaccomeijer/green-lib/css/global.bundle.css */
 /*! Bundled license information:
 
-@jaccomeijer/green-lib/src/package/css/highlight/github.css:
+@jaccomeijer/green-lib/css/highlight/github.css:
   (*!
     Theme: GitHub
     Description: Light theme as seen on github.com

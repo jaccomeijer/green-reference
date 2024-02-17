@@ -291,10 +291,10 @@ function u2(e2, t2, n2, o2, i3, u3) {
   return l.vnode && l.vnode(l2), l2;
 }
 
-// node_modules/@jaccomeijer/green-lib/src/package/css/global.bundle.css
-var global_bundle_default = "./global.bundle-NLPX7W4L.css";
+// node_modules/@jaccomeijer/green-lib/css/global.bundle.css
+var global_bundle_default = "./global.bundle-X2IAKN5H.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/element/picture/picture.jsx
+// node_modules/@jaccomeijer/green-lib/components/element/picture/picture.jsx
 var numberSort = (a2, b2) => {
   const numberA = a2.width || 999;
   const numberB = b2.width || 999;
@@ -326,16 +326,16 @@ var Picture = (props) => {
   ] });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/element/feather-icon/feather-icon.ce.css
+// node_modules/@jaccomeijer/green-lib/components/element/feather-icon/feather-icon.ce.css
 var feather_icon_ce_default = "./feather-icon.ce-RCCVXCND.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/element/feather-icon/feather-icon.ce.js
+// node_modules/@jaccomeijer/green-lib/components/element/feather-icon/feather-icon.ce.js
 var feather_icon_ce_default2 = "./feather-icon.ce-KQAR6BV2.js";
 
 // node_modules/feather-icons/dist/feather-sprite.svg
 var feather_sprite_default = "./feather-sprite-LD4UDZHI.svg";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/element/feather-icon/feather-icon.jsx
+// node_modules/@jaccomeijer/green-lib/components/element/feather-icon/feather-icon.jsx
 var FeatherIcon = (props) => {
   const strokeWidth = props.strokeWidth || 2;
   return /* @__PURE__ */ u2("feather-icon", { children: [
@@ -360,7 +360,7 @@ var FeatherIcon = (props) => {
   ] });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-action.js
+// node_modules/@jaccomeijer/green-lib/layouts/get-action.js
 var parseUrl = ({ globals: globals2, action }) => {
   if (action?.url && action.url.startsWith("http")) {
     return action.url;
@@ -370,7 +370,7 @@ var parseUrl = ({ globals: globals2, action }) => {
 var getOnClickAction = ({ globals: globals2, action }) => `location.href='${parseUrl({ globals: globals2, action })}';`;
 var getHrefAction = ({ globals: globals2, action }) => parseUrl({ globals: globals2, action });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-link/icon-link.jsx
+// node_modules/@jaccomeijer/green-lib/components/element/icon-link/icon-link.jsx
 var IconLink = (props) => /* @__PURE__ */ u2(
   "a",
   {
@@ -393,7 +393,7 @@ var IconLink = (props) => /* @__PURE__ */ u2(
   }
 );
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/element/icon-button/icon-button.jsx
+// node_modules/@jaccomeijer/green-lib/components/element/icon-button/icon-button.jsx
 var IconButton = (props) => /* @__PURE__ */ u2(
   "button",
   {
@@ -416,7 +416,7 @@ var IconButton = (props) => /* @__PURE__ */ u2(
   }
 );
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/button-segment/button-segment.jsx
+// node_modules/@jaccomeijer/green-lib/components/navigation/button-segment/button-segment.jsx
 var ButtonSegment = (props) => {
   const menu = props.menu || [];
   return /* @__PURE__ */ u2("div", { class: "button-segment", children: menu.map((action) => /* @__PURE__ */ u2(
@@ -429,13 +429,13 @@ var ButtonSegment = (props) => {
   )) });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/navigation.ce.css
+// node_modules/@jaccomeijer/green-lib/components/navigation/navigation.ce.css
 var navigation_ce_default = "./navigation.ce-JSKIPCMY.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/footer-navigation/footer-navigation.ce.js
+// node_modules/@jaccomeijer/green-lib/components/navigation/footer-navigation/footer-navigation.ce.js
 var footer_navigation_ce_default = "./footer-navigation.ce-IGZTHGPJ.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/segment/segment.jsx
+// node_modules/@jaccomeijer/green-lib/components/navigation/segment/segment.jsx
 var Segment = (props) => {
   const menu = props.menu || [];
   return /* @__PURE__ */ u2("ul", { class: "navigation-segment", children: menu.map((action) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2(
@@ -449,7 +449,7 @@ var Segment = (props) => {
   ) })) });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/footer-navigation/footer-navigation.jsx
+// node_modules/@jaccomeijer/green-lib/components/navigation/footer-navigation/footer-navigation.jsx
 var FooterNavigation = (props) => /* @__PURE__ */ u2("footer-navigation", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2("nav", { id: "footer-navigation", children: [
@@ -462,7 +462,7 @@ var FooterNavigation = (props) => /* @__PURE__ */ u2("footer-navigation", { chil
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${footer_navigation_ce_default}` })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/header-navigation/modal-menu.jsx
+// node_modules/@jaccomeijer/green-lib/components/navigation/header-navigation/modal-menu.jsx
 var ModalMenu = (props) => /* @__PURE__ */ u2("div", { id: "modal-menu", children: [
   /* @__PURE__ */ u2("div", { id: "modal" }),
   /* @__PURE__ */ u2("nav", { children: [
@@ -473,10 +473,10 @@ var ModalMenu = (props) => /* @__PURE__ */ u2("div", { id: "modal-menu", childre
   ] })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/header-navigation/header-navigation.ce.js
+// node_modules/@jaccomeijer/green-lib/components/navigation/header-navigation/header-navigation.ce.js
 var header_navigation_ce_default = "./header-navigation.ce-62A6DOKK.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/header-navigation/header-navigation.jsx
+// node_modules/@jaccomeijer/green-lib/components/navigation/header-navigation/header-navigation.jsx
 var HeaderNavigation = (props) => {
   return /* @__PURE__ */ u2("header-navigation", { children: [
     /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
@@ -515,10 +515,10 @@ var HeaderNavigation = (props) => {
   ] });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/legal-navigation/legal-navigation.ce.js
+// node_modules/@jaccomeijer/green-lib/components/navigation/legal-navigation/legal-navigation.ce.js
 var legal_navigation_ce_default = "./legal-navigation.ce-QO4J546K.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/navigation/legal-navigation/legal-navigation.jsx
+// node_modules/@jaccomeijer/green-lib/components/navigation/legal-navigation/legal-navigation.jsx
 var LegalNavigation = (props) => /* @__PURE__ */ u2("legal-navigation", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2("nav", { id: "legal-navigation", children: [
@@ -534,13 +534,13 @@ var LegalNavigation = (props) => /* @__PURE__ */ u2("legal-navigation", { childr
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${legal_navigation_ce_default}` })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/hero-topic/hero-topic.ce.css
+// node_modules/@jaccomeijer/green-lib/components/topic/hero-topic/hero-topic.ce.css
 var hero_topic_ce_default = "./hero-topic.ce-VZLZUKPI.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/hero-topic/hero-topic.ce.js
+// node_modules/@jaccomeijer/green-lib/components/topic/hero-topic/hero-topic.ce.js
 var hero_topic_ce_default2 = "./hero-topic.ce-EUOU2524.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/topic-core.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/topic-core.jsx
 var TopicCore = (props) => {
   if (!props.topic) {
     return /* @__PURE__ */ u2(g, { children: "props.topic is undefined" });
@@ -601,7 +601,7 @@ var TopicCore = (props) => {
   ] });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/hero-topic/hero-topic.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/hero-topic/hero-topic.jsx
 var HeroTopic = (props) => {
   if (!props.topic?.image)
     return /* @__PURE__ */ u2("p", { children: "Image required for Hero topic" });
@@ -630,13 +630,13 @@ var HeroTopic = (props) => {
   ] });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/card-topic/card-topic.ce.css
+// node_modules/@jaccomeijer/green-lib/components/topic/card-topic/card-topic.ce.css
 var card_topic_ce_default = "./card-topic.ce-IBVPANNW.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/card-topic/card-topic.ce.js
+// node_modules/@jaccomeijer/green-lib/components/topic/card-topic/card-topic.ce.js
 var card_topic_ce_default2 = "./card-topic.ce-3AFCP2ZR.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/card-topic/card-topic.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/card-topic/card-topic.jsx
 var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2(
@@ -662,13 +662,13 @@ var CardTopic = (props) => /* @__PURE__ */ u2("card-topic", { children: [
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${card_topic_ce_default2}` })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/profile-topic/profile-topic.ce.css
+// node_modules/@jaccomeijer/green-lib/components/topic/profile-topic/profile-topic.ce.css
 var profile_topic_ce_default = "./profile-topic.ce-QK4DXZ5R.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/profile-topic/profile-topic.ce.js
+// node_modules/@jaccomeijer/green-lib/components/topic/profile-topic/profile-topic.ce.js
 var profile_topic_ce_default2 = "./profile-topic.ce-L2J55B3O.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/profile-topic/profile-topic.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/profile-topic/profile-topic.jsx
 var ProfileTopic = (props) => /* @__PURE__ */ u2("profile-topic", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2(
@@ -693,13 +693,13 @@ var ProfileTopic = (props) => /* @__PURE__ */ u2("profile-topic", { children: [
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${profile_topic_ce_default2}` })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/quote-topic/quote-topic.ce.css
+// node_modules/@jaccomeijer/green-lib/components/topic/quote-topic/quote-topic.ce.css
 var quote_topic_ce_default = "./quote-topic.ce-KDOH6UMN.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/quote-topic/quote-topic.ce.js
+// node_modules/@jaccomeijer/green-lib/components/topic/quote-topic/quote-topic.ce.js
 var quote_topic_ce_default2 = "./quote-topic.ce-3FHHRVP6.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/quote-topic/quote-topic.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/quote-topic/quote-topic.jsx
 var QuoteTopic = (props) => /* @__PURE__ */ u2("quote-topic", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2(
@@ -724,13 +724,13 @@ var QuoteTopic = (props) => /* @__PURE__ */ u2("quote-topic", { children: [
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${quote_topic_ce_default2}` })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/headline-topic/headline-topic.ce.css
+// node_modules/@jaccomeijer/green-lib/components/topic/headline-topic/headline-topic.ce.css
 var headline_topic_ce_default = "./headline-topic.ce-YF4C4LO3.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/headline-topic/headline-topic.ce.js
+// node_modules/@jaccomeijer/green-lib/components/topic/headline-topic/headline-topic.ce.js
 var headline_topic_ce_default2 = "./headline-topic.ce-JTTKBUTY.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/headline-topic/headline-topic.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/headline-topic/headline-topic.jsx
 var HeadlineTopic = (props) => /* @__PURE__ */ u2("headline-topic", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2(
@@ -755,13 +755,13 @@ var HeadlineTopic = (props) => /* @__PURE__ */ u2("headline-topic", { children: 
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${headline_topic_ce_default2}` })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/block-topic/block-topic.ce.css
+// node_modules/@jaccomeijer/green-lib/components/topic/block-topic/block-topic.ce.css
 var block_topic_ce_default = "./block-topic.ce-TT4J7PYF.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/block-topic/block-topic.ce.js
+// node_modules/@jaccomeijer/green-lib/components/topic/block-topic/block-topic.ce.js
 var block_topic_ce_default2 = "./block-topic.ce-R65HZH2L.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/block-topic/block-topic.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/block-topic/block-topic.jsx
 var BlockTopic = (props) => /* @__PURE__ */ u2("block-topic", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2(
@@ -786,13 +786,13 @@ var BlockTopic = (props) => /* @__PURE__ */ u2("block-topic", { children: [
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${block_topic_ce_default2}` })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/featured-topic/featured-topic.ce.css
+// node_modules/@jaccomeijer/green-lib/components/topic/featured-topic/featured-topic.ce.css
 var featured_topic_ce_default = "./featured-topic.ce-5PYWHZ7M.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/featured-topic/featured-topic.ce.js
+// node_modules/@jaccomeijer/green-lib/components/topic/featured-topic/featured-topic.ce.js
 var featured_topic_ce_default2 = "./featured-topic.ce-XIG5U6DW.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/featured-topic/featured-topic.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/featured-topic/featured-topic.jsx
 var FeaturedTopic = (props) => /* @__PURE__ */ u2("featured-topic", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2(
@@ -817,13 +817,13 @@ var FeaturedTopic = (props) => /* @__PURE__ */ u2("featured-topic", { children: 
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${featured_topic_ce_default2}` })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/showcase-topic/showcase-topic.ce.css
+// node_modules/@jaccomeijer/green-lib/components/topic/showcase-topic/showcase-topic.ce.css
 var showcase_topic_ce_default = "./showcase-topic.ce-RN64WWMV.css";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/showcase-topic/showcase-topic.ce.js
+// node_modules/@jaccomeijer/green-lib/components/topic/showcase-topic/showcase-topic.ce.js
 var showcase_topic_ce_default2 = "./showcase-topic.ce-4DM25L6B.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/showcase-topic/showcase-topic.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/showcase-topic/showcase-topic.jsx
 var ShowcaseTopic = (props) => /* @__PURE__ */ u2("showcase-topic", { children: [
   /* @__PURE__ */ u2("template", { shadowrootmode: "open", children: [
     /* @__PURE__ */ u2(
@@ -849,7 +849,7 @@ var ShowcaseTopic = (props) => /* @__PURE__ */ u2("showcase-topic", { children: 
   /* @__PURE__ */ u2("script", { defer: true, src: `${props.globals.baseUrl}${props.globals.assetUrl}${showcase_topic_ce_default2}` })
 ] });
 
-// node_modules/@jaccomeijer/green-lib/src/package/components/topic/topic/topic.jsx
+// node_modules/@jaccomeijer/green-lib/components/topic/topic/topic.jsx
 var Topic = (props) => {
   let TopicElement;
   switch (props.variant) {
@@ -884,10 +884,10 @@ var Topic = (props) => {
   return /* @__PURE__ */ u2(TopicElement, { ...props });
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/esbuild-reload.ce.js
+// node_modules/@jaccomeijer/green-lib/layouts/esbuild-reload.ce.js
 var esbuild_reload_ce_default = "./esbuild-reload.ce-ZYHERQPM.js";
 
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/get-menu-actions.js
+// node_modules/@jaccomeijer/green-lib/layouts/get-menu-actions.js
 var getMenuActions = ({ pages }) => {
   const menuItems = pages.filter((page) => page.frontmatter.navigation?.heading).map((page) => {
     const frontmatter2 = page.frontmatter;
@@ -964,7 +964,7 @@ var getMenuActions = ({ pages }) => {
   return nestedMenuItems;
 };
 
-// node_modules/@jaccomeijer/green-lib/src/package/layouts/head.jsx
+// node_modules/@jaccomeijer/green-lib/layouts/head.jsx
 var Head = (props) => {
   const frontmatter2 = props.page.frontmatter;
   return /* @__PURE__ */ u2("head", { children: [
@@ -1015,14 +1015,14 @@ var metadata = {
   branding: {
     copyright: "Copyright \xA9 2024 Jacco Meijer",
     description: "A reference implementation of the Green UI Library.",
-    heading: "Green Reference",
+    heading: "Green",
     icon: "sun",
     url: "/"
   },
   vendor: {
     heading: "Made with Green UI Library",
-    icon: "globe",
-    url: "https://github.com/jaccomeijer/green-lib",
+    icon: "package",
+    url: "https://www.npmjs.com/package/@jaccomeijer/green-lib",
     version: "4.0.0"
   },
   content: {
@@ -1113,10 +1113,6 @@ var richard_horvath_cPccYbPrF_A_unsplash_default = "./richard-horvath-cPccYbPrF-
 
 // src/pages/index.mdx
 var frontmatter = {
-  "navigation": {
-    "heading": "Home",
-    "order": 10
-  },
   "topic": {
     "heading": "Green Reference",
     "abstract": "A reference implementation of the Green UI Library.",
