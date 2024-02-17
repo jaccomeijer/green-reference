@@ -5,6 +5,8 @@ import { LegalNavigation } from '@jaccomeijer/green-lib'
 import { getMenuActions } from '@jaccomeijer/green-lib'
 import { globals } from '../config/globals.js'
 import favicon from '../assets/favicon/favicon.ico'
+import globalCss from '@jaccomeijer/green-lib/css/global.bundle.css'
+import settingsCss from '../assets/css/settings.bundle.css'
 
 export const PageLayout = props => {
   const mainActions = getMenuActions({
@@ -18,6 +20,7 @@ export const PageLayout = props => {
         favicon={favicon}
         globals={globals}
         page={props.page}
+        stylesheets={[settingsCss, globalCss]}
       />
       <body>
         <div class="border-bottom">
