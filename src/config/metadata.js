@@ -3,7 +3,7 @@ export const metadata = {
     copyright: 'Copyright © 2024 Jacco Meijer',
     description: 'A reference implementation of the Green UI Library.',
     heading: 'Green',
-    icon: 'sun',
+    icon: 'book-open',
     url: '/',
   },
   vendor: {

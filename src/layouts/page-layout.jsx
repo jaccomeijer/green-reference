@@ -3,13 +3,11 @@ import { HeaderNavigation } from '@jaccomeijer/green-lib'
 import { FooterNavigation } from '@jaccomeijer/green-lib'
 import { LegalNavigation } from '@jaccomeijer/green-lib'
 import { getMenuActions } from '@jaccomeijer/green-lib'
-import { globals } from '../data/globals.js'
-import { actionMenu } from "../data/action-menu.js"
-import { socialMenu } from "../data/social-menu.js"
+import { globals } from '../config/globals.js'
 import favicon from '../assets/favicon/favicon.ico'
 
 export const PageLayout = props => {
-  const mainMenu = getMenuActions({
+  const mainActions = getMenuActions({
     pages: props.pages,
   })
 
@@ -25,11 +23,11 @@ export const PageLayout = props => {
         <div class="border-bottom">
         <div class="container">
         <HeaderNavigation
-          actionMenu={actionMenu}
+          callActions={globals.actions.call}
           globals={globals}
-          mainMenu={mainMenu}
+          mainActions={mainActions}
           pageUrl={props.page.url}
-          socialMenu={socialMenu}
+          socialActions={globals.actions.social}
         />
         </div>
         </div>
@@ -41,7 +39,7 @@ export const PageLayout = props => {
             <FooterNavigation 
               globals={globals}
               pageUrl={props.page.url}
-              socialMenu={socialMenu}
+              socialActions={globals.actions.social}
             />
           </div>
         </div>

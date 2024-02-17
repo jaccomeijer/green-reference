@@ -1,4 +1,4 @@
-import { config } from './src/data/config.js'
+import { buildConfig } from './src/config/build-config.js'
 import { build } from '@jaccomeijer/green-build'
 
-build(config)
+build(buildConfig)
