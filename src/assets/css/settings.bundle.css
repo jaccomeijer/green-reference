@@ -51,26 +51,26 @@
   --radius-rounded: 0.25rem;
 
   /* Colors */
-  --color-primary-100: hsl(216, 73, 90);
-  --color-primary-200: hsl(216, 73, 75);
-  --color-primary-300: hsl(216, 73, 60);
-  --color-primary-400: hsl(216, 73, 45);
-  --color-primary-500: hsl(216, 73, 30);
-  --color-primary-600: hsl(216, 73, 15);
+  --color-primary-100: hsl(216, 73%, 90%);
+  --color-primary-200: hsl(216, 73%, 75%);
+  --color-primary-300: hsl(216, 73%, 60%);
+  --color-primary-400: hsl(216, 73%, 45%);
+  --color-primary-500: hsl(216, 73%, 30%);
+  --color-primary-600: hsl(216, 73%, 15%);
 
-  --color-secondary-100: hsl(20, 100, 90);
-  --color-secondary-200: hsl(20, 100, 75);
-  --color-secondary-300: hsl(20, 100, 60);
-  --color-secondary-400: hsl(20, 100, 45);
-  --color-secondary-500: hsl(20, 100, 30);
-  --color-secondary-600: hsl(20, 100, 15);
+  --color-secondary-100: hsl(20, 100%, 90%);
+  --color-secondary-200: hsl(20, 100%, 75%);
+  --color-secondary-300: hsl(20, 100%, 60%);
+  --color-secondary-400: hsl(20, 100%, 45%);
+  --color-secondary-500: hsl(20, 100%, 30%);
+  --color-secondary-600: hsl(20, 100%, 15%);
 
-  --color-monochrome-100: hsl(0, 0, 90);
-  --color-monochrome-200: hsl(0, 0, 75);
-  --color-monochrome-300: hsl(0, 0, 60);
-  --color-monochrome-400: hsl(0, 0, 45);
-  --color-monochrome-500: hsl(0, 0, 30);
-  --color-monochrome-600: hsl(0, 0, 15);
-  --color-monochrome-700: hsl(0, 0, 0);
-  --color-monochrome-000: hsl(0, 0, 100);
+  --color-monochrome-100: hsl(0, 0%, 90%);
+  --color-monochrome-200: hsl(0, 0%, 75%);
+  --color-monochrome-300: hsl(0, 0%, 60%);
+  --color-monochrome-400: hsl(0, 0%, 45%);
+  --color-monochrome-500: hsl(0, 0%, 30%);
+  --color-monochrome-600: hsl(0, 0%, 15%);
+  --color-monochrome-700: hsl(0, 0%, 0%);
+  --color-monochrome-000: hsl(0, 0%, 100%);
 }
