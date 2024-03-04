@@ -21,91 +21,59 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 
 <br />
 
-# Single topic
+## Single topic
 
 <Topic
+  data-variant="block"
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
-  data-variant="block"
 />
+
 
 ---
 
-# Two columns
-
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="block"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="block"
-/>
-
----
-
-# Three columns
-
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="block"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="block"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="block"
-/>
-
----
-
-# Four columns
-
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="block"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="block"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="block"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="block"
-/>
-
----
-
-# Other references
+## Two columns
 
 <TopicList 
+  class="s-grid u-grid-two-cols u-gap-m"
+  data-variant="block"
   globals={globals}
-  data-variant="three-column"
-  topicdata-variant="card"
+  images={{ topicImage }}
+  topics={[frontmatter.topic, frontmatter.topic]}
+/>
+
+---
+
+## Three columns
+
+<TopicList 
+  class="s-grid u-grid-three-cols u-gap-m"
+  data-variant="block"
+  globals={globals}
+  images={{ topicImage }}
+  topics={[frontmatter.topic, frontmatter.topic, frontmatter.topic]}
+/>
+
+---
+
+## Four columns
+
+<TopicList 
+  class="s-grid u-grid-four-cols u-gap-m"
+  data-variant="block"
+  globals={globals}
+  images={{ topicImage }}
+  topics={[frontmatter.topic, frontmatter.topic, frontmatter.topic, frontmatter.topic]}
+/>
+
+---
+
+## Other references
+
+<TopicList 
+  class="s-grid u-grid-three-cols u-gap-m"
+  data-variant="card"
+  globals={globals}
   topics={Object.values(topicData)}
 />

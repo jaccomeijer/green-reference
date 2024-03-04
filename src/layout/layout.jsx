@@ -22,7 +22,7 @@ export const Layout = props => {
       <body>
         <a class="skip-link" href="#main-content">Skip to content</a>
         <header role="banner" class="site-header s-wrapper">
-          <div class="s-block-space u-block-space-xs">
+          <div class="s-block-space u-block-space-xs u-border-bottom">
             <NavigationHeader
               callActions={globals.actions.call}
               globals={globals}
