@@ -8,7 +8,7 @@ topic:
     url: /reference/featured
 ---
 export { Layout as default } from '../../layout/layout'
-import { TwoColumnLayout, ThreeColumnLayout, FourColumnLayout, Topic, TopicList } from '@jaccomeijer/green-lib'
+import { Topic, TopicList } from '@jaccomeijer/green-lib'
 import { globals } from '../../config/globals.js'
 import { topicData } from '../../config/topics'
 import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
@@ -16,7 +16,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <Topic
   globals={globals}
   topic={{...topicData.card, action: undefined}}
-  variant="headline"
+  data-variant="headline"
 />
 
 <br />
@@ -27,83 +27,77 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
-  variant="card"
+  data-variant="card"
 />
 
 ---
 
 # Two columns
 
-<TwoColumnLayout globals={globals}>
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="card"
-  />
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="card"
-  />
-</TwoColumnLayout>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+    topic={frontmatter.topic}
+  data-variant="card"
+/>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+    topic={frontmatter.topic}
+  data-variant="card"
+/>
 
 ---
 
 # Three columns
 
-<ThreeColumnLayout globals={globals}>
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="card"
-  />
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="card"
-  />
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="card"
-  />
-</ThreeColumnLayout>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+    topic={frontmatter.topic}
+  data-variant="card"
+/>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+    topic={frontmatter.topic}
+  data-variant="card"
+/>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+    topic={frontmatter.topic}
+  data-variant="card"
+/>
 
 ---
 
 # Four columns
 
-<FourColumnLayout globals={globals}>
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="card"
-  />
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="card"
-  />
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="card"
-  />
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="card"
-  />
-</FourColumnLayout>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+  topic={frontmatter.topic}
+  data-variant="card"
+/>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+  topic={frontmatter.topic}
+  data-variant="card"
+/>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+  topic={frontmatter.topic}
+  data-variant="card"
+/>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+  topic={frontmatter.topic}
+  data-variant="card"
+/>
 
 ---
 
@@ -112,6 +106,6 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <TopicList 
   globals={globals}
   topics={Object.values(topicData)}
-  topicVariant="card"
-  variant="three-column"
+  topicdata-variant="card"
+  data-variant="three-column"
 />

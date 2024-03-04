@@ -8,7 +8,7 @@ topic:
     url: /reference/headline
 ---
 export { Layout as default } from '../../layout/layout'
-import { Topic } from '@jaccomeijer/green-lib'
+import { Topic, TopicList } from '@jaccomeijer/green-lib'
 import { globals } from '../../config/globals.js'
 import { topicData } from '../../config/topics'
 import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
@@ -16,7 +16,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <Topic
   globals={globals}
   topic={{...topicData.featured, action: undefined}}
-  variant="headline"
+  data-variant="headline"
 />
 
 ---
@@ -25,7 +25,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
-  variant="featured"
+  data-variant="featured"
 />
 
 ---
@@ -33,14 +33,14 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <Topic
   globals={globals}
   images={{ topicImage }}
-    topic={frontmatter.topic}
-  variant="featured"
+  topic={frontmatter.topic}
+  data-variant="featured"
 />
 <Topic
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
-  variant="featured"
+  data-variant="featured"
   swap-image={true}
 />
 
@@ -51,6 +51,6 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <TopicList 
   globals={globals}
   topics={Object.values(topicData)}
-  topicVariant="card"
-  variant="three-column"
+  topicdata-variant="card"
+  data-variant="three-column"
 />

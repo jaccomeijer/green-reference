@@ -8,7 +8,7 @@ topic:
     url: /reference/block
 ---
 export { Layout as default } from '../../layout/layout'
-import { TwoColumnLayout, Topic, TopicList } from '@jaccomeijer/green-lib'
+import { Topic, TopicList } from '@jaccomeijer/green-lib'
 import { globals } from '../../config/globals.js'
 import { topicData } from '../../config/topics'
 import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
@@ -16,7 +16,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <Topic
   globals={globals}
   topic={{...topicData.showcase, action: undefined}}
-  variant="headline"
+  data-variant="headline"
 />
 
 ---
@@ -25,25 +25,23 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
-  variant="showcase"
+  data-variant="showcase"
 />
 
 ---
 
-<TwoColumnLayout globals={globals}>
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="showcase"
-  />
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="showcase"
-  />
-</TwoColumnLayout>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+  topic={frontmatter.topic}
+  data-variant="showcase"
+/>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+  topic={frontmatter.topic}
+  data-variant="showcase"
+/>
 
 ---
 
@@ -52,6 +50,6 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <TopicList 
   globals={globals}
   topics={Object.values(topicData)}
-  topicVariant="card"
-  variant="three-column"
+  topicdata-variant="card"
+  data-variant="three-column"
 />

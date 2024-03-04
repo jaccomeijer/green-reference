@@ -22,7 +22,7 @@ import demoImage from '../assets/images/simon-lee-zft-W1kVEhg-unsplash.jpg'
 <Topic
   globals={globals}
   topic={frontmatter.topic}
-  variant="headline"
+  data-variant="headline"
 />
 
 ---
@@ -86,7 +86,7 @@ sagittis orci volutpat maximus.
     images={{ demoImage }}
     style="--container-width: 700px"
     topic={frontmatter.imageTopic}
-    variant="headline"
+    data-variant="headline"
   />
 </div>
 
@@ -123,7 +123,7 @@ sagittis pellentesque odio.
 <Topic
   globals={globals}
   topic={frontmatter.topic}
-  variant="headline"
+  data-variant="headline"
 />
 
 Fusce id quam nulla. Mauris ac eros et erat dapibus gravida a ac justo. Integer
@@ -140,7 +140,7 @@ cursus fermentum risus nec semper. Fusce ornare ipsum et facilisis consequat.
     images={{ demoImage }}
     style="--container-width: 700px"
     topic={frontmatter.imageTopic}
-    variant="hero"
+    data-variant="hero"
   />
 </div>
 
@@ -156,7 +156,7 @@ ornare pulvinar.
   <TopicList 
     globals={globals}
     topics={Object.values(topicData)}
-    topicVariant="card"
-    variant="three-column"
+    topicdata-variant="card"
+    data-variant="three-column"
   />
 </nav>

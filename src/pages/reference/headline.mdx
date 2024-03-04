@@ -16,15 +16,15 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <Topic
   globals={globals}
   topic={{...topicData.headline, action: undefined}}
-  variant="headline"
+  data-variant="headline"
 />
 
-<div class="container-full">
+<div class="s-popout">
   <Topic
     globals={globals}
     images={{ topicImage }}
     topic={frontmatter.topic}
-    variant="headline"
+    data-variant="headline"
   />
 </div>
 
@@ -35,7 +35,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
   images={{ topicImage }}
   swap-image={true}
   topic={frontmatter.topic}
-  variant="headline"
+  data-variant="headline"
 />
 
 ---
@@ -45,6 +45,6 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <TopicList 
   globals={globals}
   topics={Object.values(topicData)}
-  topicVariant="card"
-  variant="three-column"
+  topicdata-variant="card"
+  data-variant="three-column"
 />
