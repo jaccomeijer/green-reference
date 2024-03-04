@@ -7,7 +7,7 @@ topic:
     heading: Show hero reference
     url: /reference/hero
 ---
-export { PageLayout as default } from '../../page-layout/page-layout'
+export { Layout as default } from '../../layout/layout'
 import { Topic, TopicList } from '@jaccomeijer/green-lib'
 import { globals } from '../../config/globals.js'
 import { topicData } from '../../config/topics'
@@ -33,7 +33,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <Topic
   globals={globals}
   images={{ topicImage }}
-  style="--image-order: 2"
+  swap-image={true}
   topic={frontmatter.topic}
   variant="headline"
 />

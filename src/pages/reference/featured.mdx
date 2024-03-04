@@ -7,8 +7,8 @@ topic:
     heading: Show headline reference
     url: /reference/headline
 ---
-export { PageLayout as default } from '../../page-layout/page-layout'
-import { Topic, TopicList, OneColumnLayout } from '@jaccomeijer/green-lib'
+export { Layout as default } from '../../layout/layout'
+import { Topic } from '@jaccomeijer/green-lib'
 import { globals } from '../../config/globals.js'
 import { topicData } from '../../config/topics'
 import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash.jpg'
@@ -30,21 +30,19 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 
 ---
 
-<OneColumnLayout globals={globals}>
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="featured"
-  />
-  <Topic
-    globals={globals}
-    images={{ topicImage }}
-      topic={frontmatter.topic}
-    variant="featured"
-    style="--image-order: 2"
-  />
-</OneColumnLayout>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+    topic={frontmatter.topic}
+  variant="featured"
+/>
+<Topic
+  globals={globals}
+  images={{ topicImage }}
+  topic={frontmatter.topic}
+  variant="featured"
+  swap-image={true}
+/>
 
 ---
 
