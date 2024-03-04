@@ -22,82 +22,39 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ---
 
 <Topic
+  data-variant="profile"
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
-  data-variant="profile"
 />
 
 ---
-
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="profile"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="profile"
-/>
-
----
-
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="profile"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="profile"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="profile"
-/>
-
----
-
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="profile"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="profile"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="profile"
-/>
-<Topic
-  globals={globals}
-  images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="profile"
-/>
-
----
-
-# Other references
 
 <TopicList 
+  class="s-grid u-grid-two-cols u-gap-2xl"
+  data-variant="profile"
   globals={globals}
-  data-variant="three-column"
-  topicdata-variant="card"
+  images={{ topicImage }}
+  topics={[frontmatter.topic, frontmatter.topic]}
+/>
+
+---
+
+<TopicList 
+  class="s-grid u-grid-three-cols u-gap-2xl"
+  data-variant="profile"
+  globals={globals}
+  images={{ topicImage }}
+  topics={[frontmatter.topic, frontmatter.topic, frontmatter.topic]}
+/>
+
+---
+
+## Other references
+
+<TopicList 
+  class="s-grid u-grid-three-cols u-gap-m"
+  data-variant="card"
+  globals={globals}
   topics={Object.values(topicData)}
 />

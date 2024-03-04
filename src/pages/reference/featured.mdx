@@ -22,35 +22,35 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ---
 
 <Topic
+  data-variant="featured"
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
-  data-variant="featured"
 />
 
 ---
 
 <Topic
+  data-variant="featured"
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
-  data-variant="featured"
 />
 <Topic
+  data-variant="featured"
   globals={globals}
   images={{ topicImage }}
-  topic={frontmatter.topic}
-  data-variant="featured"
   swap-image={true}
+  topic={frontmatter.topic}
 />
 
 ---
 
-# Other references
+## Other references
 
 <TopicList 
+  class="s-grid u-grid-three-cols u-gap-m"
+  data-variant="card"
   globals={globals}
   topics={Object.values(topicData)}
-  topicdata-variant="card"
-  data-variant="three-column"
 />

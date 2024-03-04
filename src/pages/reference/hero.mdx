@@ -21,29 +21,29 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 
 <div class="s-popout">
   <Topic
+    data-variant="hero"
     globals={globals}
     images={{ topicImage }}
     topic={frontmatter.topic}
-    data-variant="hero"
   />
 </div>
 
 ---
 
 <Topic
+  data-variant="hero"
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
-  data-variant="hero"
 />
 
 ---
 
-# Other references
+## Other references
 
 <TopicList 
+  class="s-grid u-grid-three-cols u-gap-m"
+  data-variant="card"
   globals={globals}
   topics={Object.values(topicData)}
-  topicdata-variant="card"
-  data-variant="three-column"
 />

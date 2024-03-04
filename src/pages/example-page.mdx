@@ -1,34 +1,49 @@
 ---
 navigation:
-  heading: Example
+  heading: Example Page
   order: 30
+
+openerTopic:
+  heading: Example page
+  icon: globe
+  abstract: Text is free style. Have it your own, including headings, images and all that.
 topic:
   heading: Example page
   icon: globe
   abstract: Text is free style. Have it your own, including headings, images and all that.
+  image: demoImage
+  action:
+    heading: Test action
+    icon: archive
 imageTopic:
   heading: Demo topic for example page
   icon: globe
   abstract: This topic has an image, a two line heading and a longer abstract, all for demo purposes.
-  image: demoImage
-
+  image: demoImage2
+  action:
+    heading: Test action
+    icon: archive
 ---
 export { Layout as default } from '../layout/layout'
 import { Picture, Topic, TopicList } from '@jaccomeijer/green-lib'
 import { globals } from '../config/globals.js'
 import { topicData } from '../config/topics'
 import demoImage from '../assets/images/simon-lee-zft-W1kVEhg-unsplash.jpg'
+import demoImage2 from '../assets/images/ben-abo-J8GGXy4fY88-unsplash.jpg'
 
 <Topic
   globals={globals}
-  topic={frontmatter.topic}
+  topic={frontmatter.openerTopic}
   data-variant="headline"
 />
 
 ---
 
-<div class="container" style="--container-width: 700px">
-# Heading 1
+<div class="s-wrapper" style="--wrapper-width: 45rem">
+
+export const assetUrl = globals.baseUrl + globals.assetUrl
+
+## Heading 2
 
 - Cras felis magna, imperdiet eu turpis ut, dignissim lorum ipsum venenatis
   justo.
@@ -74,19 +89,18 @@ Integer vitae elit sapien. Ut congue arcu mauris, non dictum ipsum viverra eget.
 Duis et ultricies lorem. Nulla at varius arcu. Integer tristique mattis ante eu
 bibendum. Quisque maximus orci eget justo venenatis posuere.
 
-- This is a link to an <a href={`${globals.baseUrl}${globals.assetUrl}${demoImage}`}>image</a>
+- This is a link to an <a href={ assetUrl + demoImage }>image</a>
 - This ia a link to [jaccomeijer.nl](https://www.jaccomeijer.nl)
 
 Sed velit sapien, sagittis quis ligula eu, molestie ornare eros. Etiam lobortis
 sagittis orci volutpat maximus.
 
-<div class="container-full margin-top-6 margin-bottom-6">
+<div class="s-popout">
   <Topic
     globals={globals}
-    images={{ demoImage }}
-    style="--container-width: 700px"
+    images={{ demoImage, demoImage2 }}
     topic={frontmatter.imageTopic}
-    data-variant="headline"
+    data-variant="hero"
   />
 </div>
 
@@ -101,10 +115,9 @@ ut non orci. Suspendisse nec orci est. Duis id turpis quis mauris venenatis
 condimentum.
 
 <Picture
-  class="md-picture"
+  class="s-block-space u-block-space-s"
   globals={globals}
-  id="topic-picture"
-  src={`${globals.baseUrl}${globals.assetUrl}/${demoImage}`}
+  src={ demoImage }
 />
 
 Maecenas nisl nulla, laoreet sed lectus id, commodo euismod lorem. Praesent
@@ -113,8 +126,6 @@ ac, ullamcorper tempor eros. Sed a pharetra leo. Etiam dapibus sem at neque
 faucibus, at porta mauris accumsan. Nullam tellus nunc, elementum in nibh sit
 amet, ultricies bibendum magna. Suspendisse potenti.
 
-##### Heading 5
-
 Nulla facilisi. In porta auctor lorem blandit convallis. Phasellus quis sapien
 elit. Nullam mollis, nisi ac blandit consequat, sapien ligula suscipit libero,
 et vulputate velit sapien ut elit. Vivamus dolor risus, tempus sit amet erat id,
@@ -122,6 +133,7 @@ sagittis pellentesque odio.
 
 <Topic
   globals={globals}
+  images={{ demoImage, demoImage2 }}
   topic={frontmatter.topic}
   data-variant="headline"
 />
@@ -129,18 +141,15 @@ sagittis pellentesque odio.
 Fusce id quam nulla. Mauris ac eros et erat dapibus gravida a ac justo. Integer
 sit amet elit dui. Fusce porta volutpat porttitor.
 
-###### Heading 6
-
 Cras felis magna, imperdiet eu turpis ut, dignissim venenatis justo. Nullam
 cursus fermentum risus nec semper. Fusce ornare ipsum et facilisis consequat.
 
-<div class="container-full margin-top-6 margin-bottom-6">
+<div class="s-popout">
   <Topic
     globals={globals}
-    images={{ demoImage }}
-    style="--container-width: 700px"
+    images={{ demoImage, demoImage2 }}
     topic={frontmatter.imageTopic}
-    data-variant="hero"
+    data-variant="headline"
   />
 </div>
 
@@ -148,15 +157,19 @@ Donec tincidunt ut arcu ac sagittis. Nulla condimentum consectetur tristique.
 Integer eu consectetur libero, et ullamcorper felis. Integer tempus turpis vel
 ornare pulvinar.
 
-
-</div>
 ---
 
-<nav>
-  <TopicList 
-    globals={globals}
-    topics={Object.values(topicData)}
-    topicdata-variant="card"
-    data-variant="three-column"
-  />
-</nav>
+<TopicList 
+  class="s-grid u-grid-two-cols u-gap-xs"
+  data-variant="card"
+  globals={globals}
+  images={{ demoImage, demoImage2 }}
+  topics={[ 
+    frontmatter.topic,
+    frontmatter.topic,
+    frontmatter.imageTopic,
+    frontmatter.imageTopic
+  ]}
+/>
+
+</div>
