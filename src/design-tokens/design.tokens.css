@@ -43,7 +43,7 @@
  	--font-size-5: clamp(2.4883rem, 2.0588rem + 1.718vi, 3.4332rem);
  	--font-size-6: clamp(2.986rem, 2.3926rem + 2.3737vi, 4.2915rem);
  	--font-size-7: clamp(3.5832rem, 2.7735rem + 3.2386vi, 5.3644rem);
- 	--gutter: clamp(0.5625rem, 0.4265rem + 0.6593vi, 0.9375rem);
+ 	--gutter: clamp(0.875rem, 0.739rem + 0.6593vi, 1.25rem);
  	--wrapper-width: 80rem;
  	--space-2xl: clamp(4.5rem, 4.3187rem + 0.8791vi, 5rem);
  	--space-2xl-3xl: clamp(4.5rem, 3.4121rem + 5.2747vi, 7.5rem);
