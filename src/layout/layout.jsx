@@ -32,7 +32,7 @@ export const Layout = props => {
           </div>
         </header>
         <main tabindex="-1" id="main-content" class="s-wrapper">
-          <article class="markdown s-flex-column u-gap-m">
+          <article class="markdown s-flex-column u-gap-0">
             {props.children}
           </article>
         </main>
