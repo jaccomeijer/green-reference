@@ -1,4 +1,4 @@
-/* node_modules/@jaccomeijer/green-lib/css/global/reset.css */
+/* ../green-lib/packages/green-lib/css/global/reset.css */
 @layer reset {
   *,
   *::before,
@@ -36,7 +36,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/global/body.css */
+/* ../green-lib/packages/green-lib/css/global/body.css */
 @layer body {
   body {
     background: var(--color-white);
@@ -52,7 +52,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/global/font.css */
+/* ../green-lib/packages/green-lib/css/global/font.css */
 @layer font {
   @font-face {
     font-family: "Montserrat";
@@ -63,7 +63,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/global/markdown.css */
+/* ../green-lib/packages/green-lib/css/global/markdown.css */
 @layer markdown {
   .markdown {
     font-family: var(--font-body-family);
@@ -119,7 +119,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/highlight/github.css */
+/* ../green-lib/packages/green-lib/css/highlight/github.css */
 @layer highlight {
   .hljs {
     color: #24292e;
@@ -207,7 +207,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/highlight/highlight.css */
+/* ../green-lib/packages/green-lib/css/highlight/highlight.css */
 @layer highlight {
   pre {
     margin-block: 0;
@@ -227,7 +227,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/structures/flex.css */
+/* ../green-lib/packages/green-lib/css/structures/flex.css */
 @layer structures {
   .s-flex-row {
     justify-content: flex-start;
@@ -246,7 +246,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/structures/popout.css */
+/* ../green-lib/packages/green-lib/css/structures/popout.css */
 @layer structures {
   .s-popout {
     left: 50%;
@@ -259,7 +259,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/structures/grid.css */
+/* ../green-lib/packages/green-lib/css/structures/grid.css */
 @layer structures {
   .s-grid {
     display: grid;
@@ -270,7 +270,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/structures/position-fixed.css */
+/* ../green-lib/packages/green-lib/css/structures/position-fixed.css */
 @layer structures {
   .s-position-fixed {
     bottom: 0;
@@ -281,21 +281,21 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/structures/block-space.css */
+/* ../green-lib/packages/green-lib/css/structures/block-space.css */
 @layer structures {
   .s-block-space {
     padding-block: var(--block-space);
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/structures/order.css */
+/* ../green-lib/packages/green-lib/css/structures/order.css */
 @layer structures {
   .s-order {
     order: var(--order);
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/structures/wrapper.css */
+/* ../green-lib/packages/green-lib/css/structures/wrapper.css */
 @layer structures {
   .s-wrapper {
     container-type: inline-size;
@@ -306,10 +306,10 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/bundles/css/structures.css */
+/* ../green-lib/packages/green-lib/bundles/css/structures.css */
 @layer structures;
 
-/* node_modules/@jaccomeijer/green-lib/components/empty-element/empty-element.ce.css */
+/* ../green-lib/packages/green-lib/components/empty-element/empty-element.ce.css */
 @layer components {
   :host {
     display: block;
@@ -319,7 +319,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/skip-link.css */
+/* ../green-lib/packages/green-lib/components/skip-link.css */
 @layer components {
   .skip-link {
     position: absolute;
@@ -340,7 +340,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/navigation-footer/navigation-footer.css */
+/* ../green-lib/packages/green-lib/components/navigation-footer/navigation-footer.css */
 @layer components {
   .navigation-footer {
     &,
@@ -376,7 +376,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/topic/topic-showcase.css */
+/* ../green-lib/packages/green-lib/components/topic/topic-showcase.css */
 @layer components {
   .topic.topic-showcase {
     align-items: center;
@@ -410,7 +410,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/topic/topic-featured.css */
+/* ../green-lib/packages/green-lib/components/topic/topic-featured.css */
 @layer components {
   .topic.topic-featured {
     gap: var(--space-m);
@@ -451,7 +451,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/topic/topic-card.css */
+/* ../green-lib/packages/green-lib/components/topic/topic-card.css */
 @layer components {
   .topic.topic-card {
     border-radius: var(--border-radius-rounded);
@@ -466,7 +466,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/topic/topic.css */
+/* ../green-lib/packages/green-lib/components/topic/topic.css */
 @layer components {
   .topic {
     :is(p, h1, h2, h3, h4, ul) {
@@ -512,7 +512,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/topic/topic-headline.css */
+/* ../green-lib/packages/green-lib/components/topic/topic-headline.css */
 @layer components {
   .topic.topic-headline {
     align-items: center;
@@ -553,7 +553,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/topic/topic-quote.css */
+/* ../green-lib/packages/green-lib/components/topic/topic-quote.css */
 @layer components {
   .topic.topic-quote {
     align-items: center;
@@ -609,7 +609,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/topic/topic-hero.css */
+/* ../green-lib/packages/green-lib/components/topic/topic-hero.css */
 @layer components {
   .topic.topic-hero {
     align-items: center;
@@ -659,7 +659,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/topic/topic-profile.css */
+/* ../green-lib/packages/green-lib/components/topic/topic-profile.css */
 @layer components {
   .topic.topic-profile {
     align-items: center;
@@ -699,7 +699,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/carousel-layout/carousel-layout.ce.css */
+/* ../green-lib/packages/green-lib/components/carousel-layout/carousel-layout.ce.css */
 @layer components {
   :host {
     display: block;
@@ -758,7 +758,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/textarea.css */
+/* ../green-lib/packages/green-lib/components/textarea.css */
 @layer components {
   .textarea {
     border: 1px solid transparent;
@@ -788,7 +788,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/input.css */
+/* ../green-lib/packages/green-lib/components/input.css */
 @layer components {
   .input {
     border: 1px solid transparent;
@@ -850,7 +850,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/navigation-header/modal-menu.css */
+/* ../green-lib/packages/green-lib/components/navigation-header/modal-menu.css */
 @layer components {
   .modal-menu {
     .modal-background {
@@ -893,7 +893,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/navigation-header/navigation-header.css */
+/* ../green-lib/packages/green-lib/components/navigation-header/navigation-header.css */
 @layer components {
   :host {
     display: block;
@@ -958,7 +958,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/navigation-legal/navigation-legal.css */
+/* ../green-lib/packages/green-lib/components/navigation-legal/navigation-legal.css */
 @layer components {
   .navigation-legal {
     align-items: center;
@@ -992,7 +992,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/button.css */
+/* ../green-lib/packages/green-lib/components/button.css */
 @layer components {
   .button {
     background-color: var(--button-primary-color);
@@ -1023,7 +1023,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/icon/with-icon.css */
+/* ../green-lib/packages/green-lib/components/icon/with-icon.css */
 @layer components {
   .with-icon {
     align-items: center;
@@ -1032,7 +1032,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/components/icon/svg-icon.css */
+/* ../green-lib/packages/green-lib/components/icon/svg-icon.css */
 @layer components {
   svg.icon {
     width: 1.8cap;
@@ -1040,10 +1040,10 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/bundles/css/components.css */
+/* ../green-lib/packages/green-lib/bundles/css/components.css */
 @layer components;
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/flex.css */
+/* ../green-lib/packages/green-lib/css/utilities/flex.css */
 @layer utilities {
   .u-flex-1 {
     flex: 1;
@@ -1053,7 +1053,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/radius.css */
+/* ../green-lib/packages/green-lib/css/utilities/radius.css */
 @layer utilities {
   .u-border-radius-rounded {
     border-radius: var(--border-radius-rounded);
@@ -1066,7 +1066,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/color-secondary.css */
+/* ../green-lib/packages/green-lib/css/utilities/color-secondary.css */
 @layer utilities {
   .u-color-secondary-100 {
     color: var(--color-secondary-100);
@@ -1106,7 +1106,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/color-mono.css */
+/* ../green-lib/packages/green-lib/css/utilities/color-mono.css */
 @layer utilities {
   .u-color-mono-000 {
     color: var(--color-mono-000);
@@ -1158,7 +1158,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/grid.css */
+/* ../green-lib/packages/green-lib/css/utilities/grid.css */
 @layer utilities {
   .u-grid-two-cols {
     --column-width: calc( (var(--wrapper-width) - (var(--gap)*2) - (var(--gutter)*2)) /3 + 0.1rem );
@@ -1171,7 +1171,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/border.css */
+/* ../green-lib/packages/green-lib/css/utilities/border.css */
 @layer utilities {
   .u-border-bottom {
     border-bottom: 1px solid var(--color-mono-100);
@@ -1181,7 +1181,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/visually-hidden.css */
+/* ../green-lib/packages/green-lib/css/utilities/visually-hidden.css */
 @layer utilities {
   .u-visually-hidden {
     border: 0;
@@ -1196,7 +1196,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/block-space.css */
+/* ../green-lib/packages/green-lib/css/utilities/block-space.css */
 @layer utilities {
   .u-block-space-3xs {
     --block-space: var(--space-3xs) ;
@@ -1227,14 +1227,14 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/order.css */
+/* ../green-lib/packages/green-lib/css/utilities/order.css */
 @layer utilities {
   .u-order-2 {
     --order: 2 ;
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/max-chars.css */
+/* ../green-lib/packages/green-lib/css/utilities/max-chars.css */
 @layer utilities {
   .u-max-chars-70 {
     max-width: 70ch;
@@ -1256,7 +1256,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/font-size.css */
+/* ../green-lib/packages/green-lib/css/utilities/font-size.css */
 @layer utilities {
   .u-font-size--2 {
     font-size: var(--font-size--2);
@@ -1293,14 +1293,14 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/margin.css */
+/* ../green-lib/packages/green-lib/css/utilities/margin.css */
 @layer utilities {
   .u-margin-block-start-0 {
     margin-block-start: 0;
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/color-primary.css */
+/* ../green-lib/packages/green-lib/css/utilities/color-primary.css */
 @layer utilities {
   .u-color-primary-100 {
     color: var(--color-primary-100);
@@ -1340,7 +1340,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/gap.css */
+/* ../green-lib/packages/green-lib/css/utilities/gap.css */
 @layer utilities {
   .u-gap-0 {
     --gap: 0;
@@ -1374,7 +1374,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/width-100.css */
+/* ../green-lib/packages/green-lib/css/utilities/width-100.css */
 @layer utilities {
   .u-width-100,
   .u-width-child-100 {
@@ -1385,7 +1385,7 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/css/utilities/object-fit-cover.css */
+/* ../green-lib/packages/green-lib/css/utilities/object-fit-cover.css */
 @layer utilities {
   .u-object-fit-cover {
     width: 100%;
@@ -1397,21 +1397,17 @@
   }
 }
 
-/* node_modules/@jaccomeijer/green-lib/bundles/css/utilities.css */
+/* ../green-lib/packages/green-lib/bundles/css/utilities.css */
 @layer utilities;
 
-/* node_modules/@jaccomeijer/green-lib/index.bundle.css */
-/*! Bundled license information:
+/* ../green-lib/packages/green-lib/index.bundle.css */
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
 
-@jaccomeijer/green-lib/css/highlight/github.css:
-  (*!
-    Theme: GitHub
-    Description: Light theme as seen on github.com
-    Author: github.com
-    Maintainer: @Hirse
-    Updated: 2021-05-15
-  
-    Outdated base version: https://github.com/primer/github-syntax-light
-    Current colors taken from GitHub's CSS
-  *)
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
 */
