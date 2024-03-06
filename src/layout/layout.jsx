@@ -36,7 +36,7 @@ export const Layout = props => {
             {props.children}
           </article>
         </main>
-        <footer class="site-footer s-wrapper s-block-space u-block-space-3xl">
+        <footer class="site-footer s-wrapper">
           <div class="s-block-space u-block-space-2xs u-border-top">
             <NavigationFooter
               globals={globals}
