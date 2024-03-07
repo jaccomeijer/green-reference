@@ -2,6 +2,7 @@ export const actions = {
   call: [
     {
       heading: 'Reference',
+      icon: 'book-open',
       url: '/reference',
     },
     {
