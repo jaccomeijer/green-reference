@@ -402,8 +402,10 @@
         gap: var(--space-m);
       }
     }
-    .topic-picture {
+    .topic-picture img {
       aspect-ratio: 3/2;
+    }
+    .topic-picture {
       @container (min-width: 45rem) {
         & {
           width: calc(50% - (var(--space-m)/2));
@@ -436,8 +438,10 @@
         align-items: center;
       }
     }
-    .topic-picture {
+    .topic-picture img {
       aspect-ratio: 5/4;
+    }
+    .topic-picture {
       @container (min-width: 45rem) {
         & {
           width: calc(50% - (var(--space-l)/2));
@@ -479,6 +483,9 @@
     &:hover {
       transform: translateY(-0.3rem);
     }
+    .topic-abstract {
+      flex: 1;
+    }
   }
 }
 
@@ -497,7 +504,7 @@
       order: var(--order);
       width: 100%;
       img {
-        height: 100%;
+        aspect-ratio: 2/1;
         object-fit: cover;
         width: 100%;
       }
@@ -521,9 +528,6 @@
       .topic-heading {
         font-size: var(--font-size-1);
       }
-      .topic-abstract {
-        flex: 1;
-      }
     }
   }
 }
@@ -533,7 +537,7 @@
   .topic.topic-headline {
     align-items: center;
     gap: var(--space-2xl);
-    .topic-picture {
+    .topic-picture img {
       aspect-ratio: 1/1;
       @container (min-width: 45rem) {
         & {
@@ -580,8 +584,10 @@
         flex-direction: row;
       }
     }
-    .topic-picture {
+    .topic-picture img {
       aspect-ratio: 1/1;
+    }
+    .topic-picture {
       max-width: 200px;
       @container (min-width: 45rem) {
         & {
@@ -597,7 +603,7 @@
       gap: var(--space-s);
       @container (min-width: 45rem) {
         & {
-          max-width: 25vw;
+          max-width: 40vw;
         }
       }
       .topic-icon {
@@ -632,7 +638,7 @@
     color: var(--color-mono-000);
     gap: var(--space-l);
     position: relative;
-    .topic-picture {
+    .topic-picture img {
       aspect-ratio: 2/3;
       @container (min-width: 45rem) {
         & {
@@ -664,7 +670,6 @@
       .topic-abstract {
         font-size: var(--font-size-1);
         font-weight: var(--font-body-weight-bold);
-        flex: 0;
         max-width: 40ch;
         text-wrap: balance;
       }
@@ -675,13 +680,24 @@
   }
 }
 
+/* node_modules/@jaccomeijer/green-lib/components/topic/topic-block.css */
+@layer components {
+  .topic.topic-block {
+    .topic-abstract {
+      flex: 1;
+    }
+  }
+}
+
 /* node_modules/@jaccomeijer/green-lib/components/topic/topic-profile.css */
 @layer components {
   .topic.topic-profile {
     align-items: center;
     gap: var(--space-m);
-    .topic-picture {
+    .topic-picture img {
       aspect-ratio: 1/1;
+    }
+    .topic-picture {
       max-width: 300px;
     }
     .topic-picture img {
