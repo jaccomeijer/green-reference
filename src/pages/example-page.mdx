@@ -24,7 +24,7 @@ imageTopic:
     heading: Test action
     icon: archive
 ---
-export { Layout as default } from '../layout/layout'
+export { TextLayout as default } from '../layout/text-layout.jsx'
 import { Picture, Topic, TopicList } from '@jaccomeijer/green-lib'
 import { globals } from '../config/globals.js'
 import { topicData } from '../config/topics'
@@ -38,8 +38,6 @@ import demoImage2 from '../assets/images/ben-abo-J8GGXy4fY88-unsplash.jpg'
 />
 
 ---
-
-<div class="s-wrapper" style="--wrapper-width: 45rem">
 
 export const assetUrl = globals.baseUrl + globals.assetUrl
 
@@ -140,7 +138,7 @@ sit amet elit dui. Fusce porta volutpat porttitor.
 Cras felis magna, imperdiet eu turpis ut, dignissim venenatis justo. Nullam
 cursus fermentum risus nec semper. Fusce ornare ipsum et facilisis consequat.
 
-<div class="s-popout">
+<div class="s-popout u-inline-gutter">
   <Topic
     globals={globals}
     images={{ demoImage, demoImage2 }}
@@ -171,5 +169,3 @@ ornare pulvinar.
     frontmatter.imageTopic
   ]}
 />
-
-</div>

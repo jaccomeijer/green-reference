@@ -7,7 +7,7 @@ topic:
     heading: Show hero reference
     url: /reference/hero
 ---
-export { Layout as default } from '../../layout/layout'
+export { WideLayout as default } from '../../layout/wide-layout.jsx'
 import { Topic, TopicList } from '@jaccomeijer/green-lib'
 import { globals } from '../../config/globals.js'
 import { topicData } from '../../config/topics'
@@ -19,7 +19,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
   data-variant="headline"
 />
 
-<div class="s-popout">
+<div class="s-popout u-inline-gutter">
   <Topic
     data-variant="headline"
     globals={globals}
