@@ -2,7 +2,7 @@
 
 A reference implementation of the [green-lib](https://github.com/jaccomeijer/green-lib) Library
 
-The `/docs` folder is published to <https://jaccomeijer.github.io/green-reference/>
+The `/docs` folder is published to <https://www.jaccomeijer.nl/green-reference/>
 
 ## Related repositories
 
