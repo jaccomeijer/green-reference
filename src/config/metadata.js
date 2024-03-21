@@ -12,8 +12,8 @@ export const metadata = {
   },
   vendor: {
     heading: 'Made with Green UI Library',
-    icon: 'package',
-    url: 'https://www.npmjs.com/package/@jaccomeijer/green-lib',
+    icon: 'github',
+    url: 'https://github.com/jaccomeijer/green-lib',
     version,
   },
   content: {
