@@ -31,7 +31,7 @@ export const BaseLayout = props => {
             />
           </div>
         </header>
-        <main tabindex="-1" id="main-content">
+        <main tabIndex="-1" id="main-content">
           {props.children}
         </main>
         <footer className="site-footer s-wrapper">
