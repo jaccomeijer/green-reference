@@ -16,7 +16,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <Topic
   globals={globals}
   topic={{...topicData.block, action: undefined}}
-  data-variant="headline"
+  variant="headline"
 />
 
 <br />
@@ -24,7 +24,7 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ## Single topic
 
 <Topic
-  data-variant="block"
+  variant="block"
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
@@ -35,8 +35,8 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ## Two columns
 
 <TopicList 
-  class="s-grid u-grid-two-cols u-gap-m"
-  data-variant="block"
+  className="s-grid u-grid-two-cols u-gap-m"
+  variant="block"
   globals={globals}
   images={{ topicImage }}
   topics={[frontmatter.topic, frontmatter.topic, frontmatter.topic]}
@@ -47,8 +47,8 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ## Three columns
 
 <TopicList 
-  class="s-grid u-grid-three-cols u-gap-m"
-  data-variant="block"
+  className="s-grid u-grid-three-cols u-gap-m"
+  variant="block"
   globals={globals}
   images={{ topicImage }}
   topics={[frontmatter.topic, frontmatter.topic, frontmatter.topic]}
@@ -59,8 +59,8 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ## Four columns
 
 <TopicList 
-  class="s-grid u-grid-four-cols u-gap-m"
-  data-variant="block"
+  className="s-grid u-grid-four-cols u-gap-m"
+  variant="block"
   globals={globals}
   images={{ topicImage }}
   topics={[frontmatter.topic, frontmatter.topic, frontmatter.topic, frontmatter.topic]}
@@ -71,8 +71,8 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ## Other references
 
 <TopicList 
-  class="s-grid u-grid-three-cols u-gap-m"
-  data-variant="card"
+  className="s-grid u-grid-three-cols u-gap-m"
+  variant="card"
   globals={globals}
   topics={Object.values(topicData)}
 />

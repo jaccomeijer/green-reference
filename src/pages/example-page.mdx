@@ -34,7 +34,7 @@ import demoImage2 from '../assets/images/ben-abo-J8GGXy4fY88-unsplash.jpg'
 <Topic
   globals={globals}
   topic={frontmatter.openerTopic}
-  data-variant="headline"
+  variant="headline"
 />
 
 ---
@@ -93,12 +93,12 @@ bibendum. Quisque maximus orci eget justo venenatis posuere.
 Sed velit sapien, sagittis quis ligula eu, molestie ornare eros. Etiam lobortis
 sagittis orci volutpat maximus.
 
-<div class="s-popout">
+<div className="s-popout">
   <Topic
     globals={globals}
     images={{ demoImage, demoImage2 }}
     topic={frontmatter.imageTopic}
-    data-variant="hero"
+    variant="hero"
   />
 </div>
 
@@ -109,7 +109,7 @@ ut non orci. Suspendisse nec orci est. Duis id turpis quis mauris venenatis
 condimentum.
 
 <Picture
-  class="s-block-space u-block-space-s"
+  className="s-block-space u-block-space-s"
   globals={globals}
   src={ demoImage }
 />
@@ -129,7 +129,7 @@ sagittis pellentesque odio.
   globals={globals}
   images={{ demoImage, demoImage2 }}
   topic={frontmatter.topic}
-  data-variant="card"
+  variant="card"
 />
 
 Fusce id quam nulla. Mauris ac eros et erat dapibus gravida a ac justo. Integer
@@ -138,12 +138,12 @@ sit amet elit dui. Fusce porta volutpat porttitor.
 Cras felis magna, imperdiet eu turpis ut, dignissim venenatis justo. Nullam
 cursus fermentum risus nec semper. Fusce ornare ipsum et facilisis consequat.
 
-<div class="s-popout">
+<div className="s-popout">
   <Topic
     globals={globals}
     images={{ demoImage, demoImage2 }}
     topic={frontmatter.imageTopic}
-    data-variant="headline"
+    variant="headline"
   />
 </div>
 
@@ -158,8 +158,8 @@ ornare pulvinar.
 ---
 
 <TopicList 
-  class="s-grid u-grid-two-cols u-gap-xs"
-  data-variant="card"
+  className="s-grid u-grid-two-cols u-gap-xs"
+  variant="card"
   globals={globals}
   images={{ demoImage, demoImage2 }}
   topics={[ 

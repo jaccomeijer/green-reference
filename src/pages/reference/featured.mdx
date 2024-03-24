@@ -16,13 +16,13 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 <Topic
   globals={globals}
   topic={{...topicData.featured, action: undefined}}
-  data-variant="headline"
+  variant="headline"
 />
 
 ---
 
 <Topic
-  data-variant="featured"
+  variant="featured"
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
@@ -31,14 +31,14 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ---
 
 <Topic
-  data-variant="featured"
+  variant="featured"
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
   swap-image={true}
 />
 <Topic
-  data-variant="featured"
+  variant="featured"
   globals={globals}
   images={{ topicImage }}
   topic={frontmatter.topic}
@@ -49,8 +49,8 @@ import topicImage from '../../assets/images/richard-horvath-cPccYbPrF-A-unsplash
 ## Other references
 
 <TopicList 
-  class="s-grid u-grid-three-cols u-gap-m"
-  data-variant="card"
+  className="s-grid u-grid-three-cols u-gap-m"
+  variant="card"
   globals={globals}
   topics={Object.values(topicData)}
 />

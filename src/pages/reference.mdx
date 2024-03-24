@@ -15,14 +15,14 @@ import { topicData } from '../config/topics'
 <Topic
   globals={globals}
   topic={frontmatter.topic}
-  data-variant="headline"
+  variant="headline"
 />
 
 ---
 
 <TopicList 
-  class="s-grid u-grid-three-cols u-gap-m"
-  data-variant="card"
+  className="s-grid u-grid-three-cols u-gap-m"
+  variant="card"
   globals={globals}
   topics={Object.values(topicData)}
 />
